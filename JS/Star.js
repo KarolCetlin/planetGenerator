@@ -1,0 +1,11 @@
+
+
+class Star{
+    constructor(){
+
+    }
+
+
+
+
+}
