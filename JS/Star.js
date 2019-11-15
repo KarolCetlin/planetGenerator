@@ -1,11 +1,12 @@
 'use strict';
 
-class Star {
+class NewStar {
     constructor(){
         this.starNameHTML = document.getElementById('starName');
         this.starSpectralTypeHTML = document.getElementById('starSpectreType');
 
-
+        this.calc = new Calculations();
+        this.data = new DataPlanets();
     }
 
 
