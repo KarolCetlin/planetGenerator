@@ -31,9 +31,9 @@ class Weather {
         let hum = this.data.humidity.indexOf(humidity);
 
         // HTML //
-        this.tempName.innerHTML = `Klimat: ${temperature.Name}`;
+        this.tempName.innerHTML = `<span>Globalna temperatura: </span> ${temperature.Name}`;
         this.tempDescription.innerHTML = `${temperature.Description}`;
-        this.humName.innerHTML = `Wilgotność: ${humidity.Name}`;
+        this.humName.innerHTML = `<span>Klimat: </span> ${humidity.Name}`;
         this.humDescription.innerHTML = `${humidity.Description}`;
 
         for(let selectedPlanet = 0; selectedPlanet < this.data.planetType.length; selectedPlanet++) {
@@ -43,10 +43,9 @@ class Weather {
 
             if (temp === desiredTemperature && hum === desiredHumidity) {
 
-                this.planetTypeName.textContent = `Świat typu: ${this.data.planetType[selectedPlanet].Name}`;
-                this.planetTypeDescription.textContent = `Opis: ${this.data.planetType[selectedPlanet].Description}`;
+                this.planetTypeName.innerHTML = `<span>Typ planety: </span> ${this.data.planetType[selectedPlanet].Name}`;
+                this.planetTypeDescription.textContent = ` ${this.data.planetType[selectedPlanet].Description}`;
 
-                console.log(`Działa ${this.data.planetType[selectedPlanet].Name}`);
             }
         }
         }

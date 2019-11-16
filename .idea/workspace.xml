@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9394c8b0-598b-4c63-9487-f6be9d655c3c" name="Default Changelist" comment="" />
+    <list default="true" id="9394c8b0-598b-4c63-9487-f6be9d655c3c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS/BasicType.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/BasicType.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS/Data.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/Data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS/Generator.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/Generator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS/Life.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/Life.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS/Star.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/Star.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS/Weather.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/Weather.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SCSS/elements/button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/SCSS/elements/button.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SCSS/elements/planets.scss" beforeDir="false" afterPath="$PROJECT_DIR$/SCSS/elements/planets.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SCSS/elements/population.scss" beforeDir="false" afterPath="$PROJECT_DIR$/SCSS/elements/population.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SCSS/elements/stars.scss" beforeDir="false" afterPath="$PROJECT_DIR$/SCSS/elements/stars.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SCSS/elements/world.scss" beforeDir="false" afterPath="$PROJECT_DIR$/SCSS/elements/world.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SCSS/theme/mainTheme.scss" beforeDir="false" afterPath="$PROJECT_DIR$/SCSS/theme/mainTheme.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,10 +47,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/JS/BasicType.js">
+        <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="1680">
+              <caret line="70" selection-start-line="70" selection-end-line="70" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/JS/Calculations.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
@@ -41,71 +67,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JS/Life.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+            <state relative-caret-position="456">
+              <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/JS/Data.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-552">
-              <caret line="10" column="31" lean-forward="true" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/JS/Star.js">
+        <entry file="file://$PROJECT_DIR$/SCSS/style.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="168">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://G:/Programy/ServiceDesk/ManageEngine/ServiceDesk/custom/login/default.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="29" column="15" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://G:/Programy/ServiceDesk/ManageEngine/ServiceDesk/custom/login/Login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://G:/Programy/ServiceDesk/ManageEngine/ServiceDesk/webapps/ROOT/style/loginstyle.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2760">
-              <caret line="115" column="13" selection-start-line="115" selection-start-column="13" selection-end-line="115" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://G:/Programy/ServiceDesk/ManageEngine/ServiceDesk/webapps/sd/style/loginstyle.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
+              <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -113,8 +85,53 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JS/Weather.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1104">
-              <caret line="46" column="64" selection-start-line="46" selection-start-column="64" selection-end-line="46" selection-end-column="64" />
+            <state relative-caret-position="1152">
+              <caret line="48" selection-start-line="48" selection-end-line="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/JS/BasicType.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="552">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/JS/Generator.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/JS/Star.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="404">
+              <caret line="41" column="5" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/JS/Data.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2448">
+              <caret line="102" column="60" selection-start-line="102" selection-start-column="60" selection-end-line="102" selection-end-column="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SCSS/elements/stars.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="600">
+              <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -138,7 +155,13 @@
       <find>login</find>
       <find>btn</find>
       <find>loginas</find>
+      <find>typ</find>
+      <find>indexoo</find>
+      <find>index</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -150,18 +173,29 @@
         <option value="$PROJECT_DIR$/JS/weather.js" />
         <option value="$PROJECT_DIR$/JS/life.js" />
         <option value="$PROJECT_DIR$/JS/Calculations.js" />
-        <option value="$PROJECT_DIR$/JS/Generator.js" />
-        <option value="$PROJECT_DIR$/JS/Weather.js" />
         <option value="G:/Programy/ServiceDesk/ManageEngine/ServiceDesk/custom/esm/portalDefault.html" />
         <option value="G:/Programy/ServiceDesk/ManageEngine/ServiceDesk/custom/login/default.html" />
         <option value="G:/Programy/ServiceDesk/ManageEngine/ServiceDesk/webapps/sd/style/loginstyle.css" />
         <option value="G:/Programy/ServiceDesk/ManageEngine/ServiceDesk/custom/login/Login.html" />
         <option value="G:/Programy/ServiceDesk/ManageEngine/ServiceDesk/webapps/ROOT/style/loginstyle.css" />
-        <option value="$PROJECT_DIR$/JS/Star.js" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/JS/BasicType.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/SCSS/base/reset.scss" />
+        <option value="$PROJECT_DIR$/SCSS/base/typography.scss" />
+        <option value="$PROJECT_DIR$/SCSS/elements/button.scss" />
+        <option value="$PROJECT_DIR$/SCSS/theme/mainTheme.scss" />
+        <option value="$PROJECT_DIR$/SCSS/style.scss" />
+        <option value="$PROJECT_DIR$/SCSS/elements/population.scss" />
+        <option value="$PROJECT_DIR$/SCSS/elements/stars.scss" />
+        <option value="$PROJECT_DIR$/SCSS/elements/world.scss" />
+        <option value="$PROJECT_DIR$/SCSS/elements/planets.scss" />
         <option value="$PROJECT_DIR$/JS/Life.js" />
+        <option value="$PROJECT_DIR$/JS/NewStar.js" />
+        <option value="$PROJECT_DIR$/JS/Generator.js" />
+        <option value="$PROJECT_DIR$/JS/Weather.js" />
+        <option value="$PROJECT_DIR$/JS/BasicType.js" />
         <option value="$PROJECT_DIR$/JS/Data.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/JS/Star.js" />
       </list>
     </option>
   </component>
@@ -177,6 +211,7 @@
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -186,17 +221,35 @@
         <subPane>
           <expand>
             <path>
-              <item name="Generator planet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Generator planet" type="462c0819:PsiDirectoryNode" />
+              <item name="PlanetGenerator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PlanetGenerator" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Generator planet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Generator planet" type="462c0819:PsiDirectoryNode" />
+              <item name="PlanetGenerator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PlanetGenerator" type="462c0819:PsiDirectoryNode" />
+              <item name="IMG" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PlanetGenerator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PlanetGenerator" type="462c0819:PsiDirectoryNode" />
               <item name="JS" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Generator planet" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+              <item name="PlanetGenerator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PlanetGenerator" type="462c0819:PsiDirectoryNode" />
+              <item name="SCSS" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PlanetGenerator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PlanetGenerator" type="462c0819:PsiDirectoryNode" />
+              <item name="SCSS" type="462c0819:PsiDirectoryNode" />
+              <item name="elements" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PlanetGenerator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PlanetGenerator" type="462c0819:PsiDirectoryNode" />
+              <item name="SCSS" type="462c0819:PsiDirectoryNode" />
+              <item name="theme" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -207,8 +260,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="NewWatcherDialog.advanced.open" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/SCSS/base/reset.scss&#10;G:/Programowanie/Gwiezdny Pył/PlanetGenerator/.gitignore&#10;G:/Programowanie/Gwiezdny Pył/PlanetGenerator/SCSS/style.scss&#10;G:/Programowanie/Gwiezdny Pył/PlanetGenerator/package.json" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="HTML" />
     <property name="jsx.switch.disabled" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -217,11 +272,14 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="G:\Programowanie\Gwiezdny Pył\Generator planet" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\Programowanie\Gwiezdny Pył\PlanetGenerator\IMG" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -263,19 +321,26 @@
       <workItem from="1573375616509" duration="19196000" />
       <workItem from="1573477729606" duration="20244000" />
       <workItem from="1573600452040" duration="6530000" />
-      <workItem from="1573655094320" duration="2982000" />
+      <workItem from="1573655094320" duration="3598000" />
+      <workItem from="1573662871547" duration="6594000" />
+      <workItem from="1573682566816" duration="1782000" />
+      <workItem from="1573726932663" duration="11539000" />
+      <workItem from="1573768648440" duration="12369000" />
+      <workItem from="1573816150711" duration="15958000" />
+      <workItem from="1573916503894" duration="835000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129984000" />
+    <option name="totallyTimeSpent" value="179677000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13272922" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1401919" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="npm" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32998884" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32998884" />
@@ -380,20 +445,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JS/Calculations.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JS/Generator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://G:/Programy/ServiceDesk/ManageEngine/ServiceDesk/custom/style/it360-new-custom_style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
@@ -433,6 +484,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://G:/Programy/ServiceDesk/ManageEngine/ServiceDesk/custom/login/default.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="696">
+          <caret line="29" column="15" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://G:/Programy/ServiceDesk/ManageEngine/ServiceDesk/custom/login/Login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
@@ -454,52 +512,170 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JS/Weather.js">
+    <entry file="file://G:/Programy/XAMPP/htdocs/SASS/base/typography.scss">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1104">
-          <caret line="46" column="64" selection-start-line="46" selection-start-column="64" selection-end-line="46" selection-end-column="64" />
+        <state relative-caret-position="276">
+          <caret line="15" column="11" lean-forward="true" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JS/BasicType.js">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="1872">
+          <caret line="78" column="3" lean-forward="true" selection-start-line="78" selection-start-column="3" selection-end-line="78" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JS/Life.js">
+    <entry file="file://G:/Programy/XAMPP/htdocs/index.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://G:/Programy/XAMPP/htdocs/includes/header.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+        <state relative-caret-position="216">
+          <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JS/Data.js">
+    <entry file="file://G:/Programy/XAMPP/htdocs/content/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-552">
-          <caret line="10" column="31" lean-forward="true" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+        <state relative-caret-position="336">
+          <caret line="14" column="114" selection-start-line="14" selection-start-column="114" selection-end-line="14" selection-end-column="114" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JS/Star.js">
+    <entry file="file://$PROJECT_DIR$/SCSS/base/reset.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="31" column="17" lean-forward="true" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/Programy/XAMPP/htdocs/SASS/main.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://G:/Programy/ServiceDesk/ManageEngine/ServiceDesk/custom/login/default.html">
+    <entry file="file://$PROJECT_DIR$/SCSS/elements/button.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="12" column="17" selection-start-line="12" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SCSS/base/typography.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="37" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SCSS/elements/world.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SCSS/elements/planets.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="672">
-          <caret line="29" column="15" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
+          <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SCSS/elements/population.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SCSS/theme/mainTheme.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://G:/Programy/XAMPP/htdocs/JS/slider.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="984">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        <state relative-caret-position="1680">
+          <caret line="70" selection-start-line="70" selection-end-line="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS/Calculations.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS/Life.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SCSS/style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS/Weather.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1152">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS/BasicType.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS/Generator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS/Data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2448">
+          <caret line="102" column="60" selection-start-line="102" selection-start-column="60" selection-end-line="102" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SCSS/elements/stars.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS/Star.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="41" column="5" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
         </state>
       </provider>
     </entry>

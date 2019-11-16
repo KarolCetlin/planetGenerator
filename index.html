@@ -3,51 +3,85 @@
 <head>
   <meta charset="UTF-8">
   <title>Wygeneruj planetę do gwiezdnego pyłu</title>
+
+<link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="CSS/style.min.css">
 </head>
 <body>
 
-<button id="active">Generuj planetę</button>
-<div class="planet__position">
 
+
+<div class="site__wrapper">
+
+<div class="button__position">
+<button class="button__theme" id="active">Generuj planetę</button>
+</div>
 
 <section class="planet__section">
-<h1 class="planet__name" id="planetName">Nazwa planety</h1>
-<h2 id="planetSizeName">Wielkość planety</h2>
-<p id="planetSizeDescription">opis wielkości</p>
+<h1 class="planet__name" id="planetName"></h1>
+<div class="planet__wrapper">
+<img class="planet__image" src="IMG/planets/planetsSize.png">
+<div class="planet__wrapper--postion">
+<h2 class='planet__sizeName' id="planetSizeName"></h2>
+<p id="planetSizeDescription"></p>
+<p class='planet__radius' id="planetRadius"></p>
+</div>
+</div>
 </section>
+
 
 <section class="star__section">
-<h2 id="starName">Imię gwiazdy</h2>
-<div id="starType"></div>
-<div id="'starTemperature"></div>
-</section>
+<div class="star__wrapper">
+<h2 class='star__name' id="starName"></h2>
+<div id="starSize"></div>
+<p id="starSizeDescription"></p>
 
-<section>
-<h2 id="isLifeOnPlanet">Czy planeta jest zamieszkała przez rasy rozumne?</h2>
-<h2 id="isEcosfericOnPlanet">Czy planeta posiada ekosfere?</h2>
+<div id="starSpectreType"></div>
+<p id="starSpectreTypeDescription"></p>
 
+</div>
+<img class="star__image" src="IMG/stars/starSize.png">
 </section>
 
 <section class="population__section">
-<h2 id="colonyStructure">Rodzaj kolonii</h2>
-<p id="colonyPopulation">Wielkość populacji</p>
+<img class='population__image' src="IMG/population/base.png" alt="">
+
+<div class="population__wrapper">
+<h1 class="population__colonyType" id="colonyStructure"></h1>
+<h2 id="isLifeOnPlanet"></h2>
+<p id="colonyPopulation"></p>
+</div>
+
 </section>
 
 <section class="world__section">
-<h2 id="humidityName">Wilgotność: </h2>
+
+<div class="world__wrapper">
+<h2 id="humidityName"></h2>
 <p id="humidityDescription"></p>
-<h2 id="temperatureName">Temperatura: </h2>
+<h2 id="temperatureName"></h2>
 <p id="temperatureDescription"></p>
-<h2 id="planetTypeName">Typ planety: </h2>
+<h2 id="planetTypeName"></h2>
 <p id="planetTypeDescription"></p>
+</div>
+
+<img class="world__image" src="IMG/world/jungle.png" alt="">
 </section>
 
+<section>
+<h2 id="isEcosfericOnPlanet" style="display: none">Czy planeta posiada ekosfere?</h2>
+<h2 id="isMineralsOnPlanet" style="display: none">Czy planeta posiada zasoby naturalne?</h2>
+<h2 id="isMineralsOnPlanet" style="display: none">Czy planeta posiada naturalne satelity?</h2>
+<p>Anomalia na planecie</p>
+<p>Prawo społeczne na planecie</p>
+</section>
 
 </div>
 
-
 <script src="JS/Calculations.js"></script>
 <script src="JS/BasicType.js"></script>
+<script src="JS/Star.js"></script>
 <script src="JS/Life.js"></script>
 <script src="JS/Weather.js"></script>
 <script src="JS/Data.js"></script>

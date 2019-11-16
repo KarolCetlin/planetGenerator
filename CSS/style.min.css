@@ -1,0 +1,234 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  color: white;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #4e4e4e;
+}
+
+.button__position {
+  margin-top: 100px;
+  padding: 10px;
+}
+
+.button__theme {
+  background-color: #EFB71F;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  color: #3E3A3D;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  border-color: #f0b81f;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: 0;
+  border-radius: 5px;
+}
+
+.planet__section {
+  padding: 10px;
+  width: 700px;
+  background: #f0b81f;
+  border-radius: 10px;
+  color: #3E3A3D;
+}
+
+.planet__wrapper {
+  display: flex;
+  flex-direction: row;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 5px;
+}
+
+.planet__name {
+  font-size: 32px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.planet__image {
+  width: 20%;
+  max-height: 138px;
+  align-self: center;
+}
+
+.planet__wrapper--postion {
+  flex-direction: row;
+  padding: 10px;
+}
+
+.planet__sizeName {
+  padding-bottom: 10px;
+}
+
+.star__section {
+  margin-top: 10px;
+  background: #f0b81f;
+  padding: 10px;
+  width: 700px;
+  border-radius: 20px;
+  color: #3E3A3D;
+  display: flex;
+  justify-content: space-between;
+}
+
+.star__wrapper {
+  flex-direction: column;
+  padding: 5px 0 15px 15px;
+  width: 100%;
+  border-bottom: 1px inset black;
+  border-left: 1px inset black;
+  border-bottom-left-radius: 10px;
+}
+
+.star__image {
+  padding: 20px;
+  width: 20%;
+  max-height: 140px;
+  align-self: center;
+}
+
+.star__name {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 900;
+}
+
+.population__section {
+  margin-top: 10px;
+  background: #f0b81f;
+  padding: 10px;
+  width: 700px;
+  border-radius: 10px;
+  color: #3E3A3D;
+  display: flex;
+  flex-direction: row;
+}
+
+.population__image {
+  width: 20%;
+  max-height: 140px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  align-self: center;
+}
+
+.population__wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-top-right-radius: 10px;
+  width: 100%;
+}
+
+.population__colonyType {
+  font-size: 22px;
+}
+
+.world__section {
+  margin-top: 10px;
+  background: #f0b81f;
+  padding: 10px;
+  width: 700px;
+  border-radius: 10px;
+  color: #3E3A3D;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 50px;
+}
+
+.world__image {
+  width: 20%;
+  max-height: 140px;
+  padding-right: 10px;
+  padding-top: 10px;
+  justify-items: center;
+  align-self: center;
+}
+
+.world__wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5px;
+  margin-right: 10px;
+  padding-left: 15px;
+  padding-bottom: 10px;
+  border-bottom-left-radius: 10px;
+  width: 100%;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+}
+
+.site__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to right, #b993d6, #8ca6db);
+}
+
+span {
+  font-weight: 900;
+}
+
+/*# sourceMappingURL=style.min.css.map */

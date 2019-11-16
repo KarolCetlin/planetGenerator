@@ -15,13 +15,15 @@ class Life {
     isLifeOnPlanet() {
 
         if(this.calc.drawProperty() < this.data.changeOnLife){
-            this.life.textContent = `Czy planeta posiada kolonie ras rozumnych? ${this.data.planetPeople[0]}`;
+            this.life.innerHTML = `<span> Czy planeta posiada kolonie? </span> ${this.data.planetPeople[0]}`;
             this.hasLife = true;
             this.population();
         } else {
-            this.life.textContent = `Czy planeta posiada kolonie ras rozumnych? ${this.data.planetPeople[1]}`;
-            this.hasLife = false;
+            this.life.innerHTML = `<span> Czy planeta posiada kolonie? </span> ${this.data.planetPeople[1]}`;
+            this.race.innerHTML = '';
+            this.structure.innerHTML = '';
             this.data.changeOnMinerals = 30;
+            this.hasLife = false;
         }
     }
 
@@ -29,7 +31,7 @@ class Life {
         let selectedColonyType = this.calc.drawPropertyFromArray(this.data.collonyType);
         this.amountPopulation = Math.floor(Math.random() * (this.data.collonyType[selectedColonyType].maxSize - this.data.collonyType[selectedColonyType].minSize + 1)) + this.data.collonyType[selectedColonyType].minSize;
 
-        this.structure.textContent = `Typ osady: ${this.data.collonyType[selectedColonyType].name}`;
+        this.structure.innerHTML = `<span> Typ: </span> ${this.data.collonyType[selectedColonyType].name}`;
     }
 
 
@@ -40,7 +42,7 @@ class Life {
 
             let wholePopulation = 101;
             this.race.innerHTML = '';
-            this.race.innerHTML += `Populuacja ma: ${this.amountPopulation} mieszkańców </br>`;
+            this.race.innerHTML += `<span>Populacja:</span> ${this.amountPopulation} mieszkańców </br>`;
 
             this.data.collectionRaceToDraw = [...this.data.collectionAllRaces];
 
@@ -60,7 +62,7 @@ class Life {
 
                 let amountDrawRace = Math.round(this.amountPopulation / 100 * percentDrawRace);
 
-                this.race.innerHTML += `Rasa ${this.data.collectionRaceToDraw[this.data.drawnRace]} to ${percentDrawRace}% populacji tej planety, czyli ${amountDrawRace} osób </br>`;
+                this.race.innerHTML += `${this.data.collectionRaceToDraw[this.data.drawnRace]} ${percentDrawRace}% </br>`;
 
                 if(percentDrawRace > 51){
                     console.log('Ma większe')

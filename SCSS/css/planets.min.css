@@ -1,0 +1,37 @@
+.planet__section {
+  padding: 10px;
+  width: 700px;
+  background: #f0b81f;
+  border-radius: 10px;
+  color: #3E3A3D;
+}
+
+.planet__wrapper {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.planet__name {
+  font-size: 32px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.planet__image {
+  width: 20%;
+  max-height: 140px;
+}
+
+.planet__wrapper--postion {
+  flex-direction: row;
+  padding: 10px;
+}
+
+.planet__sizeName {
+  padding-bottom: 10px;
+}
+
+/*# sourceMappingURL=planets.min.css.map */

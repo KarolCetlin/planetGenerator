@@ -1,0 +1,34 @@
+
+.star__section {
+  margin-top: 10px;
+  background: #f0b81f;
+  padding: 10px;
+  width: 700px;
+  border-radius: 20px;
+  color: #3E3A3D;
+  display: flex;
+justify-content: space-between;
+}
+
+.star__wrapper {
+  flex-direction: column;
+  padding: 5px 0 15px 15px;
+  width: 100%;
+  border-bottom: 1px inset black;
+  border-left: 1px inset black;
+  border-bottom-left-radius: 10px;
+}
+
+.star__image {
+  padding: 20px;
+  width: 20%;
+  max-height: 140px;
+  align-self: center;
+}
+
+.star__name {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 900;
+}
+
