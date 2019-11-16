@@ -1,24 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9394c8b0-598b-4c63-9487-f6be9d655c3c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JS/BasicType.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/BasicType.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JS/Data.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/Data.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JS/Generator.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/Generator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JS/Life.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/Life.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JS/Star.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/Star.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JS/Weather.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/Weather.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SCSS/elements/button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/SCSS/elements/button.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SCSS/elements/planets.scss" beforeDir="false" afterPath="$PROJECT_DIR$/SCSS/elements/planets.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SCSS/elements/population.scss" beforeDir="false" afterPath="$PROJECT_DIR$/SCSS/elements/population.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SCSS/elements/stars.scss" beforeDir="false" afterPath="$PROJECT_DIR$/SCSS/elements/stars.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SCSS/elements/world.scss" beforeDir="false" afterPath="$PROJECT_DIR$/SCSS/elements/world.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SCSS/theme/mainTheme.scss" beforeDir="false" afterPath="$PROJECT_DIR$/SCSS/theme/mainTheme.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="9394c8b0-598b-4c63-9487-f6be9d655c3c" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,7 +188,7 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="260" />
     <option name="y" value="20" />
     <option name="width" value="1400" />
@@ -327,17 +310,17 @@
       <workItem from="1573726932663" duration="11539000" />
       <workItem from="1573768648440" duration="12369000" />
       <workItem from="1573816150711" duration="15958000" />
-      <workItem from="1573916503894" duration="835000" />
+      <workItem from="1573916503894" duration="1468000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="179677000" />
+    <option name="totallyTimeSpent" value="180310000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1401919" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1401919" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="npm" order="3" side_tool="true" />
@@ -351,7 +334,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32998884" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32998884" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
