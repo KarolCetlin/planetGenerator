@@ -12,6 +12,8 @@ class Generator{
     }
 
     render() {
+        this.basic.resetClass();
+
         this.basic.planetTypeDraw();
 
         this.life.isLifeOnPlanet();
