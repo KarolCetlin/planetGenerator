@@ -1,5 +1,5 @@
 
-class Generator{
+class Index{
     constructor() {
 
         document.getElementById('active').addEventListener('click', this.render.bind(this));
@@ -12,7 +12,8 @@ class Generator{
     }
 
     render() {
-        this.basic.resetClass();
+        this.basic.showSection();
+        this.basic.hideText();
 
         this.basic.planetTypeDraw();
 
@@ -32,4 +33,14 @@ class Generator{
 
 }
 
-const planetGenerator = new Generator;
+const planetGenerator = new Index;
+
+function resetClass(){
+    let sectionHTML = [...document.getElementsByTagName('section')];
+
+    for(const element in sectionHTML) {
+        sectionHTML[element].classList.add('disable');
+    }
+}
+
+resetClass()

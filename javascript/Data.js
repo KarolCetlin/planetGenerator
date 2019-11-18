@@ -96,6 +96,8 @@ class DataPlanets{
                     'pole, czekające na to, aż je uzupełnisz',
                 minSpectralType: 0,
                 maxSpectralType: 6,
+                minSize: 1,
+                maxSize: 5,
             },
             {
                 name: 'Hiperolbrzym',
@@ -103,6 +105,19 @@ class DataPlanets{
                     'pole, czekające na to, aż je uzupełnisz',
                 minSpectralType: 0,
                 maxSpectralType: 6,
+                minSize: 100,
+                maxSize: 1700,
+            },
+            {
+                name: 'Neutronowa',
+                description: 'Zdegenerowana gwiazda powstała w wyniku ewolucji gwiazd o dużych masach (~ 8–10 mas Słońca). ' +
+                    'Powstają podczas wybuchu supernowej lub kolapsu białego karła w układach podwójnych. Materia składająca ' +
+                    'się na gwiazdy neutronowe jest niezwykle gęsta, przy średnicy 10–15 km. Łyżeczka materii neutronowej ma ' +
+                    'ciężar taki sam jak ciało o masie ok. 6 miliardów ton na Ziemi.',
+                minSpectralType: 0,
+                maxSpectralType: 0,
+                minSize: 1.4,
+                maxSize: 3,
             }
         ];
 
@@ -279,7 +294,7 @@ class DataPlanets{
                 description: 'W tym miejscu będzie opis dotyczący wielkości tej planety, na razie jest to całkowicie puste' +
                     'pole, czekające na to, aż je uzupełnisz',
                 minSizeRadius: 3.5,
-                maxSizeRadius: 27,
+                maxSizeRadius: 100,
                 typeSize: 'Gazowy olbrzym',
             },
         ]

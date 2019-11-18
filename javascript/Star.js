@@ -11,17 +11,17 @@ class Star {
         this.starSizeHTML = document.getElementById('starSize');
         this.starSizeDescritpionHTML = document.getElementById('starSizeDescription');
 
-        this.calc = new Calculations();
+        this.calc = new Calc();
         this.data = new DataPlanets();
     }
 
 
     initStar(){
 
-        let drawNameForStar = this.calc.drawPropertyFromArray(this.data.starName);
+        let drawNameForStar = this.calc.getRandomItemFromArray(this.data.starName);
         this.starNameHTML.textContent = this.data.starName[drawNameForStar];
 
-        let drawSizeForStar = this.calc.drawPropertyFromArray(this.data.starType);
+        let drawSizeForStar = this.calc.getRandomItemFromArray(this.data.starType);
         this.starSizeHTML.innerHTML = `<span>Etap życia gwiazdy:</span> ${this.data.starType[drawSizeForStar].name}`;
         this.starSizeDescritpionHTML.innerHTML = this.data.starType[drawSizeForStar].description;
 

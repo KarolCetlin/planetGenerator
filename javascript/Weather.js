@@ -5,7 +5,7 @@ class Weather {
     constructor() {
 
         this.data = new DataPlanets();
-        this.calc = new Calculations();
+        this.calc = new Calc();
 
         this.humName = document.getElementById('humidityName');
         this.humDescription = document.getElementById('humidityDescription');
@@ -24,10 +24,10 @@ class Weather {
 
     keyParametersForMakePlanet() {
 
-        let temperature = this.data.temperature[this.calc.drawPropertyFromArray(this.data.temperature)];
+        let temperature = this.data.temperature[this.calc.getRandomItemFromArray(this.data.temperature)];
         let temp = this.data.temperature.indexOf(temperature);
 
-        let humidity = this.data.humidity[this.calc.drawPropertyFromArray(this.data.humidity)];
+        let humidity = this.data.humidity[this.calc.getRandomItemFromArray(this.data.humidity)];
         let hum = this.data.humidity.indexOf(humidity);
 
         // HTML //
