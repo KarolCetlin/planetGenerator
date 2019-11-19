@@ -1,54 +1,89 @@
 class Basic {
   constructor() {
-    this.planetName = document.getElementById("planetName");
-    this.planetSizeDescritpion = document.getElementById(
+    this.$planetName = document.getElementById("planetName");
+    this.$planetSizeDescritpion = document.getElementById(
       "planetSizeDescription"
     );
-    this.planetSizeName = document.getElementById("planetSizeName");
-    this.planetRadiusHTML = document.getElementById("planetRadius");
+    this.$planetSize = document.getElementById("planetSizeName");
+    this.$planetRadius = document.getElementById("planetRadius");
 
     this.calc = new Calc();
     this.data = new Data();
+    this.world = new World();
   }
 
-  planetTypeDraw() {
-    let drawNameForPlanet = this.calc.getRandomItemFromArray(
+  addPlanet() {
+    let selectedNameIndex = this.calc.getRandomIndexFromArray(
       this.data.setPlanetNames
     );
-    let drawSizeForPlanet = this.calc.getRandomItemFromArray(
+    this.selectedSizeIndex = this.calc.getRandomIndexFromArray(
       this.data.planetSizesSet
     );
 
-    this.planetName.textContent = this.data.setPlanetNames[drawNameForPlanet];
-    this.planetSizeName.innerHTML = `<span>Rodzaj wielkości: </span> ${this.data.planetSizesSet[drawSizeForPlanet].planetSizeName}`;
-
-    this.planetRadiusHTML.innerHTML = `<span>Rozmiar względem ziemii (promień):</span> ${this.drawPlanetSize(
-      drawSizeForPlanet
-    )}`;
-    console.log(this.drawPlanetSize(drawSizeForPlanet));
-
-    this.planetSizeDescritpion.innerHTML = `<span> Wytłumaczenie: </span> ${this.data.planetSizesSet[drawSizeForPlanet].description}`;
+    this.$planetName.innerHTML = `${this.data.setPlanetNames[selectedNameIndex]}`;
+    this.$planetSize.innerHTML = `<span>Rodzaj wielkości: </span> ${
+      this.data.planetSizesSet[this.selectedSizeIndex].planetSizeName
+    }`;
+    this.$planetRadius.innerHTML = `<span>Rozmiar względem ziemii (promień):</span> ${this.addPlanetSize()}`;
+    this.$planetSizeDescritpion.innerHTML = `<span> Wytłumaczenie: </span> ${
+      this.data.planetSizesSet[this.selectedSizeIndex].description
+    }`;
   }
 
-  drawPlanetSize(planetSizeNumber) {
-    let min = this.data.planetSizesSet[planetSizeNumber].minSizeRadius;
-    let max = this.data.planetSizesSet[planetSizeNumber].maxSizeRadius;
-
-    return Math.floor(Math.random() * (max - min)) + min;
+  addPlanetSize() {
+    return this.calc.randomNumberFromArrayInRange(
+      this.data.planetSizesSet,
+      this.selectedSizeIndex,
+      "minSizeRadius",
+      "maxSizeRadius"
+    );
   }
 
-  showSection() {
-    let sectionHTML = [...document.getElementsByTagName("section")];
+  showElementsByTag(getElement) {
+    this.element = getElement.toString();
 
-    for (const element in sectionHTML) {
-      sectionHTML[element].classList.remove("disable");
-      // sectionHTML[element].style.display = 'inline';
+    let $selectedSet = [...document.getElementsByTagName(this.element)];
+
+    for (const selectedItem in $selectedSet) {
+      $selectedSet[selectedItem].classList.remove("visible__hide");
     }
   }
 
-  hideText() {
-    let $text = document.getElementById('buttonText');
+  hideElementsByTag() {
+    let sectionHTML = [...document.getElementsByTagName("section")];
 
-    $text.style.display = 'none';
+    for (const element in sectionHTML) {
+      sectionHTML[element].classList.add("visible__hide");
+    }
+  }
+
+  hideElementById(elementID) {
+    let captureElement = document.getElementById(elementID.toString());
+    captureElement.style.display = "none";
+  }
+
+  inspectEcosferic() {
+    this.$checkbox = document.getElementById("switchEcosferic");
+
+    if (this.calc.getRandomNumberFromRange() < this.data.ecosfericPossibility) {
+      this.calc.initCheckbox(this.$checkbox, (this.data.hasEcosferic = true));
+      this.world.checkConditionsForLifeWorld(this.data.hasEcosferic);
+    } else {
+      this.calc.initCheckbox(this.$checkbox, (this.data.hasEcosferic = false));
+
+      let table = [
+        this.world.$humidityTitle,
+        this.world.$humidityDescription,
+        this.world.$temperatureTitle,
+        this.world.$temperatureDescription,
+        this.world.$temperatureTitle,
+        this.world.$worldDescription,
+        this.world.$worldTitle
+      ];
+
+      for (let i = 0; i < table.length; i++) {
+        this.calc.clearDate(table[i]);
+      }
+    }
   }
 }

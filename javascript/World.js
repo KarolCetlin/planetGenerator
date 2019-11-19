@@ -1,8 +1,8 @@
 'use strict';
 
 
-class Weather {
-    constructor() {
+class World {
+    constructor(collection = {}) {
         this.data = new Data();
         this.calc = new Calc();
 
@@ -13,10 +13,11 @@ class Weather {
         this.$worldTitle = document.getElementById('planetTypeName');
         this.$worldDescription = document.getElementById('planetTypeDescription');
 
-        this.drawnTemperature = '';
+        this.drawnTemperature = collection.drawnTemperature;
         this.drawnHumidity = '';
         this.indexTemperature = '';
         this.indexHumidity = '';
+
 
     }
 
@@ -48,7 +49,9 @@ class Weather {
 
             }
         }
-        }
+
+
+    }
 
         addTemperature(){
             this.drawnTemperature = this.data.temperaturesSet[this.calc.getRandomIndexFromArray(this.data.temperaturesSet)];

@@ -1,20 +1,24 @@
-class DataPlanets{
+class Data{
     constructor() {
 
-        this.changeOnLife = 20;
+
+
+        this.lifePossibility = 20;
         this.hasLife = "";
         this.planetTypeConfiguration = "";
         this.amountPopulation = 0;
+
+        this.ecosfericPossibility = 90;
         this.hasEcosferic = "";
         this.changeOnMinerals = 15;
         this.drawChanceToLife = 0;
         this.hasEcosferic = '';
-        this.collectionRaceToDraw = [];
-        this.drawnRace = [];
+        this.selectedRaceSet = [];
+        this.indexDrawnRace = [];
 
-        this.uniquePlanetName = ['Helara', 'Kitrarth', 'Zeceitera', 'Chemion', "51 Pegasi b", "PSR 1257+12 C", 'OGLE-TR-56b', 'Fomalhaut', '2M1207b'];
+        this.setPlanetNames = ['Helara', 'Kitrarth', 'Zeceitera', 'Chemion', "51 Pegasi b", "PSR 1257+12 C", 'OGLE-TR-56b', 'Fomalhaut', '2M1207b'];
 
-        this.starType = [
+        this.setLifeCycleStars = [
             {
                 name: 'Brązowy karzeł',
                 description: 'Obiekt gwiazdopodobny o masie zbyt małej, by mogły zachodzić w nim reakcje przemiany ' +
@@ -121,7 +125,7 @@ class DataPlanets{
             }
         ];
 
-        this.starSpectralType = [
+        this.setSpectralTypes = [
             {
                 name: 'O',
                 description: 'Gwiazdy typu widmowego O są rzadkie, ale wielkie i jasno świecące, więc są łatwe do ' +
@@ -197,10 +201,10 @@ class DataPlanets{
             },
         ]
 
-        this.starName = ['Polaris', 'Syriusz', 'Rigiel', 'Vega', 'Antares', 'Canopus', 'Kudo', 'Oniga', 'Kassimian',
+        this.starNamesSet = ['Polaris', 'Syriusz', 'Rigiel', 'Vega', 'Antares', 'Canopus', 'Kudo', 'Oniga', 'Kassimian',
             'Harravos', 'Basusen', 'Marev', 'Elari', 'Wrenn', 'Jusurvo', 'Soleko'];
 
-        this.collonyType = [
+        this.outpostsSet = [
             {
                 name: 'Kolonia Górnicza',
                 minSize: 100,
@@ -232,7 +236,7 @@ class DataPlanets{
             },
         ]
 
-        this.planetSize = [
+        this.planetSizesSet = [
 
             {
                 planetSizeName: 'Asteroida',
@@ -352,7 +356,7 @@ class DataPlanets{
         ];
 
 
-        this.temperature = [
+        this.temperaturesSet = [
             {
                 Name: 'Gorąca',
                 Description: 'Średnia globalna temperatura to około 35°C',
@@ -376,7 +380,7 @@ class DataPlanets{
         ];
 
 
-        this.humidity = [
+        this.humiditiesSet = [
             {
                 Name: 'Wyschnięty',
                 Description: 'Wody powierzchniowe są niezwykle rzadkie. Opady atmosferyczne praktycznie nie istnieją',
@@ -396,7 +400,7 @@ class DataPlanets{
             },
         ];
 
-        this.planetType = [
+        this.worldTypesSet = [
             {
                 Name: 'Morze piasku',
                 Description: 'W tym miejscu będzie znajdował się fantastyczny opis tej planety, który będzie działać na' +
@@ -586,7 +590,7 @@ class DataPlanets{
         this.weatherForGasPlanet = ['huragany', 'słabe pole magnetyczne', 'asd'];
         this.planetOrbit = ['planeta około podwójna', 'egzoplaneta', 'planetoidy trojańskie'];
         this.planetPeople = ['TAK', 'NIE'];
-        this.collectionAllRaces = ['Altar-yan', 'Wulkan', 'Silian', 'Flerów', 'Ludzi', 'Syntetyków', "Giag", 'Miridu'];
+        this.mainRacesCollection = ['Altar-yan', 'Wulkanów', 'Silian', 'Flerów', 'Ludzi', 'Syntetyków', "Giag", 'Miridu'];
 
 
 

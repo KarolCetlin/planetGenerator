@@ -1,92 +1,95 @@
-'use strict';
+"use strict";
 
 class Life {
-    constructor() {
+  constructor() {
+    this.calc = new Calc();
+    this.data = new Data();
 
-        this.calc = new Calc();
-        this.data = new DataPlanets();
+    this.$raceLog = document.getElementById("colonyStructure");
+    this.$societySpace = document.getElementById("colonyPopulation");
+    this.$checkbox = document.getElementById("toggleCheckboxLife");
+  }
 
-        this.$lifeSwitch = document.getElementById('isLifeOnPlanet');
-        this.$raceLog = document.getElementById('colonyStructure');
-        this.$societySpace = document.getElementById('colonyPopulation');
-        this.$checkbox = document.getElementById('radioTest1');
+  inspectLife() {
+    if (this.calc.getRandomNumberFromRange() < this.data.lifePossibility) {
+      this.calc.initCheckbox(this.$checkbox, this.hasLife = true);
+      this.addAllSociety();
+    } else {
+        this.calc.initCheckbox(this.$checkbox, this.hasLife = false);
+        this.calc.clearDate(this.$societySpace);
+        this.calc.clearDate(this.$raceLog);
 
+        this.data.changeOnMinerals += 15;
     }
+  }
 
-    isLifeOnPlanet() {
+  addOutpost(){
+      return this.calc.getRandomIndexFromArray(this.data.outpostsSet);
+  }
 
-        if(this.calc.getRandomProperty() < this.data.changeOnLife){
-            this.$lifeSwitch.innerHTML = `<span> Czy planeta posiada kolonie? </span> ${this.data.planetPeople[0]}`;
-            this.hasLife = true;
-            this.addSociety();
 
-        } else {
-            this.$lifeSwitch.innerHTML = `<span> Czy planeta posiada kolonie? </span> ${this.data.planetPeople[1]}`;
-            this.calc.clearDate(this.$societySpace);
-            this.calc.clearDate(this.$raceLog);
+  addRaceToSociety() {
+    let indexDrawnOutpost = this.addOutpost();
 
-            this.data.changeOnMinerals = 30;
-            this.hasLife = false;
+    this.populationQuantity =
+      Math.floor(
+        Math.random() *
+          (this.data.outpostsSet[indexDrawnOutpost].maxSize -
+            this.data.outpostsSet[indexDrawnOutpost].minSize +
+            1)
+      ) + this.data.outpostsSet[indexDrawnOutpost].minSize;
 
-            this.$checkbox.checked = true;
+    this.$raceLog.innerHTML = `<span> Typ: </span> ${this.data.outpostsSet[indexDrawnOutpost].name}`;
+  }
 
+  addAllSociety() {
+    if (this.hasLife === true) {
+      this.addRaceToSociety();
+
+      let wholePopulation = 101;
+      this.calc.clearDate(this.$societySpace);
+      this.$societySpace.innerHTML += `<span>Placówka z:</span> ${this.populationQuantity} mieszkańców </br>`;
+
+      this.data.copyRaceSet = [...this.data.mainRacesCollection];
+
+      while (wholePopulation > 1) {
+        let percentDrawnRace = this.calc.getRandomNumberFromRange(wholePopulation);
+
+        if (percentDrawnRace === 0) {
+          continue;
         }
-    }
 
-    populationStructure() {
-        let selectedColonyType = this.calc.getRandomItemFromArray(this.data.collonyType);
-        this.populationQuantity = Math.floor(Math.random() * (this.data.collonyType[selectedColonyType].maxSize -
-            this.data.collonyType[selectedColonyType].minSize + 1)) + this.data.collonyType[selectedColonyType].minSize;
+        this.data.indexDrawnRace = this.calc.getRandomIndexFromArray(
+          this.data.copyRaceSet
+        );
 
-        this.$raceLog.innerHTML = `<span> Typ: </span> ${this.data.collonyType[selectedColonyType].name}`;
-    }
-
-
-    addSociety() {
-
-        if (this.hasLife === true) {
-            this.populationStructure();
-
-            let wholePopulation = 101;
-            this.$societySpace.innerHTML = '';
-            this.$societySpace.innerHTML += `<span>Populacja:</span> ${this.populationQuantity} mieszkańców </br>`;
-
-            this.data.collectionRaceToDraw = [...this.data.collectionAllRaces];
-
-            while (wholePopulation > 1) {
-                let percentDrawRace = Math.floor(Math.random() * wholePopulation);
-
-                if (percentDrawRace === 0 ) {
-                    continue;
-
-                }
-
-                this.data.drawnRace = this.calc.getRandomItemFromArray(this.data.collectionRaceToDraw);
-
-                if(this.data.collectionRaceToDraw[this.data.drawnRace] === undefined){
-                    this.data.collectionRaceToDraw.push('Brak szczegółowych danych, błędy w raportach');
-                }
-
-                let amountDrawRace = Math.round(this.populationQuantity / 100 * percentDrawRace);
-
-                this.$societySpace.innerHTML += `${this.data.collectionRaceToDraw[this.data.drawnRace]} ${percentDrawRace}% </br>`;
-
-                if(percentDrawRace > 51){
-                    console.log('Ma większe')
-
-                    this.$societySpace.innerHTML += `Planeta należaca do ${this.data.drawnRace}`;
-
-                }
-
-                wholePopulation -= percentDrawRace;
-                this.data.collectionRaceToDraw.splice(this.data.drawnRace, 1);
-            }
-
-
+        if (this.data.copyRaceSet[this.data.indexDrawnRace] === undefined) {
+          this.data.copyRaceSet.push(
+            "Brak szczegółowych danych, błędy w raportach"
+          );
         }
-    }
-    checkSocialLaw() {
 
-    }
+        let quantityDrawnRace = Math.round(
+          (this.populationQuantity / 100) * percentDrawnRace
+        );
 
+        this.$societySpace.innerHTML += `${
+          this.data.copyRaceSet[this.data.indexDrawnRace]
+        } ${percentDrawnRace}% </br>`;
+
+        this.inspectSocialLaw(percentDrawnRace);
+
+        wholePopulation -= percentDrawnRace;
+        this.data.copyRaceSet.splice(this.data.indexDrawnRace, 1);
+      }
+    }
+  }
+
+  inspectSocialLaw(checkedValue) {
+    if (checkedValue > 51) {
+      this.$societySpace.innerHTML += `Planeta należaca do ${
+        this.data.mainRacesCollection[this.data.indexDrawnRace]
+      } <br>`;
+    }
+  }
 }

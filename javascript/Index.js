@@ -1,26 +1,28 @@
 
 class Index{
     constructor() {
-
         document.getElementById('active').addEventListener('click', this.render.bind(this));
 
-    this.basic = new Basic();
-    this.life = new Life();
-    this.weather = new Weather();
-    this.star = new Star();
+        this.basic = new Basic();
+        this.life = new Life();
+        this.world = new World();
+        this.star = new Star();
 
+        this.basic.hideElementsByTag();
     }
 
     render() {
-        this.basic.showSection();
-        this.basic.hideText();
+        this.basic.showElementsByTag('section');
+        this.basic.hideElementById('sectionVisible');
 
-        this.basic.planetTypeDraw();
+        this.basic.addPlanet();
+        this.basic.inspectEcosferic();
+        this.life.inspectLife();
 
-        this.life.isLifeOnPlanet();
-        this.weather.keyParametersForMakePlanet();
+
 
         this.star.initStar();
+
 
     }
 
@@ -35,12 +37,4 @@ class Index{
 
 const planetGenerator = new Index;
 
-function resetClass(){
-    let sectionHTML = [...document.getElementsByTagName('section')];
 
-    for(const element in sectionHTML) {
-        sectionHTML[element].classList.add('disable');
-    }
-}
-
-resetClass()

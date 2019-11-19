@@ -12,30 +12,30 @@ class Star {
         this.starSizeDescritpionHTML = document.getElementById('starSizeDescription');
 
         this.calc = new Calc();
-        this.data = new DataPlanets();
+        this.data = new Data();
     }
 
 
     initStar(){
 
-        let drawNameForStar = this.calc.getRandomItemFromArray(this.data.starName);
-        this.starNameHTML.textContent = this.data.starName[drawNameForStar];
+        let drawNameForStar = this.calc.getRandomIndexFromArray(this.data.starNamesSet);
+        this.starNameHTML.textContent = this.data.starNamesSet[drawNameForStar];
 
-        let drawSizeForStar = this.calc.getRandomItemFromArray(this.data.starType);
-        this.starSizeHTML.innerHTML = `<span>Etap życia gwiazdy:</span> ${this.data.starType[drawSizeForStar].name}`;
-        this.starSizeDescritpionHTML.innerHTML = this.data.starType[drawSizeForStar].description;
+        let drawSizeForStar = this.calc.getRandomIndexFromArray(this.data.setLifeCycleStars);
+        this.starSizeHTML.innerHTML = `<span>Etap życia gwiazdy:</span> ${this.data.setLifeCycleStars[drawSizeForStar].name}`;
+        this.starSizeDescritpionHTML.innerHTML = this.data.setLifeCycleStars[drawSizeForStar].description;
 
         let drawNumberFromThisRange = this.drawStarTemeperature(drawSizeForStar);
 
-        this.starSpectralTypeHTML.innerHTML = `<span>Typ widmowy:</span> ${this.data.starSpectralType[drawNumberFromThisRange].name}`;
-        this.starSpectralDescriptionHTML.innerHTML = `${this.data.starSpectralType[drawNumberFromThisRange].description}`;
+        this.starSpectralTypeHTML.innerHTML = `<span>Typ widmowy:</span> ${this.data.setSpectralTypes[drawNumberFromThisRange].name}`;
+        this.starSpectralDescriptionHTML.innerHTML = `${this.data.setSpectralTypes[drawNumberFromThisRange].description}`;
 
 
     }
 
     drawStarTemeperature(starNumber){
-        let min = this.data.starType[starNumber].minSpectralType;
-        let max = this.data.starType[starNumber].maxSpectralType;
+        let min = this.data.setLifeCycleStars[starNumber].minSpectralType;
+        let max = this.data.setLifeCycleStars[starNumber].maxSpectralType;
 
         return Math.floor(Math.random() * (max - min)) + min;
 
