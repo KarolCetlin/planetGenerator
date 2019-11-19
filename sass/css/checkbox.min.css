@@ -1,0 +1,79 @@
+/*
+ * Toggle button variables
+ */
+/*
+ * Toggle button styles
+ */
+.switch__animation--aava label {
+  height: 50px;
+  line-height: 50px;
+  transition: all 0.2s;
+  border-radius: 2rem;
+}
+.switch__animation--aava label:before,
+.switch__animation--aava label:after {
+  position: absolute;
+  right: 1.5rem;
+  transition: all 0.2s 0.1s ease-out;
+}
+.switch__animation--aava label:before {
+  content: attr(data-on-text);
+}
+.switch__animation--aava label:after {
+  content: attr(data-off-text);
+}
+.switch__animation--aava input[type="checkbox"] + label {
+  width: 120px;
+  background: #ff5335;
+}
+.switch__animation--aava input[type="checkbox"] + label:before {
+  opacity: 0;
+  transform: translate(0, 20px);
+}
+.switch__animation--aava input[type="checkbox"] + label:after {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+.switch__animation--aava input[type="checkbox"]:checked ~ label {
+  width: 120px;
+  background: #61b136;
+}
+.switch__animation--aava input[type="checkbox"]:checked ~ label:before {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+.switch__animation--aava input[type="checkbox"]:checked ~ label:after {
+  opacity: 0;
+  transform: translate(0, -20px);
+}
+.switch__animation--aava input[type="checkbox"]:checked ~ .switch__icon:before {
+  transform: translate(-10%, 100%) rotate(45deg);
+  width: 16.6666666667px;
+}
+.switch__animation--aava input[type="checkbox"]:checked ~ .switch__icon:after {
+  transform: translate(30%) rotate(-45deg);
+}
+.switch__animation--aava .switch__icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 50px;
+  width: 50px;
+}
+.switch__animation--aava .switch__icon:before,
+.switch__animation--aava .switch__icon:after {
+  height: 3px;
+  border-radius: 3px;
+  background: #fff;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+.switch__animation--aava .switch__icon:before {
+  width: 25px;
+  transform: rotate(45deg);
+}
+.switch__animation--aava .switch__icon:after {
+  width: 25px;
+  transform: rotate(-45deg);
+}
+
+/*# sourceMappingURL=checkbox.min.css.map */

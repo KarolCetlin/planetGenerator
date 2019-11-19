@@ -1,0 +1,23 @@
+.container__direction--column {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+}
+
+.container__direction--row {
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
+  align-content: center;
+}
+
+.container__title {
+  font-weight: 900;
+  margin-right: 15px;
+  height: 30px;
+  line-height: 30px;
+}
+
+.container__description {
+padding: 5px;
+}

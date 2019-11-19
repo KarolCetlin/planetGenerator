@@ -1,4 +1,4 @@
-.fadeInLeft {
+.animation__fadeInLeft {
   -webkit-animation-name: fadeInLeft;
   animation-name: fadeInLeft;
   -webkit-animation-duration: 1s;
@@ -48,7 +48,7 @@
   100% {opacity: 0;}
 }
 
-.fadeInRightBig {
+.animation__fadeInRightBig {
   -webkit-animation-name: fadeInRightBig;
   animation-name: fadeInRightBig;
   -webkit-animation-duration: 1s;

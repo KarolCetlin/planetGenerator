@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:900i");
+
+// Button position //
+
+.page__buttonPosition {
+  padding: 10px;
+  margin: auto;
+}
+
+.button__wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+// Button design //
+
+.button__text--display{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 20px;
+  display: none;
+}
+
+.button__title {
+  margin-bottom: 10px;
+}
+
+
+
+.button__text {
+  width: 70%;
+  text-align: left;
+  letter-spacing: 2px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 30px;
+  margin-bottom: 50px;
+  background: #1a5a8a;
+  transform: skewX(5deg);
+  text-decoration: none;
+  box-shadow: -6px 6px 0 black;
+  padding: 10px 15px;
+}
+
+.button__design:only-child {
+  cursor: pointer;
+}
+
+.button__design {
+  display: flex;
+  padding: 10px 45px;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 40px;
+  color: white;
+  background: #6225e6;
+  transition: 1s;
+  box-shadow: 6px 6px 0 black;
+  transform: skewX(-15deg);
+}
+.button__design:focus {
+  outline: none;
+}
+
+.button__design:hover {
+  transition: 0.5s;
+  box-shadow: 10px 10px 0 #F0124D;
+}
+
+.button__design span:nth-child(2) {
+  transition: 0.5s;
+  margin-right: 0px;
+}
+
+.button__design:hover span:nth-child(2) {
+  transition: 0.5s;
+  margin-right: 45px;
+}
+
+span {
+  transform: skewX(15deg);
+}
+
+span:nth-child(2) {
+  width: 20px;
+  margin-left: 30px;
+  position: relative;
+  top: 12%;
+}
+
+/**************SVG****************/
+
+path.one {
+  transition: 0.4s;
+  transform: translateX(-60%);
+}
+
+path.two {
+  transition: 0.5s;
+  transform: translateX(-30%);
+}
+
+.button__design:hover path.three {
+  animation: color_anim 1s infinite 0.2s;
+}
+
+.button__design:hover path.one {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.6s;
+}
+
+.button__design:hover path.two {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.4s;
+}
+
+/* SVG animations */
+
+@keyframes color_anim {
+  0% {
+    fill: white;
+  }
+  50% {
+    fill: #F0124D;
+  }
+  100% {
+    fill: white;
+  }
+}

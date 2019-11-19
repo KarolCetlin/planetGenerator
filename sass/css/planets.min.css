@@ -1,5 +1,4 @@
-
-.planet__section {
+.section {
   padding: 10px;
   width: 700px;
   background: #f0b81f;
@@ -7,14 +6,11 @@
   color: #3E3A3D;
 }
 
-.planet__wrapper {
+.section__insideWrapper {
   display: flex;
   flex-direction: row;
-  border-top: 1px solid black;
-  border-left: 1px solid black;;
-  border-right: 1px solid black;;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
   padding: 5px;
 }
 
@@ -23,10 +19,10 @@
   font-weight: 900;
   text-align: center;
 }
+
 .planet__image {
   width: 20%;
-  max-height: 138px;
-  align-self: center;
+  max-height: 140px;
 }
 
 .planet__wrapper--postion {
@@ -34,6 +30,8 @@
   padding: 10px;
 }
 
-.planet__sizeName {
+.container__title {
   padding-bottom: 10px;
 }
+
+/*# sourceMappingURL=planets.min.css.map */

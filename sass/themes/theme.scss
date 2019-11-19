@@ -1,0 +1,20 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: radial-gradient(circle, #e6c229, #6fca59, #00c2a6, #00aedf, #1a8fe3);
+  //background: linear-gradient(to right, rgb(185, 147, 214), rgb(140, 166, 219));
+  min-height: 100vh;
+}
+
+.page__wrapper {
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 80%;
+}
+
+span {
+  font-weight: 900;
+}
