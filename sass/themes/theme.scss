@@ -7,12 +7,20 @@
   min-height: 100vh;
 }
 
+
+@media all and(min-width: 361px) {
+
+
 .page__wrapper {
   flex-direction: row;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   width: 80%;
+}
+
+
+
 }
 
 span {

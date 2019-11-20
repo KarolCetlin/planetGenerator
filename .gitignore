@@ -4,7 +4,8 @@
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff
-.idea
+.idea/vcs.xml
+.idea/workspace.xml
 .idea/**/workspace.xml
 .idea/**/tasks.xml
 .idea/**/usage.statistics.xml
@@ -12,6 +13,7 @@
 .idea/**/shelf
 
 #
+after/
 planetgenerator/
 javascript/sample.js
 

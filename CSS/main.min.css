@@ -528,16 +528,24 @@ path.two {
   min-height: 100vh;
 }
 
-.page__wrapper {
-  flex-direction: row;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  width: 80%;
+@media all and (min-width: 361px) {
+  .page__wrapper {
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 80%;
+  }
 }
-
 span {
   font-weight: 900;
+}
+
+@media all and (max-width: 360px) {
+  .page__wrapper {
+    display: flex;
+    width: 95%;
+  }
 }
 
 /*# sourceMappingURL=main.min.css.map */
