@@ -3,7 +3,7 @@
 //         this.life = new Life();
 //
 //         this.planetId = planet.id;
-//         this.planetName = planet.name;
+//         this.planetName = planet.planetName;
 //         this.planetOutpost = planet.colony;
 //
 //

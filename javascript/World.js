@@ -4,7 +4,7 @@
 class World {
     constructor(collection = {}) {
         this.data = new Data();
-        this.calc = new Calc();
+        this.calc = new Tools();
 
         this.$humidityTitle = document.getElementById('humidityName');
         this.$humidityDescription = document.getElementById('humidityDescription');

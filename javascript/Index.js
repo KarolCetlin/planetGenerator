@@ -6,7 +6,7 @@ class Index{
         this.basic = new Basic();
         this.life = new Life();
         this.world = new World();
-        this.star = new Star();
+        this.star = new Generator();
 
         this.basic.hideElementsByTag();
     }

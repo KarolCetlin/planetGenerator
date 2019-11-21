@@ -7,7 +7,7 @@ class Basic {
     this.$planetSize = document.getElementById("planetSizeName");
     this.$planetRadius = document.getElementById("planetRadius");
 
-    this.calc = new Calc();
+    this.calc = new Tools();
     this.data = new Data();
     this.world = new World();
   }

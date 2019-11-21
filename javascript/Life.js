@@ -2,7 +2,7 @@
 
 class Life {
   constructor() {
-    this.calc = new Calc();
+    this.calc = new Tools();
     this.data = new Data();
 
     this.$raceLog = document.getElementById("colonyStructure");
@@ -39,7 +39,7 @@ class Life {
             1)
       ) + this.data.outpostsSet[indexDrawnOutpost].minSize;
 
-    this.$raceLog.innerHTML = `<span> Typ: </span> ${this.data.outpostsSet[indexDrawnOutpost].name}`;
+    this.$raceLog.innerHTML = `<span> Typ: </span> ${this.data.outpostsSet[indexDrawnOutpost].planetName}`;
   }
 
   addAllSociety() {

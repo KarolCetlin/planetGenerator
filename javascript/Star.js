@@ -11,7 +11,7 @@ class Star {
         this.starSizeHTML = document.getElementById('starSize');
         this.starSizeDescritpionHTML = document.getElementById('starSizeDescription');
 
-        this.calc = new Calc();
+        this.calc = new Tools();
         this.data = new Data();
     }
 
@@ -22,12 +22,12 @@ class Star {
         this.starNameHTML.textContent = this.data.starNamesSet[drawNameForStar];
 
         let drawSizeForStar = this.calc.getRandomIndexFromArray(this.data.setLifeCycleStars);
-        this.starSizeHTML.innerHTML = `<span>Etap życia gwiazdy:</span> ${this.data.setLifeCycleStars[drawSizeForStar].name}`;
+        this.starSizeHTML.innerHTML = `<span>Etap życia gwiazdy:</span> ${this.data.setLifeCycleStars[drawSizeForStar].planetName}`;
         this.starSizeDescritpionHTML.innerHTML = this.data.setLifeCycleStars[drawSizeForStar].description;
 
         let drawNumberFromThisRange = this.drawStarTemeperature(drawSizeForStar);
 
-        this.starSpectralTypeHTML.innerHTML = `<span>Typ widmowy:</span> ${this.data.setSpectralTypes[drawNumberFromThisRange].name}`;
+        this.starSpectralTypeHTML.innerHTML = `<span>Typ widmowy:</span> ${this.data.setSpectralTypes[drawNumberFromThisRange].planetName}`;
         this.starSpectralDescriptionHTML.innerHTML = `${this.data.setSpectralTypes[drawNumberFromThisRange].description}`;
 
 
