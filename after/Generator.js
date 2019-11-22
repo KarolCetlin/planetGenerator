@@ -17,12 +17,19 @@ class Generator {
         this.starType = planetData.starType;
         this.starTypeDescription = planetData.starTypeDescription;
 
-        this.colonyChance = planetData.colonyChance;
+        this.hasOutpost = planetData.hasOutpost;
+        this.hasEcosferic = planetData.hasEcosferic;
+        this.hasMinerals = planetData.hasMinerals;
+        this.hasAnomaly = planetData.hasAnomaly;
 
-        this.addParametrs();
+        this.outpostName = planetData.outpostName;
+
+        this.addKeyParametrs();
+        this.checkKeyConditions();
+        this.addDependentParametrs();
     }
 
-    addParametrs() {
+    addKeyParametrs() {
 
         this.indexName = this.tools.getNameFromArray(this.data.setPlanetNames);
         this.planetName = this.tools.getNameFromArray(this.data.setPlanetNames, this.indexName);
@@ -41,8 +48,16 @@ class Generator {
 
     }
 
-    checkConditions() {
+    checkKeyConditions() {
+        this.hasOutpost = this.tools.checkChance(this.data.outpostPossibility);
+        this.hasEcosferic = this.tools.checkChance(this.data.ecosfericPossibility);
+        this.hasMinerals = this.tools.checkChance(this.data.mineralsPossibility);
+        this.hasAnomaly = this.tools.checkChance(this.data.anomalyPossibility);
+    }
 
+    addDependentParametrs() {
+
+        this.tools.addAllSociety()
 
 
 

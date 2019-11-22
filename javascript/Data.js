@@ -3,7 +3,7 @@ class Data{
 
 
 
-        this.lifePossibility = 20;
+        this.outpostPossibility = 20;
         this.hasLife = "";
         this.planetTypeConfiguration = "";
         this.amountPopulation = 0;

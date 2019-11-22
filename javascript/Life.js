@@ -11,7 +11,7 @@ class Life {
   }
 
   inspectLife() {
-    if (this.calc.getRandomNumberFromRange() < this.data.lifePossibility) {
+    if (this.calc.getRandomNumberFromRange() < this.data.outpostPossibility) {
       this.calc.initCheckbox(this.$checkbox, this.hasLife = true);
       this.addAllSociety();
     } else {

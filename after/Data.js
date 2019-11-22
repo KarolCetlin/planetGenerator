@@ -2,15 +2,20 @@ class Data{
     constructor() {
 
 
+        this.outpostPossibility = 20;
+        this.ecosfericPossibility = 90;
+        this.mineralsPossibility = 15;
+        this.anomalyPossibility = 20;
 
-        this.lifePossibility = 20;
+
         this.hasLife = "";
+
         this.planetTypeConfiguration = "";
         this.amountPopulation = 0;
 
-        this.ecosfericPossibility = 90;
+
         this.hasEcosferic = "";
-        this.changeOnMinerals = 15;
+
         this.drawChanceToLife = 0;
         this.hasEcosferic = '';
         this.selectedRaceSet = [];
@@ -18,6 +23,7 @@ class Data{
 
 
         this.setPlanetNames = ['Helara', 'Kitrarth', 'Zeceitera', 'Chemion', "51 Pegasi b", "PSR 1257+12 C", 'OGLE-TR-56b', 'Fomalhaut', '2M1207b'];
+
         this.starNamesSet = ['Polaris', 'Syriusz', 'Rigiel', 'Vega', 'Antares', 'Canopus', 'Kudo', 'Oniga', 'Kassimian',
             'Harravos', 'Basusen', 'Marev', 'Elari', 'Wrenn', 'Jusurvo', 'Soleko'];
 
@@ -205,7 +211,6 @@ class Data{
                 maxTemperature: 700,
             },
         ]
-
 
 
         this.outpostsSet = [
