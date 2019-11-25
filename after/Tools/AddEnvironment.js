@@ -1,11 +1,12 @@
+import {getRandomNumber, getNameFromArray, getNameFromObject, randomNumberFromArrayInRange, checkChance, sortObjectInArray, findNumberFromTotal, randomNumberInRange} from './Tools';
+import {outpostPossibility, ecosfericPossibility, mineralsPossibility, temperaturesSet, humiditiesSet, worldTypesSet, anomalyPossibility, hasLife, planetTypeConfiguration, amountPopulation, hasEcosferic, setPlanetNames, starNamesSet, planetSizesSet, setLifeCycleStars} from './Data';
 
-class AddEnvironment {
+
+export class AddEnvironment {
     constructor(condition) {
 
         if (condition === true) {
 
-            this.data = new Data();
-            this.tools = new Tools();
 
             this.drawnTemperature = '';
             this.drawnHumidity = '';
@@ -30,15 +31,15 @@ class AddEnvironment {
     }
 
     matchTypeWorld() {
-        for (let checkPlanet = 0; checkPlanet < this.data.worldTypesSet.length; checkPlanet++) {
+        for (let checkPlanet = 0; checkPlanet < worldTypesSet.length; checkPlanet++) {
 
-            let requiredTemperature = this.data.worldTypesSet[checkPlanet].Temperature;
-            let requiredHumidity = this.data.worldTypesSet[checkPlanet].Humidity;
+            let requiredTemperature = worldTypesSet[checkPlanet].Temperature;
+            let requiredHumidity = worldTypesSet[checkPlanet].Humidity;
 
             if (this.indexTemperature === requiredTemperature && this.indexHumidity === requiredHumidity) {
 
-                this.worldTypeName = this.data.worldTypesSet[checkPlanet].Name;
-                this.worldTypeDescription = this.data.worldTypesSet[checkPlanet].Description
+                this.worldTypeName = worldTypesSet[checkPlanet].Name;
+                this.worldTypeDescription = worldTypesSet[checkPlanet].Description
             }
         }
 
@@ -46,15 +47,15 @@ class AddEnvironment {
 
 
     addTemperature() {
-        this.indexTemperature = this.tools.getNameFromArray(this.data.temperaturesSet);
-        this.drawnTemperature = this.tools.getNameFromObject(this.data.temperaturesSet, this.indexTemperature, 'Name');
+        this.indexTemperature = getNameFromArray(temperaturesSet);
+        this.drawnTemperature = getNameFromObject(temperaturesSet, this.indexTemperature, 'Name');
 
         console.log(this.drawnTemperature);
     }
 
     addHumidity() {
-        this.indexHumidity = this.tools.getNameFromArray(this.data.humiditiesSet);
-        this.drawnHumidity = this.tools.getNameFromObject(this.data.humiditiesSet, this.indexHumidity, 'Name');
+        this.indexHumidity = getNameFromArray(humiditiesSet);
+        this.drawnHumidity = getNameFromObject(humiditiesSet, this.indexHumidity, 'Name');
     }
 
 }

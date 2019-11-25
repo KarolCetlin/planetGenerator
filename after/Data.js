@@ -1,34 +1,32 @@
-class Data{
-    constructor() {
 
 
-        this.outpostPossibility = 20;
-        this.ecosfericPossibility = 90;
-        this.mineralsPossibility = 15;
-        this.anomalyPossibility = 20;
+        let outpostPossibility = 20;
+        let ecosfericPossibility = 90;
+        let mineralsPossibility = 15;
+        let anomalyPossibility = 20;
 
 
-        this.hasLife = "";
+        let hasLife = "";
 
-        this.planetTypeConfiguration = "";
-        this.amountPopulation = 0;
-
-
-        this.hasEcosferic = "";
-
-        this.drawChanceToLife = 0;
-        this.hasEcosferic = '';
-        this.selectedRaceSet = [];
-        this.indexDrawnRace = [];
+        let planetTypeConfiguration = "";
+        let amountPopulation = 0;
 
 
-        this.setPlanetNames = ['Helara', 'Kitrarth', 'Zeceitera', 'Chemion', "51 Pegasi b", "PSR 1257+12 C", 'OGLE-TR-56b', 'Fomalhaut', '2M1207b'];
+        let hasEcosferic2 = "";
 
-        this.starNamesSet = ['Polaris', 'Syriusz', 'Rigiel', 'Vega', 'Antares', 'Canopus', 'Kudo', 'Oniga', 'Kassimian',
+        let drawChanceToLife = 0;
+        let hasEcosferic = '';
+        let selectedRaceSet = [];
+        let indexDrawnRace = [];
+
+
+        const setPlanetNames = ['Helara', 'Kitrarth', 'Zeceitera', 'Chemion', "51 Pegasi b", "PSR 1257+12 C", 'OGLE-TR-56b', 'Fomalhaut', '2M1207b'];
+
+        const starNamesSet = ['Polaris', 'Syriusz', 'Rigiel', 'Vega', 'Antares', 'Canopus', 'Kudo', 'Oniga', 'Kassimian',
             'Harravos', 'Basusen', 'Marev', 'Elari', 'Wrenn', 'Jusurvo', 'Soleko'];
 
 
-        this.setLifeCycleStars = [
+        const setLifeCycleStars = [
             {
                 name: 'Brązowy karzeł',
                 description: 'Obiekt gwiazdopodobny o masie zbyt małej, by mogły zachodzić w nim reakcje przemiany ' +
@@ -136,7 +134,7 @@ class Data{
         ];
 
 
-        this.setSpectralTypes = [
+        const setSpectralTypes = [
             {
                 name: 'O',
                 description: 'Gwiazdy typu widmowego O są rzadkie, ale wielkie i jasno świecące, więc są łatwe do ' +
@@ -213,7 +211,7 @@ class Data{
         ]
 
 
-        this.outpostsSet = [
+        const outpostsSet = [
             {
                 name: 'Kolonia Górnicza',
                 minSize: 100,
@@ -245,7 +243,7 @@ class Data{
             },
         ]
 
-        this.planetSizesSet = [
+        const planetSizesSet = [
 
             {
                 planetSizeName: 'Asteroida',
@@ -314,7 +312,7 @@ class Data{
 
 
 
-        this.planetSize2 = [
+        const planetSize2 = [
             {
                 planetSizeName: 'Ogromna planeta',
                 description: 'Jest tak duża, że aż za duzą :P nie wiem jaki opis dać, więc pisze właśnie to',
@@ -365,7 +363,7 @@ class Data{
         ];
 
 
-        this.temperaturesSet = [
+        const temperaturesSet = [
             {
                 Name: 'Gorąca',
                 Description: 'Średnia globalna temperatura to około 35°C',
@@ -389,7 +387,7 @@ class Data{
         ];
 
 
-        this.humiditiesSet = [
+        const humiditiesSet = [
             {
                 Name: 'Wyschnięty',
                 Description: 'Wody powierzchniowe są niezwykle rzadkie. Opady atmosferyczne praktycznie nie istnieją',
@@ -409,7 +407,7 @@ class Data{
             },
         ];
 
-        this.worldTypesSet = [
+        const worldTypesSet = [
             {
                 Name: 'Morze piasku',
                 Description: 'W tym miejscu będzie znajdował się fantastyczny opis tej planety, który będzie działać na' +
@@ -595,16 +593,11 @@ class Data{
 
 
 
-        this.typeWeather = ['wieje', 'pada', 'mgła', 'śnieży'];
-        this.weatherForGasPlanet = ['huragany', 'słabe pole magnetyczne', 'asd'];
-        this.planetOrbit = ['planeta około podwójna', 'egzoplaneta', 'planetoidy trojańskie'];
-        this.planetPeople = ['TAK', 'NIE'];
-        this.mainRacesCollection = ['Altar-yan', 'Wulkanów', 'Silian', 'Flerów', 'Ludzi', 'Syntetyków', "Giag", 'Miridu'];
+        const typeWeather = ['wieje', 'pada', 'mgła', 'śnieży'];
+        const weatherForGasPlanet = ['huragany', 'słabe pole magnetyczne', 'asd'];
+        const planetOrbit = ['planeta około podwójna', 'egzoplaneta', 'planetoidy trojańskie'];
+        const planetPeople = ['TAK', 'NIE'];
+        const mainRacesCollection = ['Altar-yan', 'Wulkanów', 'Silian', 'Flerów', 'Ludzi', 'Syntetyków', "Giag", 'Miridu'];
 
+        export {outpostPossibility, ecosfericPossibility, mineralsPossibility, temperaturesSet, humiditiesSet, worldTypesSet, anomalyPossibility, hasLife, planetTypeConfiguration, amountPopulation, hasEcosferic, setPlanetNames, starNamesSet, planetSizesSet, setLifeCycleStars};
 
-
-    }
-
-
-
-}

@@ -1,11 +1,11 @@
-class AddOutpost {
+import {Tools} from './Tools';
+import {Data} from './Data';
+
+
+export class AddOutpost {
     constructor(condition) {
 
         if (condition === true) {
-
-
-            this.data = new Data();
-            this.tools = new Tools();
 
             this.raceArray = [];
             this.populationQuantity = '';
@@ -31,15 +31,15 @@ class AddOutpost {
         let percentTotalPopulation = 100;
 
 
-        this.data.copyRaceSet = [...this.data.mainRacesCollection];
+        data.copyRaceSet = [...data.mainRacesCollection];
 
         while (percentTotalPopulation >= 1) {
 
-            let percentDrawnRace = this.tools.randomNumberInRange(1, percentTotalPopulation);
+            let percentDrawnRace = tools.randomNumberInRange(1, percentTotalPopulation);
 
 
-            this.data.indexDrawnRace = this.tools.getNameFromArray(
-                this.data.copyRaceSet
+            data.indexDrawnRace = tools.getNameFromArray(
+                data.copyRaceSet
             );
 
 
@@ -49,31 +49,31 @@ class AddOutpost {
             //     );
             // }
 
-            let quantityDrawnRace = this.tools.findNumberFromTotal(this.populationQuantity, percentDrawnRace);
+            let quantityDrawnRace = tools.findNumberFromTotal(this.populationQuantity, percentDrawnRace);
 
             const raceOnOutpost = {};
-            raceOnOutpost['name'] = this.data.copyRaceSet[this.data.indexDrawnRace];
+            raceOnOutpost['name'] = data.copyRaceSet[data.indexDrawnRace];
             raceOnOutpost['quantity'] = quantityDrawnRace;
             raceOnOutpost['percent'] = percentDrawnRace;
 
             this.raceArray.push(raceOnOutpost);
 
             percentTotalPopulation -= percentDrawnRace;
-            this.data.copyRaceSet.splice(this.data.indexDrawnRace, 1);
+            data.copyRaceSet.splice(data.indexDrawnRace, 1);
 
         }
 
-        this.tools.sortObjectInArray(this.raceArray, 'percent');
+        tools.sortObjectInArray(this.raceArray, 'percent');
         return this.raceArray
     }
 
 
     addRaceToSociety(conditionIsRight) {
 
-        this.outpostIndex = this.tools.getNameFromArray(this.data.outpostsSet);
-        this.outpostName = this.tools.getNameFromObject(this.data.outpostsSet, this.outpostIndex, 'name');
+        this.outpostIndex = tools.getNameFromArray(data.outpostsSet);
+        this.outpostName = tools.getNameFromObject(data.outpostsSet, this.outpostIndex, 'name');
 
-        this.populationQuantity = this.tools.randomNumberFromArrayInRange(this.data.outpostsSet, this.outpostIndex, 'minSize', 'maxSize');
+        this.populationQuantity = tools.randomNumberFromArrayInRange(data.outpostsSet, this.outpostIndex, 'minSize', 'maxSize');
 
 
     }

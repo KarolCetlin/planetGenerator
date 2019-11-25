@@ -1,8 +1,12 @@
+
+import {getRandomNumber, getNameFromArray, getNameFromObject, randomNumberFromArrayInRange, checkChance, sortObjectInArray, findNumberFromTotal, randomNumberInRange} from './Tools';
+import {outpostPossibility, ecosfericPossibility, mineralsPossibility, anomalyPossibility, hasLife, planetTypeConfiguration, amountPopulation, hasEcosferic, setPlanetNames, starNamesSet, planetSizesSet, setLifeCycleStars} from './Data';
+
+
+
 class Generator {
     constructor(planetData = {}) {
-        this.tools = new Tools();
-        this.data = new Data();
-        // this.outpost = new AddOutpost();
+                // this.outpost = new AddOutpost();
 
         // this.indexName = planetData.indexName;
         this.planetName = planetData.planetName;
@@ -27,45 +31,48 @@ class Generator {
         this.envirnonment = planetData.envirnonment;
 
         this.addKeyParametrs();
-        this.checkKeyConditions();
-        this.addDependentParametrs();
+        // this.checkKeyConditions();
+        // this.addDependentParametrs();
+
+
     }
 
     addKeyParametrs() {
 
-        // this.indexName = this.tools.getNameFromArray(this.data.setPlanetNames);
-        this.planetName = this.tools.getNameFromArray(this.data.setPlanetNames);
+        this.indexName = getNameFromArray(setPlanetNames);
+        this.planetName = getNameFromArray(setPlanetNames, this.indexName);
 
-        this.indexSize = this.tools.getNameFromArray(this.data.planetSizesSet);
-        this.sizeName = this.tools.getNameFromObject(this.data.planetSizesSet, this.indexSize, 'planetSizeName');
-        this.sizeDesctiption = this.tools.getNameFromObject(this.data.planetSizesSet, this.indexSize, 'description');
+        this.indexSize = getNameFromArray(planetSizesSet);
+        this.sizeName = getNameFromObject(planetSizesSet, this.indexSize, 'planetSizeName');
+        this.sizeDesctiption = getNameFromObject(planetSizesSet, this.indexSize, 'description');
 
-        this.indexStarName = this.tools.getNameFromArray(this.data.starNamesSet);
-        this.starName = this.tools.getNameFromArray(this.data.starNamesSet, this.indexStarName);
+        this.indexStarName = getNameFromArray(starNamesSet);
+        this.starName = getNameFromArray(starNamesSet, this.indexStarName);
 
-        this.starTypeIndex = this.tools.getNameFromArray(this.data.setLifeCycleStars);
-        this.starType = this.tools.getNameFromObject(this.data.setLifeCycleStars, this.starTypeIndex, 'name');
-        this.starTypeDescription = this.tools.getNameFromObject(this.data.setLifeCycleStars, this.starTypeIndex, 'description');
+        this.starTypeIndex = getNameFromArray(setLifeCycleStars);
+        this.starType = getNameFromObject(setLifeCycleStars, this.starTypeIndex, 'name');
+        this.starTypeDescription = getNameFromObject(setLifeCycleStars, this.starTypeIndex, 'description');
 
-
-    }
-
-    checkKeyConditions() {
-        this.hasEcosferic = this.tools.checkChance(this.data.ecosfericPossibility);
-        this.hasOutpost = this.tools.checkChance(this.data.outpostPossibility);
-        this.hasMinerals = this.tools.checkChance(this.data.mineralsPossibility);
-        this.hasAnomaly = this.tools.checkChance(this.data.anomalyPossibility);
-    }
-
-    addDependentParametrs() {
-        this.envirnonment = new AddEnvironment(this.hasEcosferic);
-        this.outpostName =  new AddOutpost(this.hasOutpost);
+        
 
     }
-
-
+    //
+    // checkKeyConditions() {
+    //
+    //     this.hasEcosferic = Tools.checkChance(Data.ecosfericPossibility);
+    //     this.hasOutpost = Tools.checkChance(Data.outpostPossibility);
+    //     this.hasMinerals = Tools.checkChance(Data.mineralsPossibility);
+    //     this.hasAnomaly = Tools.checkChance(Data.anomalyPossibility);
+    // }
+    //
+    // addDependentParametrs() {
+    //     this.envirnonment = new AddEnvironment(this.hasEcosferic);
+    //     this.outpostName =  new AddOutpost(this.hasOutpost);
+    //
+    // }
 }
 
-//
+export {Generator}
+
 const init = new Generator();
 console.log(init);

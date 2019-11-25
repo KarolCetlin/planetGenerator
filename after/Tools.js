@@ -1,16 +1,11 @@
-'use strict';
 
-// const asd = require('./Tools/AddOutpost');
-// asd.addAllSociety();
 
-class Tools {
-
-    getRandomNumber(maxNumber) {
+    function getRandomNumber(maxNumber) {
         maxNumber = Math.floor(maxNumber);
         return Math.floor(Math.random() * maxNumber);
     }
 
-    getNameFromArray(array, index) {
+    function getNameFromArray(array, index) {
 
         if (typeof array === 'object' && typeof index === 'number') {
 
@@ -18,39 +13,37 @@ class Tools {
 
         } else if (typeof array === 'object' && typeof index !== 'number') {
 
-            return this.getRandomNumber(array.length)
+            return getRandomNumber(array.length)
         }
     }
 
-    getNameFromObject(object, index, parameter) {
+    function getNameFromObject(object, index, parameter) {
         return object[index][parameter];
     }
 
 
-    randomNumberFromArrayInRange(array, insertIndex, minKeyName, maxKeyName) {
-        this.collection = array;
+    function randomNumberFromArrayInRange(array, insertIndex, minKeyName, maxKeyName) {
+        let collection = array;
 
-        this.minKeyToString = minKeyName.toString();
-        this.maxKeyToString = maxKeyName.toString();
+        let minKeyToString = minKeyName.toString();
+        let maxKeyToString = maxKeyName.toString();
 
-        let minNumber = this.collection[insertIndex][this.minKeyToString];
-        let maxNumber = this.collection[insertIndex][this.maxKeyToString];
+        let minNumber = collection[insertIndex][minKeyToString];
+        let maxNumber = collection[insertIndex][maxKeyToString];
 
         return Math.floor(Math.random() * (maxNumber - minNumber)) + minNumber;
     }
 
 
-    checkChance(requiredValue) {
-        let chanceValue = this.getRandomNumber(100);
+    function checkChance(requiredValue) {
+        let chanceValue = getRandomNumber(100);
 
         if (chanceValue >= requiredValue) {
             return true;
-        } else {
-            return false;
         }
     }
 
-    sortObjectInArray(array, sortProperty) {
+    function sortObjectInArray(array, sortProperty) {
 
         array.sort(function (a, b) {
             return b[sortProperty] - a[sortProperty];
@@ -58,13 +51,15 @@ class Tools {
 
     }
 
-    findNumberFromTotal(totalNumber, percent) {
+    function findNumberFromTotal(totalNumber, percent) {
         return Math.round((totalNumber / 100) * percent);
     }
 
-    randomNumberInRange(minNumber, maxNumber) {
+    function randomNumberInRange(minNumber, maxNumber) {
         return Math.floor(Math.random() * (maxNumber - minNumber)) + minNumber;
     }
 
 
-}
+
+
+export {getRandomNumber, getNameFromArray, getNameFromObject, randomNumberFromArrayInRange, checkChance, sortObjectInArray, findNumberFromTotal, randomNumberInRange};
