@@ -1,17 +1,19 @@
 .container__direction--column {
   display: flex;
   flex-direction: column;
-  margin: 5px;
+  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 .container__direction--row {
   display: flex;
   flex-direction: row;
-  margin: 5px;
+  margin: 2% 1% 0 5%;
   align-content: center;
 }
 
 .container__title {
+  color: wheat;
   font-weight: 900;
   margin-right: 15px;
   height: 30px;

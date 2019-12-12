@@ -80,3 +80,52 @@
     transform: none;
   }
 }
+
+@keyframes rollIn {
+  from {
+    display: block;
+    opacity: 0;
+    transform: translate3d(-300%, 0, 0) rotate3d(0, 0, 1, -120deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animation__rollIn {
+  animation-name: rollIn;
+  animation-duration: 1.0s;
+}
+
+.animation__rollIn--time1{
+  animation-name: rollIn;
+  animation-duration: 2.5s;
+}
+
+.animation__rollIn--time2{
+  animation-name: rollIn;
+  animation-duration: 3.0s;
+}
+
+@keyframes rollOut {
+  from {
+    display: block;
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(300%, 0, 0) rotate3d(0, 0, 1, 120deg);
+    display: none;
+  }
+}
+
+.animation__rollOut {
+  animation-name: rollOut;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}

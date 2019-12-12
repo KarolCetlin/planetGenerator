@@ -1,23 +1,37 @@
 {
-  "planetName": "PlanetGenerator",
+  "name": "planetgenerator2",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack-dev-server --config ./config/webpack.config.js",
+    "prod": "webpack --config ./config/webpack.config.prod.js",
+    "dev": "webpack --config ./config/webpack.config.js",
+    "dev:watch": "npm run dev -- --watch",
+    "prod-watch": "webpack --config ./config/webpack.config.prod.js --watch",
+    "clean": "rimraf dist",
+    "server": "http-server dist -p 8082 -c-1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/KarolCetlin/planetGenerator.git"
-  },
-  "keywords": [],
-  "author": "",
+  "author": "Karol Cetlin",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/KarolCetlin/planetGenerator/issues"
+  "devDependencies": {
+    "@babel/core": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "@babel/preset-es2015": "^7.0.0-beta.53",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.2.0",
+    "file-loader": "^5.0.2",
+    "html-webpack-plugin": "^3.2.0",
+    "image-webpack-loader": "^6.0.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0",
+    "save-dev": "0.0.1-security",
+    "style-loader": "^1.0.0",
+    "url-loader": "^2.3.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
   },
-  "homepage": "https://github.com/KarolCetlin/planetGenerator#readme",
-  "dependencies": {
-    "express": "^4.17.1"
-  }
+  "description": ""
 }

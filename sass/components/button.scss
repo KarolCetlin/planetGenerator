@@ -8,6 +8,9 @@
 }
 
 .button__wrapper {
+  cursor: pointer;
+  user-select: none;
+  outline: 0;
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
@@ -45,7 +48,6 @@
 }
 
 .button__design:only-child {
-  cursor: pointer;
 }
 
 .button__design {

@@ -5,8 +5,153 @@
 
 .page__wrapper {
   display: flex;
-  width: 95%;
+  flex-direction: column;
+  align-items: center;
+  width: 92%;
+
 }
+
+  .button__design{
+    transform: skewX(0deg);
+    padding: 10px 25px;
+  }
+
+  span {
+    transform: skewX(0deg);
+  }
+
+  span:nth-child(2) {
+    top: 30%;
+  }
+
+  .card {
+    position: relative;
+    width: 100%;
+    height: 675px;
+    margin: 0 0 20px;
+  }
+
+  .card:nth-child(2) {
+    position: relative;
+    margin: 0 0 20px;
+    font-size: 14.5px;
+  }
+
+  .button__design:hover {
+    box-shadow: 5px 5px 0 #F0124D;
+  }
+
+  .container__title {
+    margin-right: 15px;
+    height: 60px;
+    line-height: 30px;
+  }
+
+
+}
+
+
+////
+
+
+@media all and (min-width: 361px) and (max-width: 425px){
+
+  .page__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 94%;
+  }
+
+  .button__design{
+    transform: skewX(0deg);
+  }
+
+  span {
+    transform: skewX(0deg);
+  }
+
+  span:nth-child(2) {
+    top: 30%;
+  }
+
+  .card {
+    width: 100%;
+    position: relative;
+    height: 675px;
+    margin: 0 0 20px;
+  }
+
+  .card:nth-child(2) {
+    position: relative;
+    margin: 0 0 20px;
+    font-size: 14.5px;
+  }
+
+  .button__design:hover {
+    box-shadow: 5px 5px 0 #F0124D;
+  }
+
+  .container__title {
+    margin-right: 15px;
+    height: 60px;
+    line-height: 30px;
+  }
+
+
+}
+
+/////
+
+
+
+@media all and (min-width: 426px) and (max-width: 500px){
+
+  .page__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 94%;
+  }
+
+  .button__design{
+    transform: skewX(0deg);
+
+    span {
+      text-align: center;
+    }
+
+  }
+
+  span {
+    transform: skewX(0deg);
+  }
+
+  span:nth-child(2) {
+    top: 30%;
+  }
+
+  .card {
+    width: 100%;
+    position: relative;
+    height: 675px;
+    margin: 0 0 20px;
+  }
+
+  .card:nth-child(2) {
+    position: relative;
+    margin: 0 0 20px;
+  }
+
+  .button__design:hover {
+    box-shadow: 5px 5px 0 #F0124D;
+  }
+
+  .container__title {
+    margin-right: 15px;
+    height: 50px;
+    line-height: 30px;
+  }
 
 
 }

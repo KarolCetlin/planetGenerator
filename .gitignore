@@ -15,6 +15,10 @@
 #
 planetgenerator/
 javascript/sample.js
+build/
+node_modules/
+public/
+prod/
 
 # Generated files
 .idea/**/contentModel.xml

@@ -1,12 +1,12 @@
 @import "./base/reset";
 @import "./base/typography";
 
-@import "layout/section";
-@import "layout/animations";
-@import "layout/containter";
+@import "./layout/section";
+@import "./layout/animations";
+@import "./layout/containter";
 
-@import "components/checkbox";
-@import "components/button";
+@import "./components/checkbox";
+@import "./components/button";
 
-@import "themes/theme";
-@import "themes/mobile";
+@import "./themes/theme";
+@import "./themes/mobile";

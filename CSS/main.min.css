@@ -56,16 +56,25 @@ table {
 body {
   font-family: "Raleway", sans-serif;
   font-size: 18px;
-  color: white;
+  color: wheat;
   font-weight: 400;
   line-height: 1.5;
-  color: #4e4e4e;
+}
+
+:root {
+  --gd1-color1: #12c2e9;
+  --gd1-color2: #f64f59;
+  --gd2-color1: #a8ff78;
+  --gd2-color2: #78ffd6;
+  --gd3-color1: #f12711;
+  --gd3-color2: #f5af19;
 }
 
 .section {
   padding: 10px;
   width: 700px;
   background: #6225e6;
+  position: relative;
   border-radius: 10px;
   color: white;
   margin-bottom: 10px;
@@ -134,12 +143,15 @@ body {
 }
 
 .section__title {
+  color: wheat;
+  z-index: 20;
   font-size: 32px;
   font-weight: 900;
   text-align: center;
 }
 
-.section__subtitle {
+.card__subtitle {
+  color: wheat;
   text-align: center;
   font-size: 26px;
   font-weight: 900;
@@ -154,6 +166,67 @@ body {
 
 .planet__sizeName {
   padding-bottom: 10px;
+}
+
+.card {
+  position: relative;
+  width: 450px;
+  height: 675px;
+  margin: 0 50px 2% 50px;
+}
+
+.card .card__content {
+  overflow: hidden;
+  border-radius: 20px;
+  height: 100%;
+}
+
+.card .card__image img {
+  width: 100%;
+  height: 100%;
+  filter: grayscale(70%) brightness(60%);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 20px;
+  transform: skew(1.5deg, 1.5deg);
+  background: linear-gradient(315deg, var(--gd1-color1), var(--gd1-color2));
+}
+
+.card:nth-child(2)::before {
+  background: linear-gradient(315deg, var(--gd2-color1), var(--gd2-color2));
+}
+
+.card:nth-child(3)::before {
+  background: linear-gradient(315deg, var(--gd3-color1), var(--gd3-color2));
+}
+
+.card:nth-child(4)::before {
+  background: linear-gradient(to right bottom, #008e9b, #008bad, #0086be, #007ecc, #2c73d2);
+}
+
+.card .card__text {
+  text-align: left;
+  color: wheat;
+  padding-left: 5%;
+}
+
+.card__contentWrapper {
+  position: absolute;
+  top: 1%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
 }
 
 .animation__fadeInLeft {
@@ -247,20 +320,67 @@ body {
     transform: none;
   }
 }
+@keyframes rollIn {
+  from {
+    display: block;
+    opacity: 0;
+    transform: translate3d(-300%, 0, 0) rotate3d(0, 0, 1, -120deg);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animation__rollIn {
+  animation-name: rollIn;
+  animation-duration: 1s;
+}
+
+.animation__rollIn--time1 {
+  animation-name: rollIn;
+  animation-duration: 2.5s;
+}
+
+.animation__rollIn--time2 {
+  animation-name: rollIn;
+  animation-duration: 3s;
+}
+
+@keyframes rollOut {
+  from {
+    display: block;
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(300%, 0, 0) rotate3d(0, 0, 1, 120deg);
+    display: none;
+  }
+}
+.animation__rollOut {
+  animation-name: rollOut;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
 .container__direction--column {
   display: flex;
   flex-direction: column;
-  margin: 5px;
+  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 .container__direction--row {
   display: flex;
   flex-direction: row;
-  margin: 5px;
+  margin: 2% 1% 0 5%;
   align-content: center;
 }
 
 .container__title {
+  color: wheat;
   font-weight: 900;
   margin-right: 15px;
   height: 30px;
@@ -276,7 +396,7 @@ body {
   display: inline-block;
   color: #fff;
   font-weight: bold;
-  width: 110px;
+  width: 92px;
   transition: 1s;
 }
 
@@ -321,7 +441,7 @@ body {
 .switch__animation--aava label:before,
 .switch__animation--aava label:after {
   position: absolute;
-  right: 1.5rem;
+  right: 1.3rem;
   transition: all 0.2s 0.1s ease-out;
 }
 
@@ -334,7 +454,7 @@ body {
 }
 
 .switch__animation--aava input[type=checkbox] + label {
-  width: 110px;
+  width: 90px;
   background: #ff5335;
 }
 
@@ -349,7 +469,7 @@ body {
 }
 
 .switch__animation--aava input[type=checkbox]:checked ~ label {
-  width: 110px;
+  width: 90px;
   background: #61b136;
 }
 
@@ -365,7 +485,7 @@ body {
 
 .switch__animation--aava input[type=checkbox]:checked ~ .switch__icon:before {
   transform: translate(-10%, 100%) rotate(45deg);
-  width: 16.66667px;
+  width: 11.66667px;
 }
 
 .switch__animation--aava input[type=checkbox]:checked ~ .switch__icon:after {
@@ -389,12 +509,12 @@ body {
 }
 
 .switch__animation--aava .switch__icon:before {
-  width: 25px;
+  width: 18px;
   transform: rotate(45deg);
 }
 
 .switch__animation--aava .switch__icon:after {
-  width: 25px;
+  width: 18px;
   transform: rotate(-45deg);
 }
 
@@ -522,10 +642,25 @@ path.two {
 }
 .page {
   display: flex;
+  overflow: hidden;
   flex-direction: column;
   align-items: center;
-  background-image: radial-gradient(circle, #e6c229, #6fca59, #00c2a6, #00aedf, #1a8fe3);
+  background-image: url(/images/background/wallpaper.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
   min-height: 100vh;
+}
+
+a[href],
+input[type=submit],
+input[type=image],
+label[for],
+select,
+button,
+.pointer {
+  cursor: pointer;
 }
 
 @media all and (min-width: 361px) {
@@ -544,7 +679,7 @@ span {
 @media all and (max-width: 360px) {
   .page__wrapper {
     display: flex;
-    width: 95%;
+    width: 100%;
   }
 }
 

@@ -3,7 +3,7 @@
   display: inline-block;
   color: #fff;
   font-weight: bold;
-  width: 110px;
+  width: 92px;
   transition: 1s;
 }
 
@@ -44,7 +44,7 @@
 .switch__animation--aava label:before,
 .switch__animation--aava label:after {
   position: absolute;
-  right: 1.5rem;
+  right: 1.3rem;
   transition: all 0.2s 0.1s ease-out;
 }
 .switch__animation--aava label:before {
@@ -55,7 +55,7 @@
 }
 
 .switch__animation--aava input[type="checkbox"] + label {
-  width: 110px;
+  width: 90px;
   background: #ff5335;
 }
 .switch__animation--aava input[type="checkbox"] + label:before {
@@ -68,7 +68,7 @@
 }
 
 .switch__animation--aava input[type="checkbox"]:checked ~ label {
-  width: 110px;
+  width: 90px;
   background: #61b136;
 }
 .switch__animation--aava input[type="checkbox"]:checked ~ label:before {
@@ -82,7 +82,7 @@
 
 .switch__animation--aava input[type="checkbox"]:checked ~ .switch__icon:before {
   transform: translate(-10%, 100%) rotate(45deg);
-  width: 16.66667px;
+  width: 11.66667px;
 }
 
 .switch__animation--aava input[type="checkbox"]:checked ~ .switch__icon:after {
@@ -104,10 +104,10 @@
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
 }
 .switch__animation--aava .switch__icon:before {
-  width: 25px;
+  width: 18px;
   transform: rotate(45deg);
 }
 .switch__animation--aava .switch__icon:after {
-  width: 25px;
+  width: 18px;
   transform: rotate(-45deg);
 }
