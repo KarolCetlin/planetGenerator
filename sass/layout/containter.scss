@@ -8,8 +8,9 @@
 .container__direction--row {
   display: flex;
   flex-direction: row;
-  margin: 2% 1% 0 5%;
+  margin: 2% 2% 0 5%;
   align-content: center;
+  justify-content: space-between;
 }
 
 .container__title {

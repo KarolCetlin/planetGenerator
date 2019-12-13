@@ -1,6 +1,7 @@
 {
   "name": "planetgenerator2",
-  "version": "1.0.0",
+  "version": "1.1.0",
+  "description": "Planet generator for RPG Star Dust",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config ./config/webpack.config.js",
@@ -31,7 +32,8 @@
     "url-loader": "^2.3.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.9.0"
-  },
-  "description": ""
+    "webpack-dev-server": "^3.9.0",
+    "serialize-javascript": "2.1.1"
+  }
+
 }

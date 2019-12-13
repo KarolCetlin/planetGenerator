@@ -53,3 +53,4 @@ class Init {
 }
 
 new Init("active", "auto");
+
