@@ -3,8 +3,8 @@ import Show from "./Tools/Show";
 import Clear from "./Tools/Clear.js";
 import { planetsCollection, currentPlanetNumber } from "../Index";
 import Visible from './Tools/Visible';
-// import {CanvasJS} from '../Vendors/canvasjs-2.3.2/canvasjs.min.js';
-
+import ApexCharts from 'apexcharts'
+import Diagram from './Tools/Diagram';
 
 class ShowDOM {
   constructor() {
@@ -59,12 +59,20 @@ class ShowDOM {
       );
       new Show("colonyDescription", "outpost", "", "outpostDescritpion")
 
+      new Diagram();
 
     } else {
       // new Visible('id', 'showPlanetCard', 'outpostSection');
       new Visible('hasOutpost', 'hide', 'outpostSection');
       new Clear("colonyStructure", "colonyPopulation");
     }
+
+
+
+
+
+
+
   }
 
   showEnvironmentCard(){

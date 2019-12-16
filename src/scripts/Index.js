@@ -10,7 +10,6 @@ import '../../public/images/background/wallpaper.jpg';
 
 
 
-
 export let currentPlanetNumber = 0;
 export let planetsCollection = [];
 
