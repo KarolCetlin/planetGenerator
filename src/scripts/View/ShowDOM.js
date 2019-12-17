@@ -4,7 +4,7 @@ import Clear from "./Tools/Clear.js";
 import { planetsCollection, currentPlanetNumber } from "../Index";
 import Visible from './Tools/Visible';
 import ApexCharts from 'apexcharts'
-import Diagram from './Tools/Diagram';
+import Diagram from '../Logic/Diagram';
 
 class ShowDOM {
   constructor() {
@@ -55,7 +55,7 @@ class ShowDOM {
         "colonyPopulation",
         "outpost",
         "Liczba mieszkańców:",
-        "populationQuantity"
+        "outpostPopulation"
       );
       new Show("colonyDescription", "outpost", "", "outpostDescritpion")
 

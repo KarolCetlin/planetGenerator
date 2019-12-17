@@ -7,19 +7,16 @@ class AddOutpost {
         if (condition === true) {
 
             this.raceArray = [];
-            this.populationQuantity = '';
+            this.outpostPopulation = '';
             this.outpostIndex = '';
             this.outpostName = '';
-
 
             this.addAllSociety();
 
             console.log(this.raceArray);
         } else {
-            // console.log('Niestety nie ma żadnego posterunku na tej planecie');
+            console.log('Niestety nie ma żadnego posterunku na tej planecie');
         }
-
-
     }
 
 
@@ -27,36 +24,34 @@ class AddOutpost {
 
         this.addRaceToSociety();
 
-        let percentTotalPopulation = 100;
+        let initialPercentPopulation = 100;
+        const lastPercentPopulation = 1;
+        const amountRacesToRemove = 1;
 
+        let copyRacesCollection = [...mainRacesCollection];
 
-        let copyRaceSet = [...mainRacesCollection];
+        while (initialPercentPopulation >= lastPercentPopulation) {
 
-        while (percentTotalPopulation >= 1) {
-
-            let percentDrawnRace = randomNumberInRange(1, percentTotalPopulation);
-
-
-            let indexDrawnRace = getNameFromArray(copyRaceSet);
+            let percentDrawnRace = randomNumberInRange(lastPercentPopulation, initialPercentPopulation);
+            let indexDrawnRace = getNameFromArray(copyRacesCollection);
+            let quantityDrawnRace = findNumberFromTotal(this.outpostPopulation, percentDrawnRace);
 
             //
-            // if (copyRaceSet[indexDrawnRace] === undefined) {
-            //     copyRaceSet.push(
+            // if (copyRacesCollection[indexDrawnRace] === undefined) {
+            //     copyRacesCollection.push(
             //         "Brak szczegółowych danych, błędy w raportach"
             //     );
             // }
 
-            let quantityDrawnRace = findNumberFromTotal(this.populationQuantity, percentDrawnRace);
-
             const raceOnOutpost = {};
-            raceOnOutpost['name'] = copyRaceSet[indexDrawnRace];
+            raceOnOutpost['name'] = copyRacesCollection[indexDrawnRace];
             raceOnOutpost['quantity'] = quantityDrawnRace;
             raceOnOutpost['percent'] = percentDrawnRace;
 
             this.raceArray.push(raceOnOutpost);
 
-            percentTotalPopulation -= percentDrawnRace;
-            copyRaceSet.splice(indexDrawnRace, 1);
+            initialPercentPopulation -= percentDrawnRace;
+            copyRacesCollection.splice(indexDrawnRace, amountRacesToRemove);
 
         }
 
@@ -64,14 +59,13 @@ class AddOutpost {
         return this.raceArray
     }
 
-
-    addRaceToSociety(conditionIsRight) {
+    addRaceToSociety() {
 
         this.outpostIndex = getNameFromArray(outpostsSet);
         this.outpostName = getNameFromObject(outpostsSet, this.outpostIndex, 'name');
         this.outpostDescritpion = getNameFromObject(outpostsSet, this.outpostIndex, 'description');
 
-        this.populationQuantity = randomNumberFromArrayInRange(outpostsSet, this.outpostIndex, 'minSize', 'maxSize');
+        this.outpostPopulation = randomNumberFromArrayInRange(outpostsSet, this.outpostIndex, 'minSize', 'maxSize');
     }
 
 

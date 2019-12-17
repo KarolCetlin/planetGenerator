@@ -1,4 +1,4 @@
-import {currentPlanetNumber, planetsCollection} from "../../Index";
+import {currentPlanetNumber, planetsCollection} from "../Index";
 import ApexCharts from 'apexcharts';
 
 class Diagram{
@@ -15,15 +15,23 @@ class Diagram{
 
         for(let index = 0; index < this.currentOutpost.length; index++){
 
-            let currentRaceName = this.currentOutpost[index]['name'];
-            this.raceNameCollection.push(currentRaceName);
+            this.setOutpostProperty('name', index, this.raceNameCollection);
+            this.setOutpostProperty('quantity', index, this.raceQuantityCollection);
 
-            let currentRaceQuantity = this.currentOutpost[index]['quantity'];
-            this.raceQuantityCollection.push(currentRaceQuantity);
-
-
+            // let currentRaceName = this.currentOutpost[index]['name'];
+            // this.raceNameCollection.push(currentRaceName);
+            //
+            // let currentRaceQuantity = this.currentOutpost[index]['quantity'];
+            // this.raceQuantityCollection.push(currentRaceQuantity);
 
         }
+    }
+
+    setOutpostProperty(property, raceIndex, addToArray){
+
+        let currentProperty = this.currentOutpost[raceIndex][property];
+        addToArray.push(currentProperty)
+
     }
 
 
@@ -35,6 +43,10 @@ class Diagram{
             chart: {
                 width: '100%',
                 type: 'pie',
+
+                style: {
+                    cssClass: 'diagramView',
+                }
             },
             labels: [...this.raceNameCollection],
             series: [...this.raceQuantityCollection],
@@ -47,10 +59,17 @@ class Diagram{
                     legend: {
                         show: true,
                         position: 'top',
-                        color: 'white'
+                        fillColor: 'white'
+                    },
+
+                    annotations: {
+                        position: 'front',
                     }
+
                 }
             }]
+
+
         }
 
         var chart = new ApexCharts(document.querySelector("#chartContainer"), options);
