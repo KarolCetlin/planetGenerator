@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "outDir": "../src",
+    "module": "commonjs",
+    "target": "es5",
+    "sourceMap": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "preserve",
+    "noImplicitAny": false,
+    "lib": ["es2015"]
+  },
+  "exclude": [
+    "node_modules"
+  ],
+
+
+  "include": [
+    "PlanetGenerator/**/*"
+  ]
+
+}
+

@@ -12,7 +12,7 @@ module.exports = {
     mode: 'development',
 
     entry: {
-        main: './src/scripts/Index.js'
+        main: './src/scripts/Index.js',
     },
 
     devtool: 'inline-source-map',
@@ -20,7 +20,8 @@ module.exports = {
     output: {
         filename: "js/bundle.js",
         path: path.resolve(__dirname, '../', 'build'),
-        // drugi argument to wyjście z folderu gdzie jest plik konfiguracyjny dla webpacka
+
+        // second arg ('../') is exit from actual folder where is  config file for webpack
     },
 
     devServer: {
@@ -67,6 +68,14 @@ module.exports = {
                     }
                 }
             },
+
+            {
+                test: /\.tsx?$/,
+                use: 'ts-loader',
+                exclude: /node_modules/,
+
+                           },
+
             {
                 test: /\.(png|svg|jpg|gif)$/i,
                 use: [
@@ -125,6 +134,14 @@ module.exports = {
             },
 
         ],
+
+
+
     },
 
+
+
 };
+
+
+

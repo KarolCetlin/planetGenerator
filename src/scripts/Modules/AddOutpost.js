@@ -1,76 +1,64 @@
-import {getRandomNumber, getNameFromArray, getNameFromObject, randomNumberFromArrayInRange, checkChance, sortObjectInArray, findNumberFromTotal, randomNumberInRange} from '../Logic/Tools.js';
-import {outpostPossibility, ecosfericPossibility, outpostsSet, indexDrawnRace, mineralsPossibility, mainRacesCollection, anomalyPossibility, hasLife, planetTypeConfiguration, amountPopulation, hasEcosferic, setPlanetNames, starNamesSet, planetSizesSet, setLifeCycleStars} from '../Data/Data.js';
-
-class AddOutpost {
-    constructor(condition) {
-
-        if (condition === true) {
-
-            this.raceArray = [];
-            this.outpostPopulation = '';
-            this.outpostIndex = '';
-            this.outpostName = '';
-
-            this.addAllSociety();
-
-            console.log(this.raceArray);
-        } else {
-            console.log('Niestety nie ma żadnego posterunku na tej planecie');
-        }
+"use strict";
+var __spreadArrays = (this && this.__spreadArrays) || function () {
+    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
+    for (var r = Array(s), k = 0, i = 0; i < il; i++)
+        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
+            r[k] = a[j];
+    return r;
+};
+exports.__esModule = true;
+var Tools_js_1 = require("../Logic/Tools.js");
+var Data_js_1 = require("../Data/Data.js");
+var AddOutpost = /** @class */ (function () {
+    function AddOutpost() {
+        this.raceArray = [];
+        this.outpostPopulation = null;
+        this.outpostIndex = null;
+        this.outpostName = '';
+        this.addAllSociety();
+        console.log(this.raceArray);
     }
-
-
-    addAllSociety() {
-
+    AddOutpost.prototype.addAllSociety = function () {
         this.addRaceToSociety();
-
-        let initialPercentPopulation = 100;
-        const lastPercentPopulation = 1;
-        const amountRacesToRemove = 1;
-
-        let copyRacesCollection = [...mainRacesCollection];
-
-        while (initialPercentPopulation >= lastPercentPopulation) {
-
-            let percentDrawnRace = randomNumberInRange(lastPercentPopulation, initialPercentPopulation);
-            let indexDrawnRace = getNameFromArray(copyRacesCollection);
-            let quantityDrawnRace = findNumberFromTotal(this.outpostPopulation, percentDrawnRace);
-
+        var initialPercentPopulation = 100;
+        var lastPercentPopulation = 1;
+        var amountRacesToRemove = 1;
+        var hasPopulationToDraw;
+        var copyRacesCollection = __spreadArrays(Data_js_1.mainRacesCollection);
+        function checkState(checkedArgument) {
+            checkedArgument = true;
+            if (initialPercentPopulation <= lastPercentPopulation) {
+                checkedArgument = false;
+            }
+        }
+        while (hasPopulationToDraw === true) {
+            checkState(hasPopulationToDraw);
+            var percentDrawnRace = Tools_js_1.randomNumberInRange(lastPercentPopulation, initialPercentPopulation);
+            var indexDrawnRace_1 = Tools_js_1.getNameFromArray(copyRacesCollection);
+            var quantityDrawnRace = Tools_js_1.findNumberFromTotal(this.outpostPopulation, percentDrawnRace);
             //
             // if (copyRacesCollection[indexDrawnRace] === undefined) {
             //     copyRacesCollection.push(
             //         "Brak szczegółowych danych, błędy w raportach"
             //     );
             // }
-
-            const raceOnOutpost = {};
-            raceOnOutpost['name'] = copyRacesCollection[indexDrawnRace];
+            var raceOnOutpost = [];
+            raceOnOutpost['name'] = copyRacesCollection[indexDrawnRace_1];
             raceOnOutpost['quantity'] = quantityDrawnRace;
             raceOnOutpost['percent'] = percentDrawnRace;
-
             this.raceArray.push(raceOnOutpost);
-
             initialPercentPopulation -= percentDrawnRace;
-            copyRacesCollection.splice(indexDrawnRace, amountRacesToRemove);
-
+            copyRacesCollection.splice(indexDrawnRace_1, amountRacesToRemove);
         }
-
-        sortObjectInArray(this.raceArray, 'percent');
-        return this.raceArray
-    }
-
-    addRaceToSociety() {
-
-        this.outpostIndex = getNameFromArray(outpostsSet);
-        this.outpostName = getNameFromObject(outpostsSet, this.outpostIndex, 'name');
-        this.outpostDescritpion = getNameFromObject(outpostsSet, this.outpostIndex, 'description');
-
-        this.outpostPopulation = randomNumberFromArrayInRange(outpostsSet, this.outpostIndex, 'minSize', 'maxSize');
-    }
-
-
-
-}
-
-export default AddOutpost;
-
+        Tools_js_1.sortObjectInArray(this.raceArray, 'percent');
+        return this.raceArray;
+    };
+    AddOutpost.prototype.addRaceToSociety = function () {
+        this.outpostIndex = Tools_js_1.getNameFromArray(Data_js_1.outpostsSet);
+        this.outpostName = Tools_js_1.getNameFromObject(Data_js_1.outpostsSet, this.outpostIndex, 'name');
+        this.outpostDescription = Tools_js_1.getNameFromObject(Data_js_1.outpostsSet, this.outpostIndex, 'description');
+        this.outpostPopulation = Tools_js_1.randomNumberFromArrayInRange(Data_js_1.outpostsSet, this.outpostIndex, 'minSize', 'maxSize');
+    };
+    return AddOutpost;
+}());
+exports["default"] = AddOutpost;

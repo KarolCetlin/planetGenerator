@@ -7,9 +7,6 @@ import '../../public/images/stars/star.jpg';
 import '../../public/images/world/savanna.jpg';
 import '../../public/images/background/wallpaper.jpg';
 
-
-
-
 export let currentPlanetNumber = 0;
 export let planetsCollection = [];
 
@@ -23,15 +20,14 @@ class Init {
       case "auto":
         this.initGenerator();
         new ShowDOM();
-
         break;
 
       case "single":
-        console.log("pojedyńcze");
+        console.log("change one parameter");
         break;
 
       case "custom":
-        console.log("pełna personalizacja");
+        console.log("custom planet");
         break;
     }
   }

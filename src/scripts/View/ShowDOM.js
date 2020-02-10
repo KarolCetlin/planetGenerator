@@ -3,7 +3,6 @@ import Show from "./Tools/Show";
 import Clear from "./Tools/Clear.js";
 import { planetsCollection, currentPlanetNumber } from "../Index";
 import Visible from './Tools/Visible';
-import ApexCharts from 'apexcharts'
 import Diagram from '../Logic/Diagram';
 
 class ShowDOM {
@@ -57,9 +56,13 @@ class ShowDOM {
         "Liczba mieszkańców:",
         "outpostPopulation"
       );
-      new Show("colonyDescription", "outpost", "", "outpostDescritpion")
+      new Show("colonyDescription", "outpost", "", "outpostDescription");
 
       new Diagram();
+
+
+    //  const racesDiagram = new Diagram();
+    // setTimeout(() => racesDiagram.renderDiagram(), 2000);
 
     } else {
       // new Visible('id', 'showPlanetCard', 'outpostSection');

@@ -2,12 +2,200 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ccdff719-8c76-497a-a2b1-78eee58650da" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/config/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Logic/Tools.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Modules/AddOutpost.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/Chart.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/Chart.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/Chart.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/Chart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/Chart.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/Chart.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/LICENSE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/advanced/content-security-policy.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/advanced/content-security-policy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/advanced/content-security-policy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/advanced/progress-bar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/charts/area/analyser.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/charts/area/line-boundaries.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/charts/area/line-datasets.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/charts/area/line-stacked.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/charts/area/radar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/charts/bar/horizontal.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/charts/bar/multi-axis.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/charts/bar/stacked-group.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/charts/bar/stacked.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/charts/bar/vertical.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/charts/bubble.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/charts/combo-bar-line.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/charts/doughnut.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/charts/line/basic.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/charts/line/interpolation-modes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/charts/line/line-styles.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/charts/line/multi-axis.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/charts/line/point-sizes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/charts/line/point-styles.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/charts/line/skip-points.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/charts/line/stepped.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/charts/pie.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/charts/polar-area.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/charts/radar-skip-points.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/charts/radar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/charts/scatter/basic.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/charts/scatter/multi-axis.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/legend/callbacks.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/legend/point-style.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/legend/positioning.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/samples.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/scales/filtering-labels.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/scales/gridlines-display.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/scales/gridlines-style.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/scales/linear/min-max-suggested.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/scales/linear/min-max.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/scales/linear/step-size.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/scales/logarithmic/line.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/scales/logarithmic/scatter.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/scales/multiline-labels.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/scales/non-numeric-y.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/scales/time/combo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/scales/time/financial.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/scales/time/line-point-data.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/scales/time/line.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/scales/toggle-scale-type.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/scriptable/bar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/scriptable/bubble.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/scriptable/line.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/scriptable/pie.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/scriptable/polar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/scriptable/radar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/tooltips/border.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/tooltips/callbacks.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/tooltips/custom-line.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/tooltips/custom-pie.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/tooltips/custom-points.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/tooltips/interactions.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/tooltips/positioning.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sass/themes/theme.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/themes/theme.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/Index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Logic/Diagram.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/Logic/Diagram.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Logic/Tools.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Modules/AddEnvironment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/Modules/Environment.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scripts/Modules/AddOutpost.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/Modules/AddOutpost.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Modules/Generator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/Modules/Generator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/canvasjs.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/canvasjs.react.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/01-overview/animated-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/01-overview/chart-from-json-data.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/01-overview/chart-with-axis-scale-breaks.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/01-overview/chart-with-crosshair.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/01-overview/chart-with-custom-legend-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/01-overview/chart-with-image-overlay.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/01-overview/chart-with-index-data-label.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/01-overview/chart-with-inverted-reversed-axis.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/01-overview/chart-with-logarithmic-axis.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/01-overview/chart-with-secondary-axis.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/01-overview/chart-with-zoom-pan.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/01-overview/dynamic-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/01-overview/interactive-draggable-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/01-overview/multi-series-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/01-overview/null-data-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/01-overview/performance-demo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/02-line-spline-step-line-charts/dashed-line-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/02-line-spline-step-line-charts/dynamic-spline-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/02-line-spline-step-line-charts/line-chart-with-axis-scale-breaks.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/02-line-spline-step-line-charts/line-chart-with-data-markers.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/02-line-spline-step-line-charts/line-chart-with-logarithmic-axis.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/02-line-spline-step-line-charts/line-chart-with-multiple-axis.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/02-line-spline-step-line-charts/line-chart-with-zoom-pan.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/02-line-spline-step-line-charts/line-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/02-line-spline-step-line-charts/multi-series-line-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/02-line-spline-step-line-charts/multi-series-spline-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/02-line-spline-step-line-charts/multi-series-step-line-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/02-line-spline-step-line-charts/spline-chart-with-legends.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/02-line-spline-step-line-charts/spline-chart-with-secondary-axis.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/02-line-spline-step-line-charts/spline-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/02-line-spline-step-line-charts/step-line-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/03-stacked-spline-range-area-charts/area-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/03-stacked-spline-range-area-charts/multi-series-area-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/03-stacked-spline-range-area-charts/multi-series-range-area-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/03-stacked-spline-range-area-charts/multi-series-spline-area-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/03-stacked-spline-range-area-charts/range-area-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/03-stacked-spline-range-area-charts/range-spline-area-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/03-stacked-spline-range-area-charts/spline-area-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/03-stacked-spline-range-area-charts/stacked-area-100-chart-with-date-time-axis.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/03-stacked-spline-range-area-charts/stacked-area-100-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/03-stacked-spline-range-area-charts/stacked-area-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/03-stacked-spline-range-area-charts/step-area-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/04-column-stacked-range-waterfall-charts/bar-chart-with-axis-scale-break.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/04-column-stacked-range-waterfall-charts/bar-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/04-column-stacked-range-waterfall-charts/column-chart-with-multiple-axis.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/04-column-stacked-range-waterfall-charts/column-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/04-column-stacked-range-waterfall-charts/multi-series-bar-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/04-column-stacked-range-waterfall-charts/multi-series-range-column-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/04-column-stacked-range-waterfall-charts/multi-series-waterfall-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/04-column-stacked-range-waterfall-charts/range-bar-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/04-column-stacked-range-waterfall-charts/range-column-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/04-column-stacked-range-waterfall-charts/stacked-bar-100-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/04-column-stacked-range-waterfall-charts/stacked-bar-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/04-column-stacked-range-waterfall-charts/stacked-column-100-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/04-column-stacked-range-waterfall-charts/stacked-column-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/04-column-stacked-range-waterfall-charts/waterfall-chart-with-custom-color.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/04-column-stacked-range-waterfall-charts/waterfall-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/05-pie-doughnut-funnel-pyramid-charts/doughnut-Chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/05-pie-doughnut-funnel-pyramid-charts/doughnut-chart-with-custom-inner-radius.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/05-pie-doughnut-funnel-pyramid-charts/funnel-chart-with-custom-neck.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/05-pie-doughnut-funnel-pyramid-charts/funnel-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/05-pie-doughnut-funnel-pyramid-charts/inverted-reversed-funnel-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/05-pie-doughnut-funnel-pyramid-charts/pie-chart-with-custom-radius.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/05-pie-doughnut-funnel-pyramid-charts/pie-chart-with-legends.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/05-pie-doughnut-funnel-pyramid-charts/pie-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/05-pie-doughnut-funnel-pyramid-charts/pyramid-chart-where-area-represents-value.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/05-pie-doughnut-funnel-pyramid-charts/pyramid-chart-with-index-label-placed-Inside.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/05-pie-doughnut-funnel-pyramid-charts/pyramid-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/06-candlestick-ohlc-charts/candlestick-line-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/06-candlestick-ohlc-charts/multi-series-candlestick-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/06-candlestick-ohlc-charts/ohlc-chart-from-json-data.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/06-candlestick-ohlc-charts/ohlc-stock-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/07-scatter-bubble-charts/bubble-chart-with-data-marker.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/07-scatter-bubble-charts/bubble-chart-with-zoom-pan.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/07-scatter-bubble-charts/bubble-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/07-scatter-bubble-charts/multi-series-scatter-point-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/07-scatter-bubble-charts/scatter-point-chart-with-custom-marker.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/07-scatter-bubble-charts/scatter-point-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/08-box-and-whisker-charts/box-and-whisker-chart-with-custom-color.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/08-box-and-whisker-charts/box-and-whisker-chart-with-outliers.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/08-box-and-whisker-charts/box-and-whisker-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/09-combination-charts/column-line-area-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/09-combination-charts/error-bar-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/09-combination-charts/error-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/09-combination-charts/error-line-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/09-combination-charts/ohlc-line-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/09-combination-charts/pareto-chart-with-index-data-label.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/09-combination-charts/pareto-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/09-combination-charts/range-area-line-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/10-dynamic-charts/dynamic-column-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/10-dynamic-charts/dynamic-line-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/10-dynamic-charts/dynamic-multi-series-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/11-integration/jquery-charts.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/11-integration/jquery-line-chart-with-zoom-pan.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/11-integration/jquery-resizable-chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/11-integration/jquery-spline-area-chart-in-tab.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/11-integration/jquery-spline-chart-with-image-export.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/instruction.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/jquery.canvasjs.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/license.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scripts/View/ShowDOM.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/View/ShowDOM.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/View/Tools/Diagram.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/Logic/Diagram.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,58 +228,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/index.html">
+        <entry file="file://$PROJECT_DIR$/src/scripts/Modules/AddAnomaly.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="180" selection-start-line="180" selection-end-line="180" />
+            <state relative-caret-position="15">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/scripts/View/ShowDOM.js">
+        <entry file="file://$PROJECT_DIR$/src/scripts/Modules/Environment.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="6" lean-forward="true" selection-start-line="28" selection-start-column="6" selection-end-line="29" />
-              <folding>
-                <element signature="e#0#45#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/scripts/Logic/Diagram.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="13" column="30" lean-forward="true" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sass/themes/theme.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/scripts/View/Tools/Show.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/scripts/Modules/AddOutpost.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="252">
+              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
               <folding>
                 <element signature="e#0#191#0" expanded="true" />
               </folding>
@@ -100,31 +249,52 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sass/layout/section.scss">
+        <entry file="file://$PROJECT_DIR$/config/tsconfig.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2190">
-              <caret line="146" selection-start-line="146" selection-end-line="146" />
+            <state relative-caret-position="315">
+              <caret line="21" column="18" lean-forward="true" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sass/themes/mobile.scss">
+        <entry file="file://$PROJECT_DIR$/src/scripts/Modules/AddOutpost.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3735">
-              <caret line="249" column="22" selection-start-line="249" selection-start-column="22" selection-end-line="249" selection-end-column="22" />
+            <state relative-caret-position="960">
+              <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="210">
-                <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-              </first_editor>
-              <second_editor />
+        <entry file="file://$PROJECT_DIR$/src/scripts/Logic/Tools.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="53" column="20" lean-forward="true" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/scripts/Modules/AddOutpost.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="526">
+              <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
+              <folding>
+                <element signature="e#0#191#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/scripts/View/ShowDOM.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="15" lean-forward="true" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+              <folding>
+                <element signature="e#0#45#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -132,8 +302,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scripts/Data/Data.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+            <state relative-caret-position="475">
+              <caret line="624" column="37" selection-start-line="624" selection-start-column="37" selection-end-line="624" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/scripts/Logic/Diagram.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="57" selection-start-line="57" selection-end-line="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/scripts/Modules/Generator.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1335">
+              <caret line="122" lean-forward="true" selection-start-line="122" selection-end-line="122" />
+              <folding>
+                <element signature="e#0#119#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -144,6 +335,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="tsconfig.json" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -160,6 +353,7 @@
       <find>c</find>
       <find>hasEcosferic</find>
       <find>public</find>
+      <find>ł</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -168,16 +362,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/dist/bundle.js.map" />
-        <option value="$PROJECT_DIR$/dist/bundle.js" />
-        <option value="$PROJECT_DIR$/scripts/Data.js" />
-        <option value="$PROJECT_DIR$/scripts/Index.js" />
-        <option value="$PROJECT_DIR$/scripts/UI/Show.js" />
-        <option value="$PROJECT_DIR$/scripts/Tools/AddAnomaly.js" />
-        <option value="$PROJECT_DIR$/sass/main.scss" />
-        <option value="$PROJECT_DIR$/dist/index.html" />
-        <option value="$PROJECT_DIR$/scripts/Tools/AddOutpost.js" />
-        <option value="$PROJECT_DIR$/scripts/Generator.js" />
         <option value="$PROJECT_DIR$/scripts/Tools/AddEnvironment.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
@@ -196,7 +380,6 @@
         <option value="$PROJECT_DIR$/sass/layout/animations.scss" />
         <option value="$PROJECT_DIR$/sass/components/button.scss" />
         <option value="$PROJECT_DIR$/config/webpack.config,prod.js" />
-        <option value="$PROJECT_DIR$/config/webpack.config.js" />
         <option value="$PROJECT_DIR$/src/scripts/View/Tools/Visible.js" />
         <option value="$PROJECT_DIR$/src/scripts/View/Tools/Clear.js" />
         <option value="$PROJECT_DIR$/src/scripts/View/Tools/Show.js" />
@@ -204,21 +387,32 @@
         <option value="$PROJECT_DIR$/src/scripts/Generator.js" />
         <option value="$PROJECT_DIR$/src/scripts/Data/Data.js" />
         <option value="$PROJECT_DIR$/src/scripts/Tools.js" />
-        <option value="$PROJECT_DIR$/src/scripts/Modules/Generator.js" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/README.txt" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/sass/layout/section.scss" />
         <option value="$PROJECT_DIR$/sass/layout/containter.scss" />
         <option value="$PROJECT_DIR$/sass/themes/mobile.scss" />
-        <option value="$PROJECT_DIR$/src/scripts/Index.js" />
         <option value="$PROJECT_DIR$/src/scripts/Logic/DataForDiagram.js" />
-        <option value="$PROJECT_DIR$/src/scripts/View/ShowDOM.js" />
         <option value="$PROJECT_DIR$/src/scripts/View/Tools/Diagram.js" />
         <option value="$PROJECT_DIR$/sass/themes/theme.scss" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/scripts/Vendors/apexcharts-bundle/dist/apexcharts.css" />
         <option value="$PROJECT_DIR$/src/index.html" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/scripts/Index.js" />
         <option value="$PROJECT_DIR$/src/scripts/Logic/Diagram.js" />
+        <option value="$PROJECT_DIR$/src/scripts/Logic/Tools2.js.ts" />
+        <option value="$PROJECT_DIR$/src/scripts/Logic/Tools2.js" />
+        <option value="$PROJECT_DIR$/src/scripts/Logic/Tools2.ts" />
+        <option value="$PROJECT_DIR$/src/scripts/Modules/Environment.js" />
+        <option value="$PROJECT_DIR$/src/scripts/index.ts" />
+        <option value="$PROJECT_DIR$/config/webpack.config.js" />
+        <option value="$PROJECT_DIR$/src/scripts/Modules/Outpost.js" />
         <option value="$PROJECT_DIR$/src/scripts/Modules/AddOutpost.js" />
+        <option value="$PROJECT_DIR$/src/scripts/Modules/Generator.js" />
+        <option value="$PROJECT_DIR$/src/scripts/Logic/Tools.ts" />
+        <option value="$PROJECT_DIR$/config/tsconfig.json" />
+        <option value="$PROJECT_DIR$/src/scripts/Modules/AddOutpost.ts" />
+        <option value="$PROJECT_DIR$/src/scripts/View/ShowDOM.js" />
       </list>
     </option>
   </component>
@@ -228,9 +422,8 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-7" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
@@ -239,7 +432,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -250,19 +442,23 @@
             <path>
               <item name="PlanetGenerator" type="b2602c69:ProjectViewProjectNode" />
               <item name="PlanetGenerator" type="462c0819:PsiDirectoryNode" />
-              <item name="sass" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PlanetGenerator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PlanetGenerator" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PlanetGenerator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PlanetGenerator" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PlanetGenerator" type="b2602c69:ProjectViewProjectNode" />
               <item name="PlanetGenerator" type="462c0819:PsiDirectoryNode" />
               <item name="sass" type="462c0819:PsiDirectoryNode" />
-              <item name="layout" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PlanetGenerator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PlanetGenerator" type="462c0819:PsiDirectoryNode" />
-              <item name="sass" type="462c0819:PsiDirectoryNode" />
-              <item name="themes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PlanetGenerator" type="b2602c69:ProjectViewProjectNode" />
@@ -280,7 +476,7 @@
               <item name="PlanetGenerator" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="scripts" type="462c0819:PsiDirectoryNode" />
-              <item name="Logic" type="462c0819:PsiDirectoryNode" />
+              <item name="Data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PlanetGenerator" type="b2602c69:ProjectViewProjectNode" />
@@ -294,7 +490,15 @@
               <item name="PlanetGenerator" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="scripts" type="462c0819:PsiDirectoryNode" />
-              <item name="View" type="462c0819:PsiDirectoryNode" />
+              <item name="Modules" type="462c0819:PsiDirectoryNode" />
+              <item name="AddOutpost.ts" type="620a8d5e:NestingTreeNode" />
+            </path>
+            <path>
+              <item name="PlanetGenerator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PlanetGenerator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+              <item name="Vendors" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PlanetGenerator" type="b2602c69:ProjectViewProjectNode" />
@@ -302,18 +506,18 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="scripts" type="462c0819:PsiDirectoryNode" />
               <item name="View" type="462c0819:PsiDirectoryNode" />
-              <item name="Tools" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../React-Portfolio-Template-master (2)/React-Portfolio-Template-master" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -326,7 +530,8 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\Karol Cetlin\AppData\Roaming\npm\node_modules\prettier" />
-    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
+    <property name="settings.editor.selected.configurable" value="settings.typescriptcompiler" />
+    <property name="ts.external.directory.path" value="G:\Programowanie\GwiezdnyPyl\PlanetGenerator\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -335,6 +540,9 @@
       <recent name="G:\Programowanie\GwiezdnyPyl\PlanetGenerator2\src\scripts\Modules" />
       <recent name="G:\Programowanie\GwiezdnyPyl\PlanetGenerator2\src\scripts\Logic" />
       <recent name="G:\Programowanie\GwiezdnyPyl\PlanetGenerator2\src\scripts\Data" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\Programowanie\GwiezdnyPyl\PlanetGenerator\src\scripts\Vendors" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -387,12 +595,25 @@
       <workItem from="1576237968516" duration="12136000" />
       <workItem from="1576418525291" duration="3368000" />
       <workItem from="1576490669388" duration="11475000" />
-      <workItem from="1576624340686" duration="2299000" />
+      <workItem from="1576624340686" duration="2898000" />
+      <workItem from="1576680096904" duration="5381000" />
+      <workItem from="1576771514294" duration="5159000" />
+      <workItem from="1576938660753" duration="1873000" />
+      <workItem from="1580315996021" duration="29000" />
+      <workItem from="1580316039274" duration="1209000" />
+      <workItem from="1580385363393" duration="4655000" />
+      <workItem from="1580492741841" duration="1240000" />
+      <workItem from="1580921498058" duration="599000" />
+      <workItem from="1581004451806" duration="599000" />
+      <workItem from="1581032543811" duration="1282000" />
+      <workItem from="1581164608326" duration="9814000" />
+      <workItem from="1581248875432" duration="7510000" />
+      <workItem from="1581334912141" duration="9656000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="239746000" />
+    <option name="totallyTimeSpent" value="289351000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -409,54 +630,62 @@
     <layout>
       <window_info id="Structure" order="0" sideWeight="0.5020298" side_tool="true" weight="0.10826667" />
       <window_info id="Favorites" order="1" sideWeight="0.50217706" side_tool="true" weight="0.10826667" />
-      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.49797022" visible="true" weight="0.113066666" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.49797022" visible="true" weight="0.28487754" />
       <window_info id="npm" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32998884" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32998884" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4989339" weight="0.25353646" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.4992" visible="true" weight="0.27647716" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5008" side_tool="true" weight="0.19397993" />
+      <window_info anchor="bottom" id="TypeScript" order="0" weight="0.17333333" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32998884" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.32998884" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" sideWeight="0.4989339" weight="0.25333333" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4992" visible="true" weight="0.27" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5008" side_tool="true" weight="0.19397993" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" weight="0.3296" />
-      <window_info anchor="right" id="Mongo Explorer" order="4" weight="0.33333334" />
-      <window_info anchor="right" id="Key Promoter X" order="5" weight="0.328" />
+      <window_info anchor="right" id="Key Promoter X" order="4" weight="0.32782516" />
+      <window_info anchor="right" id="Mongo Explorer" order="5" weight="0.33333334" />
     </layout>
     <layout-to-restore>
       <window_info id="Structure" order="0" sideWeight="0.5020298" side_tool="true" weight="0.10826667" />
       <window_info id="Favorites" order="1" sideWeight="0.50217706" side_tool="true" weight="0.10826667" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.49797022" visible="true" weight="0.15893333" />
+      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.49797022" visible="true" weight="0.28487754" />
       <window_info id="npm" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32998884" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32998884" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4989339" weight="0.25353646" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4992" weight="0.27647716" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5008" side_tool="true" weight="0.19397993" />
+      <window_info active="true" anchor="bottom" id="TypeScript" order="0" visible="true" weight="0.17333333" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32998884" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.32998884" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" sideWeight="0.4989339" weight="0.25353646" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4992" weight="0.27" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5008" side_tool="true" weight="0.19397993" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" weight="0.3296" />
-      <window_info anchor="right" id="Mongo Explorer" order="4" weight="0.33333334" />
-      <window_info anchor="right" id="Key Promoter X" order="5" weight="0.328" />
+      <window_info anchor="right" id="Key Promoter X" order="4" weight="0.32782516" />
+      <window_info anchor="right" id="Mongo Explorer" order="5" weight="0.33333334" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/src/scripts/Logic/Tools2.js" />
+        <option value="$PROJECT_DIR$/src/scripts/Logic/Tools.js" />
+      </list>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -468,30 +697,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.postcssrc.json" />
-    <entry file="file://$PROJECT_DIR$/postcss.config.js" />
-    <entry file="file://$PROJECT_DIR$/dist/bundle.js.map" />
-    <entry file="file://$PROJECT_DIR$/dist/bundle.js" />
-    <entry file="file://$PROJECT_DIR$/sass/main.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/index.html" />
-    <entry file="file://$PROJECT_DIR$/app.js" />
-    <entry file="file://$USER_HOME$/Downloads/example5/config/webpack.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="2" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../PlanetGenerator3/scripts/Tools/AddOutpost.js" />
-    <entry file="file://$PROJECT_DIR$/../PlanetGenerator3/scripts/Data.js" />
-    <entry file="file://$PROJECT_DIR$/javascript/Life.js" />
-    <entry file="file://$PROJECT_DIR$/javascript/Calc.js" />
     <entry file="file://$PROJECT_DIR$/javascript/Basic.js" />
     <entry file="file://$PROJECT_DIR$/javascript/Index.js" />
     <entry file="file://$PROJECT_DIR$/src/scripts/Vendors/Gots/samples/stateChart.html" />
@@ -523,16 +728,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scripts/Modules/AddEnvironment.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#0#185#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Downloads/canvasjs-2.3.2/canvasjs.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3510">
@@ -542,20 +737,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/05-pie-doughnut-funnel-pyramid-charts/pie-chart.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/webpack.config,prod.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/Vendors/canvasjs-2.3.2/examples/05-pie-doughnut-funnel-pyramid-charts/pie-chart.html" />
     <entry file="file://$PROJECT_DIR$/build/index.html" />
     <entry file="file://$PROJECT_DIR$/build/5abb2fa79d6e24f6b7669f4e04079a9f.jpg" />
     <entry file="file://$PROJECT_DIR$/build/2209092d8e1f96476a741d04013cac80.jpg" />
@@ -590,62 +772,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scripts/Logic/Tools.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scripts/Modules/AddAnomaly.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.txt" />
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="52" selection-start-line="3" selection-start-column="52" selection-end-line="3" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/webpack.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="60" column="32" selection-start-line="60" selection-start-column="32" selection-end-line="60" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../Krebs/index.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scripts/Modules/Generator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1695">
-          <caret line="143" selection-start-line="143" selection-end-line="143" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scripts/Index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Krebs/src/index.js" />
     <entry file="file://$PROJECT_DIR$/sass/layout/containter.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/Vendors/apexcharts-bundle/package.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/Vendors/apexcharts-bundle/.eslintrc.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sass/themes/theme.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/View/Tools/Show.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -663,6 +818,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/Vendors/Chart/Chart.bundle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/Vendors/Chart/Chart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="3" selection-start-column="3" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/Vendors/Chart/samples/charts/bar/stacked.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -673,57 +854,144 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scripts/Data/Data.js">
+    <entry file="file://$PROJECT_DIR$/src/scripts/Vendors/apexcharts-bundle/dist/apexcharts.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sass/themes/theme.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+        <state>
+          <caret column="20" selection-start-column="20" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="180" selection-start-line="180" selection-end-line="180" />
+        <state relative-caret-position="427">
+          <caret line="146" lean-forward="true" selection-start-line="146" selection-end-line="146" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scripts/View/ShowDOM.js">
+    <entry file="file://$PROJECT_DIR$/config/webpack.config,prod.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="6" lean-forward="true" selection-start-line="28" selection-start-column="6" selection-end-line="29" />
+        <state relative-caret-position="165">
+          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/Logic/Tools2.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/Logic/Tools3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="40" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/Index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="35" column="36" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
           <folding>
-            <element signature="e#0#45#0" expanded="true" />
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-540">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="17" lean-forward="true" selection-start-column="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/Logic/Tools.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-363" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/Modules/AddAnomaly.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/Modules/Environment.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+          <folding>
+            <element signature="e#0#191#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/Modules/Generator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1335">
+          <caret line="122" lean-forward="true" selection-start-line="122" selection-end-line="122" />
+          <folding>
+            <element signature="e#0#119#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scripts/Logic/Diagram.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="13" column="30" lean-forward="true" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+        <state relative-caret-position="225">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scripts/View/Tools/Show.js">
+    <entry file="file://$PROJECT_DIR$/src/scripts/Data/Data.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+        <state relative-caret-position="475">
+          <caret line="624" column="37" selection-start-line="624" selection-start-column="37" selection-end-line="624" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/Logic/Tools.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="53" column="20" lean-forward="true" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/tsconfig.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="18" lean-forward="true" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scripts/Modules/AddOutpost.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="960">
+          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/Modules/AddOutpost.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="526">
+          <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
           <folding>
             <element signature="e#0#191#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/View/ShowDOM.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="15" lean-forward="true" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
           </folding>
         </state>
       </provider>

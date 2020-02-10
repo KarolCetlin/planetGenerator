@@ -1,6 +1,6 @@
 # Planets generator for fabular RPG game called Star Dast. 
 
-
+// I'm still working on the project //
 
 
 ## Technology what I`m using 
