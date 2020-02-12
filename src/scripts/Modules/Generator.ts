@@ -1,77 +1,150 @@
-"use strict";
-var _this = this;
-exports.__esModule = true;
-var Tools_1 = require("../Logic/Tools");
-var Data_js_1 = require("../Data/Data.js");
-var AddOutpost_js_1 = require("./AddOutpost.js");
-var Environment_js_1 = require("./Environment.js");
-var generatePlanetName = function () {
-    // return getName(setPlanetNames)
+import {getName, getNameFromArray, getNameFromObject, randomNumberFromArrayInRange, checkChance} from "../Logic/Tools";
+import {planetSizesSet, setPlanetNames, starNamesSet, setLifeCycleStars, setSpectralTypes, ecosfericPossibility, outpostPossibility, mineralsPossibility, anomalyPossibility, } from "../Data/Data";
+import AddOutpost from "./AddOutpost.js";
+import Environment from "./Environment.js";
+
+interface Planet {
+    planetName: string;
+    indexSize: string;
+    sizeName: string;
+    planetRadius: number;
+    starName: string;
+    sizeDesctiption: string;
+    starTypeIndex: number;
+    starType: string;
+    starTypeDescription: string;
+    indexSpectralType: number;
+    nameSpectralType: string;
+    descriptionSpectralType: string;
+    hasOutpost: boolean;
+    hasEcosferic: boolean;
+    hasMinerals: boolean;
+    hasAnomaly: boolean;
+    outpost: any;
+    environment: string | null;
+}
+
+const generatePlanetName = (): any => {
+    return getName(setPlanetNames)
 };
-var generateIndexSize = function () {
-    return Tools_1.getNameFromArray(Data_js_1.planetSizesSet);
+
+const generateIndexSize = (): string => {
+    return getNameFromArray(planetSizesSet);
 };
-var generateSizeName = function () {
-    return Tools_1.getNameFromObject(Data_js_1.planetSizesSet, _this.indexSize, "planetSizeName");
+
+const generateSizeName = (): string => {
+    return getNameFromObject(
+        planetSizesSet,
+        this.indexSize,
+        "planetSizeName");
 };
-var generatePlanetRadius = function () {
-    return Tools_1.randomNumberFromArrayInRange(Data_js_1.planetSizesSet, _this.indexSize, "minSizeRadius", "maxSizeRadius");
+
+const generatePlanetRadius = (): number => {
+    return randomNumberFromArrayInRange(
+        planetSizesSet,
+        this.indexSize,
+        "minSizeRadius",
+        "maxSizeRadius"
+    );
 };
-var generateStarName = function () {
-    // return getName(starNamesSet);
+
+const generateStarName = (): any => {
+    return getName(starNamesSet);
 };
-var generateSizeDesctiption = function () {
-    return Tools_1.getNameFromObject(Data_js_1.planetSizesSet, _this.indexSize, "description");
+
+const generateSizeDesctiption = (): string => {
+    return getNameFromObject(
+        planetSizesSet,
+        this.indexSize,
+        "description"
+    );
+
 };
-var generateStarTypeIndex = function () {
-    return Tools_1.getNameFromArray(Data_js_1.setLifeCycleStars);
+
+const generateStarTypeIndex = (): number => {
+    return getNameFromArray(setLifeCycleStars);
 };
-var generateStarType = function () {
-    return Tools_1.getNameFromObject(Data_js_1.setLifeCycleStars, _this.starTypeIndex, "name");
+
+const generateStarType = (): string => {
+    return getNameFromObject(
+        setLifeCycleStars,
+        this.starTypeIndex,
+        "name"
+    );
 };
-var generateStarTypeDescription = function () {
-    return Tools_1.getNameFromObject(Data_js_1.setLifeCycleStars, _this.starTypeIndex, "description");
+
+const generateStarTypeDescription = (): string => {
+    return getNameFromObject(
+        setLifeCycleStars,
+        this.starTypeIndex,
+        "description"
+    );
 };
-var generateIndexSpectralType = function () {
-    return Tools_1.randomNumberFromArrayInRange(Data_js_1.setLifeCycleStars, _this.starTypeIndex, "minSpectralType", "maxSpectralType");
+
+const generateIndexSpectralType = (): number => {
+    return randomNumberFromArrayInRange(
+            setLifeCycleStars,
+            this.starTypeIndex,
+            "minSpectralType",
+            "maxSpectralType"
+        );
 };
-var generateNameSpectralType = function () {
-    return Tools_1.getNameFromObject(Data_js_1.setSpectralTypes, _this.indexSpectralType, "name");
+
+const generateNameSpectralType = (): string => {
+    return getNameFromObject(
+            setSpectralTypes,
+            this.indexSpectralType,
+            "name"
+        );
 };
-var generateDescriptionSpectralType = function () {
-    return Tools_1.getNameFromObject(Data_js_1.setSpectralTypes, _this.indexSpectralType, "description");
+
+const generateDescriptionSpectralType = (): string => {
+    return getNameFromObject(
+            setSpectralTypes,
+            this.indexSpectralType,
+            "description"
+        );
 };
-var generateHasOutpost = function () {
-    return Tools_1.checkChance(Data_js_1.ecosfericPossibility);
+
+const generateHasOutpost = (): boolean => {
+    return checkChance(ecosfericPossibility);
 };
-var generateHasEcosferic = function () {
-    return Tools_1.checkChance(Data_js_1.outpostPossibility);
+
+const generateHasEcosferic = (): boolean => {
+    return checkChance(outpostPossibility);
 };
-var generateHasMinerals = function () {
-    return Tools_1.checkChance(Data_js_1.mineralsPossibility);
+
+const generateHasMinerals = (): boolean => {
+    return checkChance(mineralsPossibility);
 };
-var generateHasAnomaly = function () {
-    return Tools_1.checkChance(Data_js_1.anomalyPossibility);
+
+const generateHasAnomaly = (): boolean => {
+    return checkChance(anomalyPossibility);
 };
-var generateOutpost = function (hasOutpost) {
+
+const generateOutpost = (hasOutpost): any => {
     if (hasOutpost === true) {
-        return _this.outpost = new AddOutpost_js_1["default"]();
-    }
-    else {
-        console.log('Niestety nie ma żadnego posterunku na tej planecie');
-    }
+
+        return this.outpost = new AddOutpost();
+
+        } else {
+            console.log('Niestety nie ma żadnego posterunku na tej planecie');
+        }
 };
-var generateEnvirnonment = function (hasEcosferic) {
+
+const generateEnvirnonment = (hasEcosferic): string => {
     if (hasEcosferic) {
-        _this.envirnonment = new Environment_js_1["default"]();
-    }
-    else {
+        this.envirnonment = new Environment();
+    } else {
         console.log('planeta poza ekosferą, istenienie środowiska jest niemożliwe');
         return null;
     }
+
 };
-exports.generatePlanet = function () {
-    var hasEcosferic = generateHasEcosferic();
+
+export const generatePlanet = (): Planet => {
+    const hasEcosferic = generateHasEcosferic();
+
     return {
         planetName: generatePlanetName(),
         indexSize: generateIndexSize(),
@@ -86,13 +159,15 @@ exports.generatePlanet = function () {
         nameSpectralType: generateNameSpectralType(),
         descriptionSpectralType: generateDescriptionSpectralType(),
         hasOutpost: generateHasOutpost(),
-        hasEcosferic: hasEcosferic,
+        hasEcosferic,
         hasMinerals: generateHasMinerals(),
         hasAnomaly: generateHasAnomaly(),
         outpost: generateOutpost(hasEcosferic),
-        environment: generateEnvirnonment(hasEcosferic)
+        environment: generateEnvirnonment(hasEcosferic),
     };
 };
+
+
 // class Generator {
 //     constructor(planetData = {}) {
 //         this.planetName = planetData.planetName;
@@ -220,3 +295,4 @@ exports.generatePlanet = function () {
 //     }
 //
 // }
+

@@ -6,9 +6,21 @@ function getRandomNumber(maxNumber: number): number {
 }
 
 
-function getName(array: Array<number>, index: number = getRandomNumber(array.length)){
+function getName(array: [], index: number = 0){
 
-    return array[index]
+    let defaultNumber = 0;
+
+    if(defaultNumber === 0) {
+
+        defaultNumber = getRandomNumber(array.length)
+        return array[defaultNumber]
+
+    } else {
+        return array[index]
+
+    }
+
+
 
 }
 
