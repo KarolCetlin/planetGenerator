@@ -1,25 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="ccdff719-8c76-497a-a2b1-78eee58650da" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/scripts/Modules/Generator.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scripts/Modules/generators/planetName.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/webpack.config,prod.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/webpack.config.prod.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/Index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/Index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/Logic/Tools.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/Logic/Tools.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/Modules/Generator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/Modules/Generator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/index.ts" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ComposerSettings">
-    <execution>
-      <executable />
-    </execution>
+    <execution />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -47,23 +57,6 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>this</find>
-      <find>generat</find>
-      <find>img</find>
-      <find>checkbox</find>
-      <find>$checkbox</find>
-      <find>show</find>
-      <find>section3</find>
-      <find>width</find>
-      <find>c</find>
-      <find>hasEcosferic</find>
-      <find>public</find>
-      <find>ł</find>
-      <find>setPlanetNames</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -74,10 +67,14 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectId" id="1XidQ0RFaotlDVuCSdE4O2hjEuO" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../React-Portfolio-Template-master (2)/React-Portfolio-Template-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -94,7 +91,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\Karol Cetlin\AppData\Roaming\npm\node_modules\prettier" />
     <property name="settings.editor.selected.configurable" value="settings.typescriptcompiler" />
-    <property name="ts.external.directory.path" value="G:\Programowanie\GwiezdnyPyl\PlanetGenerator\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -107,18 +104,6 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="G:\Programowanie\GwiezdnyPyl\PlanetGenerator\src\scripts\Vendors" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -178,6 +163,8 @@
       <workItem from="1581532965932" duration="51000" />
       <workItem from="1581533165422" duration="45000" />
       <workItem from="1581533255109" duration="3407000" />
+      <workItem from="1581537302190" duration="99000" />
+      <workItem from="1581538623824" duration="672000" />
     </task>
     <servers />
   </component>
@@ -191,21 +178,14 @@
     </todo-panel>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-    <option name="exactExcludedFiles">
-      <list>
-        <option value="$PROJECT_DIR$/src/scripts/Logic/Tools.js" />
-      </list>
-    </option>
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
