@@ -1,3 +1,4 @@
+
 const availablePlanetNames = ['Helara',
   'Kitrarth',
   'Zeceitera',
@@ -9,9 +10,11 @@ const availablePlanetNames = ['Helara',
   '2M1207b',
 ];
 
-export const generatePlanetName = (): string => {
+const generatePlanetName = (): string => {
   const availablePlanetsCount = availablePlanetNames.length;
   const randomIndex = Math.floor(Math.random() * availablePlanetsCount - 1);
 
   return availablePlanetNames[ randomIndex ];
 };
+
+export default generatePlanetName;

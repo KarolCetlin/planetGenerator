@@ -18,12 +18,12 @@ class ShowDOM {
   }
 
   showPlanetCard() {
-    new Show("planetName", "planetName");
-    new Show("planetSizeName", "sizeName", "Rodzaj wielkości:");
-    new Show("planetSizeDescription", "sizeDesctiption", "Wytłumaczenie:");
+    new Show("planetName", "name");
+    new Show("planetSizeName", "size", "Rodzaj wielkości:");
+    new Show("planetSizeDescription", "description", "Wytłumaczenie:");
     new Show(
       "planetRadius",
-      "planetRadius",
+      "radius",
       "Rozmiar względem ziemii (promień):"
     );
 

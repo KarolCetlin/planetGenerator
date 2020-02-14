@@ -1,5 +1,5 @@
 import "../../sass/main.scss";
-import { generatePlanet } from "./Modules/Generator.js";
+import {generatePlanet, generateStar} from "./Modules/Generator";
 import ShowDOM from "./View/ShowDOM";
 import '../../public/images/planets/planets2.jpg';
 import '../../public/images/population/colony.jpg';
@@ -8,8 +8,9 @@ import '../../public/images/world/savanna.jpg';
 import '../../public/images/background/wallpaper.jpg';
 
 
-export let currentPlanetNumber: number = 0;
+export let currentSolarSystemNumber: number = 0;
 export let planetsCollection: Array<object> = [];
+export let starsCollection: Array<object> = [];
 
 enum Method {
 
@@ -49,15 +50,20 @@ class Init {
     initGenerator() {
 
         let newPlanet: any = generatePlanet();
+        let newStar: any = generateStar();
         planetsCollection.push(newPlanet);
+        starsCollection.push(newStar);
+
         console.log(planetsCollection);
+        console.log(starsCollection);
+
     }
 
     click($element, chosenMethod) {
         let clickedElement = document.getElementById($element);
         clickedElement.onclick = () => {
             this.checkMethod(chosenMethod);
-            currentPlanetNumber++;
+            currentSolarSystemNumber++;
         };
     }
 }

@@ -2,20 +2,18 @@ import {getName, getNameFromArray, getNameFromObject, randomNumberFromArrayInRan
 import {planetSizesSet, setPlanetNames, starNamesSet, setLifeCycleStars, setSpectralTypes, ecosfericPossibility, outpostPossibility, mineralsPossibility, anomalyPossibility, } from "../Data/Data";
 import AddOutpost from "./AddOutpost.js";
 import Environment from "./Environment.js";
+import planetNameGenerator  from './generators/planetNameGenerator'
+import starNameGenerator from './generators/planetNameGenerator'
+import { planetSizeDescriptionGenerator, numberTypeGenerator, planetSizeNameGenerator, planetTypeSizeGenerator, planetRadiusGenerator } from './generators/planetTypeGenerator'
+import { starTypeName, starDescription, starSpectralType } from './generators/starTypeGenerator';
+
 
 interface Planet {
-    planetName: string;
-    indexSize: string;
-    sizeName: string;
-    planetRadius: number;
-    starName: string;
-    sizeDesctiption: string;
-    starTypeIndex: number;
-    starType: string;
-    starTypeDescription: string;
-    indexSpectralType: number;
-    nameSpectralType: string;
-    descriptionSpectralType: string;
+    name: string;
+    size: string;
+    description: string;
+    radius: number;
+
     hasOutpost: boolean;
     hasEcosferic: boolean;
     hasMinerals: boolean;
@@ -24,40 +22,37 @@ interface Planet {
     environment: string | null;
 }
 
-const generatePlanetName = (): any => {
-    return getName(setPlanetNames)
+interface Star {
+    name: string;
+    starTypeIndex: number;
+    starType: string;
+    starTypeDescription: string;
+    indexSpectralType: number;
+    nameSpectralType: string;
+    descriptionSpectralType: string;
+
+}
+
+
+const generatePlanetName = (): string => {
+    return planetNameGenerator();
 };
 
-const generateIndexSize = (): string => {
-    return getNameFromArray(planetSizesSet);
-};
-
-const generateSizeName = (): string => {
-    return getNameFromObject(
-        planetSizesSet,
-        this.indexSize,
-        "planetSizeName");
+const generatePlanetSizeName = (): string => {
+    return planetSizeNameGenerator()
 };
 
 const generatePlanetRadius = (): number => {
-    return randomNumberFromArrayInRange(
-        planetSizesSet,
-        this.indexSize,
-        "minSizeRadius",
-        "maxSizeRadius"
-    );
+    return planetRadiusGenerator()
 };
 
-const generateStarName = (): any => {
-    return getName(starNamesSet);
+const generateStarName = (): string => {
+    return starNameGenerator();
 };
 
-const generateSizeDesctiption = (): string => {
-    return getNameFromObject(
-        planetSizesSet,
-        this.indexSize,
-        "description"
-    );
+const generatePlanetSizeDescription = (): string => {
+
+    return planetSizeDescriptionGenerator()
 
 };
 
@@ -66,28 +61,15 @@ const generateStarTypeIndex = (): number => {
 };
 
 const generateStarType = (): string => {
-    return getNameFromObject(
-        setLifeCycleStars,
-        this.starTypeIndex,
-        "name"
-    );
+    return starTypeName();
 };
 
 const generateStarTypeDescription = (): string => {
-    return getNameFromObject(
-        setLifeCycleStars,
-        this.starTypeIndex,
-        "description"
-    );
+    return starDescription()
 };
 
 const generateIndexSpectralType = (): number => {
-    return randomNumberFromArrayInRange(
-            setLifeCycleStars,
-            this.starTypeIndex,
-            "minSpectralType",
-            "maxSpectralType"
-        );
+    return starSpectralType ()
 };
 
 const generateNameSpectralType = (): string => {
@@ -132,9 +114,9 @@ const generateOutpost = (hasOutpost): any => {
         }
 };
 
-const generateEnvirnonment = (hasEcosferic): string => {
-    if (hasEcosferic) {
-        this.envirnonment = new Environment();
+const generateEnvirnonment = (): string => {
+    if (this.hasEcosferic == true) {
+        this.environment = new Environment();
     } else {
         console.log('planeta poza ekosferą, istenienie środowiska jest niemożliwe');
         return null;
@@ -144,28 +126,42 @@ const generateEnvirnonment = (hasEcosferic): string => {
 
 export const generatePlanet = (): Planet => {
     const hasEcosferic = generateHasEcosferic();
+    const hasOutpost = generateHasOutpost();
 
     return {
-        planetName: generatePlanetName(),
-        indexSize: generateIndexSize(),
-        sizeName: generateSizeName(),
-        planetRadius: generatePlanetRadius(),
-        starName: generateStarName(),
-        sizeDesctiption: generateSizeDesctiption(),
+        name: generatePlanetName(),
+        size: generatePlanetSizeName(),
+        radius: generatePlanetRadius(),
+        description: generatePlanetSizeDescription(),
+
+        hasOutpost: generateHasOutpost(),
+        hasEcosferic: generateHasEcosferic(),
+        hasMinerals: generateHasMinerals(),
+        hasAnomaly: generateHasAnomaly(),
+        outpost: generateOutpost(hasEcosferic),
+        environment: generateEnvirnonment(),
+
+    };
+
+};
+
+export const generateStar = (): Star => {
+
+    return {
+
+        name: generateStarName(),
         starTypeIndex: generateStarTypeIndex(),
         starType: generateStarType(),
         starTypeDescription: generateStarTypeDescription(),
         indexSpectralType: generateIndexSpectralType(),
         nameSpectralType: generateNameSpectralType(),
         descriptionSpectralType: generateDescriptionSpectralType(),
-        hasOutpost: generateHasOutpost(),
-        hasEcosferic,
-        hasMinerals: generateHasMinerals(),
-        hasAnomaly: generateHasAnomaly(),
-        outpost: generateOutpost(hasEcosferic),
-        environment: generateEnvirnonment(hasEcosferic),
-    };
-};
+
+
+    }
+
+}
+
 
 
 // class Generator {
