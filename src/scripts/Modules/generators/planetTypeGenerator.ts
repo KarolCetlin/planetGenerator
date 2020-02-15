@@ -1,4 +1,4 @@
-interface PlanetSize {
+interface AvailablePlanetSizeParameters {
     planetSizeName:string,
     description:string,
     minSizeRadius:number,
@@ -6,7 +6,13 @@ interface PlanetSize {
     typeSize:string
 }
 
-const availablePlanetSizes: PlanetSize[] = [
+interface PlanetSize {
+    name:string,
+    description:string,
+    radius:number,
+}
+
+const availablePlanetSizes: AvailablePlanetSizeParameters[] = [
 
     {
         planetSizeName: 'Asteroida',
@@ -74,6 +80,14 @@ const availablePlanetSizes: PlanetSize[] = [
 ];
 
 let currentTypeNumber : number = 0;
+
+export const generatePlanetSize = (): PlanetSize => {
+    return {
+        description:'',
+        name:'',
+        radius:0
+    }
+}
 
 export const numberTypeGenerator = (): void => {
 

@@ -21,8 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ccdff719-8c76-497a-a2b1-78eee58650da" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/Modules/Generator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/Modules/Generator.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/Modules/generators/planetNameGenerator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/Modules/generators/planetNameGenerator.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/Modules/generators/planetTypeGenerator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/Modules/generators/planetTypeGenerator.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
