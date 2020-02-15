@@ -6,7 +6,7 @@ interface AvailablePlanetSizeParameters {
     typeSize:string
 }
 
-interface PlanetSize {
+export interface PlanetSize {
     name:string,
     description:string,
     radius:number,

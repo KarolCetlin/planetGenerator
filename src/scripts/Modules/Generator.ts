@@ -13,15 +13,15 @@ import {
   planetRadiusGenerator,
   planetSizeDescriptionGenerator,
   planetSizeNameGenerator,
+  PlanetSize,
+  generatePlanetSize,
 } from './generators/planetTypeGenerator';
 import { starDescription, starSpectralType, starTypeName } from './generators/starTypeGenerator';
 import { generateOutpost } from './AddOutpost';
 
 interface Planet {
   name: string;
-  size: string;
-  description: string;
-  radius: number;
+  size: PlanetSize;
   hasOutpost: boolean;
   hasEcosferic: boolean;
   hasMinerals: boolean;
@@ -133,9 +133,7 @@ export const generatePlanet = (): Planet => {
 
   return {
     name: generatePlanetName(),
-    size: generatePlanetSizeName(),
-    radius: generatePlanetRadius(),
-    description: generatePlanetSizeDescription(),
+    size: generatePlanetSize(),
     hasOutpost: generateHasOutpost(),
     hasEcosferic: generateHasEcosferic(),
     hasMinerals: generateHasMinerals(),
