@@ -16,12 +16,14 @@ import {
   PlanetSize,
   generatePlanetSize,
 } from './generators/planetTypeGenerator';
-import { starDescription, starSpectralType, starTypeName } from './generators/starTypeGenerator';
-import { generateOutpost } from './AddOutpost';
+// import { generateOutpost } from './AddOutpost';
+import {generateStar, Star} from './generators/starNameGenerator'
+
 
 interface Planet {
   name: string;
   size: PlanetSize;
+  star: Star;
   hasOutpost: boolean;
   hasEcosferic: boolean;
   hasMinerals: boolean;
@@ -30,14 +32,7 @@ interface Planet {
   environment: string | null;
 }
 
-interface Star {
-  name: string;
-  starType: string;
-  starTypeDescription: string;
-  indexSpectralType: number;
-  nameSpectralType: string;
-  descriptionSpectralType: string;
-}
+
 
 const generatePlanetName = (): string => {
   return planetNameGenerator();
@@ -59,34 +54,6 @@ const generatePlanetSizeDescription = (): string => {
   return planetSizeDescriptionGenerator();
 };
 
-const generateStarType = (): string => {
-  return starTypeName();
-};
-
-const generateStarTypeDescription = (): string => {
-  return starDescription();
-};
-
-const generateIndexSpectralType = (): number => {
-  return starSpectralType();
-};
-
-const generateNameSpectralType = (): string => {
-  return getNameFromObject(
-    setSpectralTypes,
-    this.indexSpectralType,
-    'name',
-  );
-};
-
-const generateDescriptionSpectralType = (): string => {
-  return getNameFromObject(
-    setSpectralTypes,
-    this.indexSpectralType,
-    'description',
-  );
-};
-
 const generateHasOutpost = (): boolean => {
   return checkChance(outpostPossibility);
 };
@@ -105,7 +72,7 @@ const generateHasAnomaly = (): boolean => {
 
 const generatePlanetOutpost = (hasOutpost): any => {
 
-  return generateOutpost();
+  return null;
 
   // if (hasOutpost === true) {
   //
@@ -134,6 +101,7 @@ export const generatePlanet = (): Planet => {
   return {
     name: generatePlanetName(),
     size: generatePlanetSize(),
+    star: generateStar(),
     hasOutpost: generateHasOutpost(),
     hasEcosferic: generateHasEcosferic(),
     hasMinerals: generateHasMinerals(),
@@ -143,13 +111,3 @@ export const generatePlanet = (): Planet => {
   };
 };
 
-export const generateStar = (): Star => {
-  return {
-    name: generateStarName(),
-    starType: generateStarType(),
-    starTypeDescription: generateStarTypeDescription(),
-    indexSpectralType: generateIndexSpectralType(),
-    nameSpectralType: generateNameSpectralType(),
-    descriptionSpectralType: generateDescriptionSpectralType(),
-  };
-};

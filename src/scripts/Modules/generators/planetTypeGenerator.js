@@ -60,6 +60,21 @@ var availablePlanetSizes = [
     },
 ];
 var currentTypeNumber = 0;
+var generatePlanetSizeRadius = function (planetSizeParameters) {
+    var minValue = planetSizeParameters.minSizeRadius;
+    var maxValue = planetSizeParameters.maxSizeRadius;
+    return Math.floor(Math.random() * (maxValue - minValue)) + minValue;
+};
+exports.generatePlanetSize = function () {
+    var countOfAvailableSizes = availablePlanetSizes.length;
+    var randomAvailableSizeIndex = Math.floor(Math.random() * countOfAvailableSizes);
+    var planetSizeParameters = availablePlanetSizes[randomAvailableSizeIndex];
+    return {
+        description: planetSizeParameters.description,
+        name: planetSizeParameters.planetSizeName,
+        radius: generatePlanetSizeRadius(planetSizeParameters)
+    };
+};
 exports.numberTypeGenerator = function () {
     currentTypeNumber = Math.floor(Math.random() * availablePlanetSizes.length);
 };

@@ -1,4 +1,27 @@
-const availableStarNames = ['Polaris',
+import {
+    StarSpectral,
+    StarType,
+    generateStarType,
+    generateSpectralType,
+} from './starTypeGenerator';
+
+export interface Star {
+    name: string;
+    lifeCycle: StarType;
+    spectral: StarSpectral;
+}
+
+export const generateStar = () => {
+
+    return {
+        name: StarNameGenerator(),
+        lifeCycle: generateStarType(),
+        spectral: generateSpectralType(),
+    }
+
+}
+
+const availableStarNames: string[] = ['Polaris',
     'Syriusz',
     'Rigiel',
     'Vega',
@@ -21,5 +44,3 @@ const StarNameGenerator = (): string => {
 
     return availableStarNames[randomIndex];
 };
-
-export default StarNameGenerator
