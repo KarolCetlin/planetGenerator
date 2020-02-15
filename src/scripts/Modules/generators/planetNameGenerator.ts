@@ -1,4 +1,3 @@
-
 const availablePlanetNames = ['Helara',
   'Kitrarth',
   'Zeceitera',

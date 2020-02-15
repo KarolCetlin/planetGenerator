@@ -1,4 +1,12 @@
-const availablePlanetSizes: Array<object> = [
+interface PlanetSize {
+    planetSizeName:string,
+    description:string,
+    minSizeRadius:number,
+    maxSizeRadius:number,
+    typeSize:string
+}
+
+const availablePlanetSizes: PlanetSize[] = [
 
     {
         planetSizeName: 'Asteroida',

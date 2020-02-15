@@ -22,7 +22,6 @@ interface Planet {
   size: string;
   description: string;
   radius: number;
-
   hasOutpost: boolean;
   hasEcosferic: boolean;
   hasMinerals: boolean;
@@ -57,9 +56,7 @@ const generateStarName = (): string => {
 };
 
 const generatePlanetSizeDescription = (): string => {
-
   return planetSizeDescriptionGenerator();
-
 };
 
 const generateStarType = (): string => {
