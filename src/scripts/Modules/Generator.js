@@ -3,12 +3,12 @@ var _this = this;
 exports.__esModule = true;
 var Tools_1 = require("../Logic/Tools");
 var Data_1 = require("../Data/Data");
-var AddOutpost_js_1 = require("./AddOutpost.js");
 var Environment_js_1 = require("./Environment.js");
 var planetNameGenerator_1 = require("./generators/planetNameGenerator");
 var planetNameGenerator_2 = require("./generators/planetNameGenerator");
 var planetTypeGenerator_1 = require("./generators/planetTypeGenerator");
 var starTypeGenerator_1 = require("./generators/starTypeGenerator");
+var AddOutpost_1 = require("./AddOutpost");
 var generatePlanetName = function () {
     return planetNameGenerator_1["default"]();
 };
@@ -23,9 +23,6 @@ var generateStarName = function () {
 };
 var generatePlanetSizeDescription = function () {
     return planetTypeGenerator_1.planetSizeDescriptionGenerator();
-};
-var generateStarTypeIndex = function () {
-    return Tools_1.getNameFromArray(Data_1.setLifeCycleStars);
 };
 var generateStarType = function () {
     return starTypeGenerator_1.starTypeName();
@@ -43,10 +40,10 @@ var generateDescriptionSpectralType = function () {
     return Tools_1.getNameFromObject(Data_1.setSpectralTypes, _this.indexSpectralType, "description");
 };
 var generateHasOutpost = function () {
-    return Tools_1.checkChance(Data_1.ecosfericPossibility);
+    return Tools_1.checkChance(Data_1.outpostPossibility);
 };
 var generateHasEcosferic = function () {
-    return Tools_1.checkChance(Data_1.outpostPossibility);
+    return Tools_1.checkChance(Data_1.ecosfericPossibility);
 };
 var generateHasMinerals = function () {
     return Tools_1.checkChance(Data_1.mineralsPossibility);
@@ -54,14 +51,17 @@ var generateHasMinerals = function () {
 var generateHasAnomaly = function () {
     return Tools_1.checkChance(Data_1.anomalyPossibility);
 };
-var generateOutpost = function (hasOutpost) {
-    if (hasOutpost === true) {
-        return _this.outpost = new AddOutpost_js_1["default"]();
-    }
-    else {
-        console.log('Niestety nie ma żadnego posterunku na tej planecie');
-    }
+var generatePlanetOutpost = function (hasOutpost) {
+    return AddOutpost_1.generateOutpost();
+    // if (hasOutpost === true) {
+    //
+    //     return generateOutpost();
+    //
+    //     } else {
+    //         console.log('Niestety nie ma żadnego posterunku na tej planecie');
+    //     }
 };
+console.log(generatePlanetOutpost);
 var generateEnvirnonment = function () {
     if (_this.hasEcosferic == true) {
         _this.environment = new Environment_js_1["default"]();
@@ -83,14 +83,13 @@ exports.generatePlanet = function () {
         hasEcosferic: generateHasEcosferic(),
         hasMinerals: generateHasMinerals(),
         hasAnomaly: generateHasAnomaly(),
-        outpost: generateOutpost(hasEcosferic),
+        outpost: generatePlanetOutpost(hasOutpost),
         environment: generateEnvirnonment()
     };
 };
 exports.generateStar = function () {
     return {
         name: generateStarName(),
-        starTypeIndex: generateStarTypeIndex(),
         starType: generateStarType(),
         starTypeDescription: generateStarTypeDescription(),
         indexSpectralType: generateIndexSpectralType(),

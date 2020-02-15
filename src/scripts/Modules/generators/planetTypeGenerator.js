@@ -68,6 +68,7 @@ exports.planetSizeDescriptionGenerator = function () {
     return availablePlanetSizes[currentTypeNumber]['description'];
 };
 exports.planetSizeNameGenerator = function () {
+    exports.numberTypeGenerator();
     return availablePlanetSizes[currentTypeNumber]['planetSizeName'];
 };
 exports.planetTypeSizeGenerator = function () {

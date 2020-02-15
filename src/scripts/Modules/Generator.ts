@@ -1,12 +1,11 @@
 import {getName, getNameFromArray, getNameFromObject, randomNumberFromArrayInRange, checkChance} from "../Logic/Tools";
 import {planetSizesSet, setPlanetNames, starNamesSet, setLifeCycleStars, setSpectralTypes, ecosfericPossibility, outpostPossibility, mineralsPossibility, anomalyPossibility, } from "../Data/Data";
-import AddOutpost from "./AddOutpost.js";
 import Environment from "./Environment.js";
 import planetNameGenerator  from './generators/planetNameGenerator'
 import starNameGenerator from './generators/planetNameGenerator'
 import { planetSizeDescriptionGenerator, numberTypeGenerator, planetSizeNameGenerator, planetTypeSizeGenerator, planetRadiusGenerator } from './generators/planetTypeGenerator'
 import { starTypeName, starDescription, starSpectralType } from './generators/starTypeGenerator';
-
+import { generateOutpost } from './AddOutpost';
 
 interface Planet {
     name: string;
@@ -24,7 +23,6 @@ interface Planet {
 
 interface Star {
     name: string;
-    starTypeIndex: number;
     starType: string;
     starTypeDescription: string;
     indexSpectralType: number;
@@ -56,10 +54,6 @@ const generatePlanetSizeDescription = (): string => {
 
 };
 
-const generateStarTypeIndex = (): number => {
-    return getNameFromArray(setLifeCycleStars);
-};
-
 const generateStarType = (): string => {
     return starTypeName();
 };
@@ -89,11 +83,11 @@ const generateDescriptionSpectralType = (): string => {
 };
 
 const generateHasOutpost = (): boolean => {
-    return checkChance(ecosfericPossibility);
+    return checkChance(outpostPossibility);
 };
 
 const generateHasEcosferic = (): boolean => {
-    return checkChance(outpostPossibility);
+    return checkChance(ecosfericPossibility);
 };
 
 const generateHasMinerals = (): boolean => {
@@ -104,15 +98,21 @@ const generateHasAnomaly = (): boolean => {
     return checkChance(anomalyPossibility);
 };
 
-const generateOutpost = (hasOutpost): any => {
-    if (hasOutpost === true) {
+const generatePlanetOutpost = (hasOutpost): any => {
 
-        return this.outpost = new AddOutpost();
+    return generateOutpost();
 
-        } else {
-            console.log('Niestety nie ma żadnego posterunku na tej planecie');
-        }
+
+    // if (hasOutpost === true) {
+    //
+    //     return generateOutpost();
+    //
+    //     } else {
+    //         console.log('Niestety nie ma żadnego posterunku na tej planecie');
+    //     }
 };
+
+console.log(generatePlanetOutpost);
 
 const generateEnvirnonment = (): string => {
     if (this.hasEcosferic == true) {
@@ -138,7 +138,7 @@ export const generatePlanet = (): Planet => {
         hasEcosferic: generateHasEcosferic(),
         hasMinerals: generateHasMinerals(),
         hasAnomaly: generateHasAnomaly(),
-        outpost: generateOutpost(hasEcosferic),
+        outpost: generatePlanetOutpost(hasOutpost),
         environment: generateEnvirnonment(),
 
     };
@@ -150,7 +150,6 @@ export const generateStar = (): Star => {
     return {
 
         name: generateStarName(),
-        starTypeIndex: generateStarTypeIndex(),
         starType: generateStarType(),
         starTypeDescription: generateStarTypeDescription(),
         indexSpectralType: generateIndexSpectralType(),
@@ -160,7 +159,7 @@ export const generateStar = (): Star => {
 
     }
 
-}
+};
 
 
 
