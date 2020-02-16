@@ -3,7 +3,24 @@ import {
     randomNumberInRange,
 } from '../Logic/Tools';
 
-const availableOutpostsTypes = [
+import { generatePlanet } from './Generator';
+
+interface OutpostsParameters {
+    name: string,
+    minSize: number,
+    maxSize: number,
+    description: string,
+}
+
+
+export interface Outpost {
+    name: string,
+    population: number,
+    description: string,
+    raceInOutpost: any,
+}
+
+const availableOutpostsTypes: OutpostsParameters[] = [
     {
         name: 'Kolonia Górnicza',
         minSize: 100,
@@ -62,65 +79,55 @@ const availableOutpostsTypes = [
 const mainRacesCollection: Array<string> = ['Altar-yan', 'Wulkanów', 'Silian', 'Flerów', 'Ludzi', 'Syntetyków', "Giag", 'Miridu'];
 
 
-interface Outpost {
-    name: string;
-    population: number
-    description: string
-    raceInOutpost: any
-
-}
-
 export const generateOutpost = (): Outpost => {
+const countOfAvailableOutpostsTypes = availableOutpostsTypes.length;
+const randomvailableOutpostsIndex = Math.floor(Math.random() * countOfAvailableOutpostsTypes);
+
+const outpostTypeParameters = availableOutpostsTypes[randomvailableOutpostsIndex];
 
     return {
-        name: generateName(),
-        population: generatePopulation(),
-        description: generateDescription(),
-        raceInOutpost: addRaceToSociety(),
+        name: outpostTypeParameters.name,
+        population: generatePopulation(outpostTypeParameters),
+        description: outpostTypeParameters.description,
+        raceInOutpost: null,
     }
 
 };
 
-let currentOutpostNumber: number = 0;
+const generatePopulation = (outpostTypeParameters: OutpostsParameters):number => {
+    const minValue = outpostTypeParameters.minSize;
+    const maxValue = outpostTypeParameters.maxSize;
+
+    return Math.floor(Math.random() * (maxValue - minValue)) + minValue;
+}
+
+const generateNewPopulation = () => {
+
+    const population = generatePlanet['outpost']['population'];
+    console.log(population);
 
 
-export const numberTypeGenerator = (): any => {
-    currentOutpostNumber = Math.floor(Math.random() * availableOutpostsTypes.length);
-};
+}
 
 
-const generateName = (): string => {
-    numberTypeGenerator();
-    generatePopulation();
-    generateDescription();
-    addRaceToSociety();
 
 
-    return availableOutpostsTypes[currentOutpostNumber]['name'];
-
-};
 
 
-const generatePopulation = (): number => {
 
-    let minNumber = availableOutpostsTypes[currentOutpostNumber]['minSize'];
-    let maxNumber = availableOutpostsTypes[currentOutpostNumber]['maxSize'];
 
-    return Math.floor(Math.random() * (maxNumber - minNumber)) + minNumber;
-};
 
-const generateDescription = (): string => {
 
-    return availableOutpostsTypes[currentOutpostNumber]['description'];
 
-};
+
+
 
 const findNumberFromTotal = (totalNumber: number, percent: number): number => {
     let maxChanceToSuccess: number = 100;
     return Math.round((totalNumber / maxChanceToSuccess) * percent);
 };
 
-const sortObjectInArray = (array: [], sortProperty: string): void => {
+const sortObjectInArray = (array: any, sortProperty: string): void => {
 
     array.sort((a: string, b: string) => b[sortProperty] - a[sortProperty]
     )
@@ -129,7 +136,13 @@ const sortObjectInArray = (array: [], sortProperty: string): void => {
 
 
 
-const addRaceToSociety = (): any => {
+const addRaceToSociety = (number2): any => {
+
+
+
+    const population2  = number2;
+    console.log(population2)
+
 
     let initialPercentPopulation: number = 100;
     const lastPercentPopulation: number = 1;
@@ -141,10 +154,9 @@ const addRaceToSociety = (): any => {
 
     while (initialPercentPopulation >= lastPercentPopulation) {
 
-
         let percentDrawnRace = randomNumberInRange(lastPercentPopulation, initialPercentPopulation);
         let indexDrawnRace = getNameFromArray(copyRacesCollection);
-        let quantityDrawnRace = findNumberFromTotal(this.population, percentDrawnRace);
+        let quantityDrawnRace = findNumberFromTotal(population2, percentDrawnRace);
 
         //
         // if (copyRacesCollection[indexDrawnRace] === undefined) {
@@ -164,9 +176,8 @@ const addRaceToSociety = (): any => {
         copyRacesCollection.splice(indexDrawnRace, amountRacesToRemove);
 
     }
-    sortObjectInArray(this.raceArray, 'percent');
+    sortObjectInArray(raceArray, 'percent');
     return raceArray;
-    console.log(raceArray);
 };
 
 

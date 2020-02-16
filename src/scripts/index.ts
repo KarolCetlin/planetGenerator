@@ -1,5 +1,5 @@
 import "../../sass/main.scss";
-import {generatePlanet, generateStar} from "./Modules/Generator";
+import {generatePlanet} from "./Modules/Generator";
 import ShowDOM from "./View/ShowDOM";
 import '../../public/images/planets/planets2.jpg';
 import '../../public/images/population/colony.jpg';
@@ -50,12 +50,8 @@ class Init {
     initGenerator() {
 
         let newPlanet: any = generatePlanet();
-        let newStar: any = generateStar();
         planetsCollection.push(newPlanet);
-        starsCollection.push(newStar);
-
         console.log(planetsCollection);
-        console.log(starsCollection);
 
     }
 

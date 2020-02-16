@@ -6,18 +6,16 @@ import {
   outpostPossibility,
   setSpectralTypes,
 } from '../Data/Data';
-import Environment from './Environment.js';
 import planetNameGenerator from './generators/planetNameGenerator';
 import starNameGenerator from './generators/planetNameGenerator';
 import {
-  planetRadiusGenerator,
-  planetSizeDescriptionGenerator,
-  planetSizeNameGenerator,
   PlanetSize,
   generatePlanetSize,
 } from './generators/planetTypeGenerator';
-// import { generateOutpost } from './AddOutpost';
-import {generateStar, Star} from './generators/starNameGenerator'
+import { Outpost, generateOutpost } from './AddOutpost';
+import {generateStar, Star} from './generators/starGenerator'
+import { Environment,
+  environmentGenerete } from './Environment'
 
 
 interface Planet {
@@ -28,30 +26,12 @@ interface Planet {
   hasEcosferic: boolean;
   hasMinerals: boolean;
   hasAnomaly: boolean;
-  outpost: any;
-  environment: string | null;
+  outpost: Outpost;
+  environment: Environment;
 }
-
-
 
 const generatePlanetName = (): string => {
   return planetNameGenerator();
-};
-
-const generatePlanetSizeName = (): string => {
-  return planetSizeNameGenerator();
-};
-
-const generatePlanetRadius = (): number => {
-  return planetRadiusGenerator();
-};
-
-const generateStarName = (): string => {
-  return starNameGenerator();
-};
-
-const generatePlanetSizeDescription = (): string => {
-  return planetSizeDescriptionGenerator();
 };
 
 const generateHasOutpost = (): boolean => {
@@ -85,12 +65,12 @@ const generatePlanetOutpost = (hasOutpost): any => {
 
 console.log(generatePlanetOutpost);
 
-const generateEnvirnonment = (): string => {
-  if (this.hasEcosferic == true) {
-    this.environment = new Environment();
+const generateEnvirnonment = (): Environment => {
+  if (generatePlanet[this.hasEcosferic] === true) {
+    this.environment = environmentGenerete();
   } else {
     console.log('planeta poza ekosferą, istenienie środowiska jest niemożliwe');
-    return null;
+    return environmentGenerete();
   }
 };
 
@@ -106,7 +86,7 @@ export const generatePlanet = (): Planet => {
     hasEcosferic: generateHasEcosferic(),
     hasMinerals: generateHasMinerals(),
     hasAnomaly: generateHasAnomaly(),
-    outpost: generatePlanetOutpost(hasOutpost),
+    outpost: generateOutpost(),
     environment: generateEnvirnonment(),
   };
 };

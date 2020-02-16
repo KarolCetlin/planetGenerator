@@ -79,7 +79,6 @@ const availablePlanetSizes: AvailablePlanetSizeParameters[] = [
   },
 ];
 
-let currentTypeNumber: number = 0;
 
 const generatePlanetSizeRadius = (planetSizeParameters: AvailablePlanetSizeParameters):number => {
   const minValue = planetSizeParameters.minSizeRadius;
@@ -101,35 +100,5 @@ export const generatePlanetSize = (): PlanetSize => {
   };
 };
 
-export const numberTypeGenerator = (): void => {
 
-  currentTypeNumber = Math.floor(Math.random() * availablePlanetSizes.length);
 
-};
-
-export const planetSizeDescriptionGenerator = (): string => {
-  numberTypeGenerator();
-  return availablePlanetSizes[ currentTypeNumber ][ 'description' ];
-
-};
-
-export const planetSizeNameGenerator = (): string => {
-  numberTypeGenerator();
-
-  return availablePlanetSizes[ currentTypeNumber ][ 'planetSizeName' ];
-
-};
-
-export const planetTypeSizeGenerator = (): string => {
-
-  return availablePlanetSizes[ currentTypeNumber ][ 'typeSize' ];
-
-};
-
-export const planetRadiusGenerator = (): number => {
-
-  let minNumber = availablePlanetSizes[ currentTypeNumber ][ 'minSizeRadius' ];
-  let maxNumber = availablePlanetSizes[ currentTypeNumber ][ 'maxSizeRadius' ];
-
-  return Math.floor(Math.random() * (maxNumber - minNumber)) + minNumber;
-};

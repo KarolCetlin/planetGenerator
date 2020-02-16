@@ -6,9 +6,9 @@ var __spreadArrays = (this && this.__spreadArrays) || function () {
             r[k] = a[j];
     return r;
 };
-var _this = this;
 exports.__esModule = true;
 var Tools_1 = require("../Logic/Tools");
+var Generator_1 = require("./Generator");
 var availableOutpostsTypes = [
     {
         name: 'Kolonia Górnicza',
@@ -61,31 +61,24 @@ var availableOutpostsTypes = [
 ];
 var mainRacesCollection = ['Altar-yan', 'Wulkanów', 'Silian', 'Flerów', 'Ludzi', 'Syntetyków', "Giag", 'Miridu'];
 exports.generateOutpost = function () {
+    var countOfAvailableOutpostsTypes = availableOutpostsTypes.length;
+    var randomvailableOutpostsIndex = Math.floor(Math.random() * countOfAvailableOutpostsTypes);
+    var outpostTypeParameters = availableOutpostsTypes[randomvailableOutpostsIndex];
     return {
-        name: generateName(),
-        population: generatePopulation(),
-        description: generateDescription(),
-        raceInOutpost: addRaceToSociety()
+        name: outpostTypeParameters.name,
+        population: generatePopulation(outpostTypeParameters),
+        description: outpostTypeParameters.description,
+        raceInOutpost: null
     };
 };
-var currentOutpostNumber = 0;
-exports.numberTypeGenerator = function () {
-    currentOutpostNumber = Math.floor(Math.random() * availableOutpostsTypes.length);
+var generatePopulation = function (outpostTypeParameters) {
+    var minValue = outpostTypeParameters.minSize;
+    var maxValue = outpostTypeParameters.maxSize;
+    return Math.floor(Math.random() * (maxValue - minValue)) + minValue;
 };
-var generateName = function () {
-    exports.numberTypeGenerator();
-    generatePopulation();
-    generateDescription();
-    addRaceToSociety();
-    return availableOutpostsTypes[currentOutpostNumber]['name'];
-};
-var generatePopulation = function () {
-    var minNumber = availableOutpostsTypes[currentOutpostNumber]['minSize'];
-    var maxNumber = availableOutpostsTypes[currentOutpostNumber]['maxSize'];
-    return Math.floor(Math.random() * (maxNumber - minNumber)) + minNumber;
-};
-var generateDescription = function () {
-    return availableOutpostsTypes[currentOutpostNumber]['description'];
+var generateNewPopulation = function () {
+    var population = Generator_1.generatePlanet['outpost']['population'];
+    console.log(population);
 };
 var findNumberFromTotal = function (totalNumber, percent) {
     var maxChanceToSuccess = 100;
@@ -94,7 +87,9 @@ var findNumberFromTotal = function (totalNumber, percent) {
 var sortObjectInArray = function (array, sortProperty) {
     array.sort(function (a, b) { return b[sortProperty] - a[sortProperty]; });
 };
-var addRaceToSociety = function () {
+var addRaceToSociety = function (number2) {
+    var population2 = number2;
+    console.log(population2);
     var initialPercentPopulation = 100;
     var lastPercentPopulation = 1;
     var amountRacesToRemove = 1;
@@ -103,7 +98,7 @@ var addRaceToSociety = function () {
     while (initialPercentPopulation >= lastPercentPopulation) {
         var percentDrawnRace = Tools_1.randomNumberInRange(lastPercentPopulation, initialPercentPopulation);
         var indexDrawnRace = Tools_1.getNameFromArray(copyRacesCollection);
-        var quantityDrawnRace = findNumberFromTotal(_this.population, percentDrawnRace);
+        var quantityDrawnRace = findNumberFromTotal(population2, percentDrawnRace);
         //
         // if (copyRacesCollection[indexDrawnRace] === undefined) {
         //     copyRacesCollection.push(
@@ -118,9 +113,8 @@ var addRaceToSociety = function () {
         initialPercentPopulation -= percentDrawnRace;
         copyRacesCollection.splice(indexDrawnRace, amountRacesToRemove);
     }
-    sortObjectInArray(_this.raceArray, 'percent');
+    sortObjectInArray(raceArray, 'percent');
     return raceArray;
-    console.log(raceArray);
 };
 // class AddOutpost {
 //     raceArray: any;

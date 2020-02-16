@@ -59,7 +59,6 @@ var availablePlanetSizes = [
         typeSize: 'Gazowy olbrzym'
     },
 ];
-var currentTypeNumber = 0;
 var generatePlanetSizeRadius = function (planetSizeParameters) {
     var minValue = planetSizeParameters.minSizeRadius;
     var maxValue = planetSizeParameters.maxSizeRadius;
@@ -74,23 +73,4 @@ exports.generatePlanetSize = function () {
         name: planetSizeParameters.planetSizeName,
         radius: generatePlanetSizeRadius(planetSizeParameters)
     };
-};
-exports.numberTypeGenerator = function () {
-    currentTypeNumber = Math.floor(Math.random() * availablePlanetSizes.length);
-};
-exports.planetSizeDescriptionGenerator = function () {
-    exports.numberTypeGenerator();
-    return availablePlanetSizes[currentTypeNumber]['description'];
-};
-exports.planetSizeNameGenerator = function () {
-    exports.numberTypeGenerator();
-    return availablePlanetSizes[currentTypeNumber]['planetSizeName'];
-};
-exports.planetTypeSizeGenerator = function () {
-    return availablePlanetSizes[currentTypeNumber]['typeSize'];
-};
-exports.planetRadiusGenerator = function () {
-    var minNumber = availablePlanetSizes[currentTypeNumber]['minSizeRadius'];
-    var maxNumber = availablePlanetSizes[currentTypeNumber]['maxSizeRadius'];
-    return Math.floor(Math.random() * (maxNumber - minNumber)) + minNumber;
 };
