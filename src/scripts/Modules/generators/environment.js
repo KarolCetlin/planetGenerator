@@ -1,5 +1,6 @@
 "use strict";
 exports.__esModule = true;
+var events_1 = require("./events");
 var availableTemperatures = [
     {
         name: 'Gorąca',
@@ -206,24 +207,26 @@ var availableWorlds = [
         humidity: 4
     },
 ];
-exports.environmentGenerete = function () {
-    var countOfAvailableTemperatures = availableTemperatures.length;
-    var countOfAvailableHumidities = availableHumidities.length;
-    var randomAvailableTemperatureIndex = Math.floor(Math.random() * countOfAvailableTemperatures);
-    var randomAvailableHumidityIndex = Math.floor(Math.random() * countOfAvailableHumidities);
-    var temperatureParameters = availableTemperatures[randomAvailableTemperatureIndex];
-    var humidityParameters = availableHumidities[randomAvailableHumidityIndex];
-    return {
-        temperatureName: temperatureParameters.name,
-        temperatureDescription: temperatureParameters.description,
-        humidityName: humidityParameters.name,
-        humidityDescription: humidityParameters.description,
-        worldName: matchWorld(randomAvailableTemperatureIndex, randomAvailableHumidityIndex).name,
-        worldDescription: matchWorld(randomAvailableTemperatureIndex, randomAvailableHumidityIndex).description
-    };
+exports.environmentGenerate = function () {
+    if (events_1.planetHasEcosferic === true) {
+        var countOfAvailableTemperatures = availableTemperatures.length;
+        var countOfAvailableHumidities = availableHumidities.length;
+        var randomAvailableTemperatureIndex = Math.floor(Math.random() * countOfAvailableTemperatures);
+        var randomAvailableHumidityIndex = Math.floor(Math.random() * countOfAvailableHumidities);
+        var temperatureParameters = availableTemperatures[randomAvailableTemperatureIndex];
+        var humidityParameters = availableHumidities[randomAvailableHumidityIndex];
+        return {
+            temperatureName: temperatureParameters.name,
+            temperatureDescription: temperatureParameters.description,
+            humidityName: humidityParameters.name,
+            humidityDescription: humidityParameters.description,
+            worldName: matchWorld(randomAvailableTemperatureIndex, randomAvailableHumidityIndex).name,
+            worldDescription: matchWorld(randomAvailableTemperatureIndex, randomAvailableHumidityIndex).description
+        };
+    }
 };
 var matchWorld = function (temperatureIndex, humidityIndex) {
-    var countOfAvailableWorlds = availableWorlds.length;
+    var countOfAvailableWorlds = availableWorlds.length - 1;
     for (var availableWorldIndex = 0; availableWorldIndex < countOfAvailableWorlds; availableWorldIndex++) {
         var requiredTemperature = availableWorlds[availableWorldIndex].temperature;
         var requiredHumidity = availableWorlds[availableWorldIndex].humidity;

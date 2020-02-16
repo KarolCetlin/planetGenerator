@@ -1,9 +1,15 @@
+import { planetHasEcosferic  } from './events'
 
 interface RequirementsCreationEnvironment {
     name: string,
     description: string,
     temperature?: number,
     humidity?: number,
+}
+
+interface World {
+    name: string,
+    description: string,
 }
 
 export interface Environment {
@@ -244,30 +250,34 @@ const availableWorlds: RequirementsCreationEnvironment[] = [
 ];
 
 
-export const environmentGenerete = (): Environment => {
+export const environmentGenerate = (): Environment => {
 
-    const countOfAvailableTemperatures = availableTemperatures.length;
-    const countOfAvailableHumidities = availableHumidities.length;
-    const randomAvailableTemperatureIndex = Math.floor(Math.random() * countOfAvailableTemperatures);
-    const randomAvailableHumidityIndex = Math.floor(Math.random() * countOfAvailableHumidities);
+    if(planetHasEcosferic === true) {
+        const countOfAvailableTemperatures = availableTemperatures.length;
+        const countOfAvailableHumidities = availableHumidities.length;
+        const randomAvailableTemperatureIndex = Math.floor(Math.random() * countOfAvailableTemperatures);
+        const randomAvailableHumidityIndex = Math.floor(Math.random() * countOfAvailableHumidities);
 
-    const temperatureParameters = availableTemperatures[randomAvailableTemperatureIndex];
-    const humidityParameters = availableHumidities[randomAvailableHumidityIndex];
+        const temperatureParameters = availableTemperatures[randomAvailableTemperatureIndex];
+        const humidityParameters = availableHumidities[randomAvailableHumidityIndex];
 
-    return {
-        temperatureName: temperatureParameters.name,
-        temperatureDescription: temperatureParameters.description,
-        humidityName: humidityParameters.name,
-        humidityDescription: humidityParameters.description,
-        worldName: matchWorld(randomAvailableTemperatureIndex, randomAvailableHumidityIndex).name,
-        worldDescription: matchWorld(randomAvailableTemperatureIndex, randomAvailableHumidityIndex).description,
+        return {
+            temperatureName: temperatureParameters.name,
+            temperatureDescription: temperatureParameters.description,
+            humidityName: humidityParameters.name,
+            humidityDescription: humidityParameters.description,
+            worldName: matchWorld(randomAvailableTemperatureIndex, randomAvailableHumidityIndex).name,
+            worldDescription: matchWorld(randomAvailableTemperatureIndex, randomAvailableHumidityIndex).description,
+        }
+
     }
+
 
 };
 
-const matchWorld = (temperatureIndex: number, humidityIndex: number) => {
+const matchWorld = (temperatureIndex: number, humidityIndex: number): World => {
 
-    const countOfAvailableWorlds = availableWorlds.length;
+    const countOfAvailableWorlds = availableWorlds.length -1;
 
     for (let availableWorldIndex = 0; availableWorldIndex < countOfAvailableWorlds; availableWorldIndex++) {
 

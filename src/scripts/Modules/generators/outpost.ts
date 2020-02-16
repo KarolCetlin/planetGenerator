@@ -1,3 +1,4 @@
+import {planetHasOutpost} from './events';
 
 interface OutpostsParameters {
     name: string,
@@ -8,9 +9,9 @@ interface OutpostsParameters {
 
 export interface Outpost {
     name: string,
-    population: number,
+    population?: number,
     description: string,
-    society: Object[],
+    society?: Object[],
 }
 
 interface Society {
@@ -77,19 +78,37 @@ const availableOutpostsTypes: OutpostsParameters[] = [
 
 const mainRacesCollection: Array<string> = ['Altar-yan', 'Wulkanów', 'Silian', 'Flerów', 'Ludzi', 'Syntetyków', "Giag", 'Miridu'];
 
+
 export const generateOutpost = (): Outpost => {
-const countOfAvailableOutpostsTypes = availableOutpostsTypes.length;
-const randomAvailableOutpostsIndex = Math.floor(Math.random() * countOfAvailableOutpostsTypes);
 
-const outpostTypeParameters = availableOutpostsTypes[randomAvailableOutpostsIndex];
-let currentPopulation: number = Math.floor(Math.random() * (outpostTypeParameters.maxSize - outpostTypeParameters.minSize)) + outpostTypeParameters.minSize;
+    if (planetHasOutpost === true) {
 
-    return {
-        name: outpostTypeParameters.name,
-        population: currentPopulation,
-        description: outpostTypeParameters.description,
-        society: addRaceToSociety(currentPopulation),
+        const countOfAvailableOutpostsTypes = availableOutpostsTypes.length;
+        const randomAvailableOutpostsIndex = Math.floor(Math.random() * countOfAvailableOutpostsTypes);
+
+        const outpostTypeParameters = availableOutpostsTypes[randomAvailableOutpostsIndex];
+        let currentPopulation: number = Math.floor(Math.random() * (outpostTypeParameters.maxSize - outpostTypeParameters.minSize)) + outpostTypeParameters.minSize;
+
+        console.log('jest kolonia')
+
+        return {
+            name: outpostTypeParameters.name,
+            population: currentPopulation,
+            description: outpostTypeParameters.description,
+            society: addRaceToSociety(currentPopulation),
+        }
+
+    } else {
+
+console.log('brak koloni')
+        return {
+            name: 'Brak',
+            description: 'Ta planeta nie posiada żadnej kolonii',
+        }
+
     }
+
+
 };
 
 
@@ -110,13 +129,13 @@ const getPercentOfRaceInPopulation = (minNumber: number, maxNumber: number): num
     return Math.floor(Math.random() * (maxNumber - minNumber)) + minNumber;
 };
 
-const getRaceNameIndex = (array: String[] ): number => {
+const getRaceNameIndex = (array: String[]): number => {
     return Math.floor(Math.random() * array.length);
 };
 
 enum Race {
 
-        Name = 'name',
+    Name = 'name',
     Quantity = 'quantity',
     Percent = 'percent',
 
@@ -152,7 +171,7 @@ const addRaceToSociety = (currentPopulation: number): Object[] => {
         initialPercentPopulation -= percentDrawnRace;
         copyRacesCollection.splice(indexDrawnRace, amountRacesToRemove);
     }
-    
+
     sortRacesByPercents(raceCollection, Race.Percent);
     return raceCollection;
 

@@ -7,6 +7,7 @@ var __spreadArrays = (this && this.__spreadArrays) || function () {
     return r;
 };
 exports.__esModule = true;
+var events_1 = require("./events");
 var availableOutpostsTypes = [
     {
         name: 'Kolonia Górnicza',
@@ -59,16 +60,26 @@ var availableOutpostsTypes = [
 ];
 var mainRacesCollection = ['Altar-yan', 'Wulkanów', 'Silian', 'Flerów', 'Ludzi', 'Syntetyków', "Giag", 'Miridu'];
 exports.generateOutpost = function () {
-    var countOfAvailableOutpostsTypes = availableOutpostsTypes.length;
-    var randomAvailableOutpostsIndex = Math.floor(Math.random() * countOfAvailableOutpostsTypes);
-    var outpostTypeParameters = availableOutpostsTypes[randomAvailableOutpostsIndex];
-    var currentPopulation = Math.floor(Math.random() * (outpostTypeParameters.maxSize - outpostTypeParameters.minSize)) + outpostTypeParameters.minSize;
-    return {
-        name: outpostTypeParameters.name,
-        population: currentPopulation,
-        description: outpostTypeParameters.description,
-        society: addRaceToSociety(currentPopulation)
-    };
+    if (events_1.planetHasOutpost === true) {
+        var countOfAvailableOutpostsTypes = availableOutpostsTypes.length;
+        var randomAvailableOutpostsIndex = Math.floor(Math.random() * countOfAvailableOutpostsTypes);
+        var outpostTypeParameters = availableOutpostsTypes[randomAvailableOutpostsIndex];
+        var currentPopulation = Math.floor(Math.random() * (outpostTypeParameters.maxSize - outpostTypeParameters.minSize)) + outpostTypeParameters.minSize;
+        console.log('jest kolonia');
+        return {
+            name: outpostTypeParameters.name,
+            population: currentPopulation,
+            description: outpostTypeParameters.description,
+            society: addRaceToSociety(currentPopulation)
+        };
+    }
+    else {
+        console.log('brak koloni');
+        return {
+            name: 'Brak',
+            description: 'Ta planeta nie posiada żadnej kolonii'
+        };
+    }
 };
 var getRaceQuantityFromPercent = function (totalNumber, percent) {
     var maxChanceToSuccess = 100;
