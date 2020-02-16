@@ -3,7 +3,7 @@ import {
     StarType,
     generateStarType,
     generateSpectralType,
-} from './starTypeGenerator';
+} from './starType';
 
 export interface Star {
     name: string;
@@ -11,7 +11,7 @@ export interface Star {
     spectral: StarSpectral;
 }
 
-export const generateStar = () => {
+export const generateStar = (): Star => {
 
     return {
         name: StarNameGenerator(),

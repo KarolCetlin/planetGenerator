@@ -20,9 +20,6 @@ enum Method {
 
 }
 
-
-
-
 class Init {
     constructor($element, chosenMethod) {
         this.click($element, chosenMethod);

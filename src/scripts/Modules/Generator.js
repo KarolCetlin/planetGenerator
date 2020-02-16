@@ -3,11 +3,11 @@ var _this = this;
 exports.__esModule = true;
 var Tools_1 = require("../Logic/Tools");
 var Data_1 = require("../Data/Data");
-var planetNameGenerator_1 = require("./generators/planetNameGenerator");
-var planetTypeGenerator_1 = require("./generators/planetTypeGenerator");
-var AddOutpost_1 = require("./AddOutpost");
-var starGenerator_1 = require("./generators/starGenerator");
-var Environment_1 = require("./Environment");
+var planetNameGenerator_1 = require("./generators/planetName");
+var planetTypeGenerator_1 = require("./generators/planetType");
+var AddOutpost_1 = require("./generators/outpost");
+var starGenerator_1 = require("./generators/star");
+var Environment_1 = require("./generators/environment");
 var generatePlanetName = function () {
     return planetNameGenerator_1["default"]();
 };

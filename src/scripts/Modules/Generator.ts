@@ -6,16 +6,16 @@ import {
   outpostPossibility,
   setSpectralTypes,
 } from '../Data/Data';
-import planetNameGenerator from './generators/planetNameGenerator';
-import starNameGenerator from './generators/planetNameGenerator';
+import planetNameGenerator from './generators/planetName';
+import starNameGenerator from './generators/planetName';
 import {
   PlanetSize,
   generatePlanetSize,
-} from './generators/planetTypeGenerator';
-import { Outpost, generateOutpost } from './AddOutpost';
-import {generateStar, Star} from './generators/starGenerator'
+} from './generators/planetType';
+import { Outpost, generateOutpost } from './generators/outpost';
+import {generateStar, Star} from './generators/star'
 import { Environment,
-  environmentGenerete } from './Environment'
+  environmentGenerete } from './generators/environment'
 
 
 interface Planet {

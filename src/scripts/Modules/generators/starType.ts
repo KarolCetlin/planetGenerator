@@ -217,7 +217,7 @@ export const generateStarType = (): StarType => {
         description: starLifeCycleParameters.description,
         spectralIndex: starSpectralIndex(starLifeCycleParameters)
     }
-}
+};
 
 export const generateSpectralType = (): StarSpectral => {
 
@@ -232,7 +232,7 @@ export const generateSpectralType = (): StarSpectral => {
         temperature: starTemperature(starSpectralTypeParameters)
     }
 
-}
+};
 
 const starSpectralIndex = (starLifeCycleParameters: AvailableLifeCycleStars): number => {
 

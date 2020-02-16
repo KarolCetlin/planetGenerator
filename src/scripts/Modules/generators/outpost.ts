@@ -82,7 +82,7 @@ const countOfAvailableOutpostsTypes = availableOutpostsTypes.length;
 const randomAvailableOutpostsIndex = Math.floor(Math.random() * countOfAvailableOutpostsTypes);
 
 const outpostTypeParameters = availableOutpostsTypes[randomAvailableOutpostsIndex];
-let currentPopulation = Math.floor(Math.random() * (outpostTypeParameters.maxSize - outpostTypeParameters.minSize)) + outpostTypeParameters.minSize;
+let currentPopulation: number = Math.floor(Math.random() * (outpostTypeParameters.maxSize - outpostTypeParameters.minSize)) + outpostTypeParameters.minSize;
 
     return {
         name: outpostTypeParameters.name,
@@ -95,6 +95,7 @@ let currentPopulation = Math.floor(Math.random() * (outpostTypeParameters.maxSiz
 
 const getRaceQuantityFromPercent = (totalNumber: number, percent: number): number => {
     let maxChanceToSuccess: number = 100;
+
     return Math.round((totalNumber / maxChanceToSuccess) * percent);
 };
 
@@ -109,12 +110,19 @@ const getPercentOfRaceInPopulation = (minNumber: number, maxNumber: number): num
     return Math.floor(Math.random() * (maxNumber - minNumber)) + minNumber;
 };
 
-const getRaceNameIndex = (array: String[] ): any => {
+const getRaceNameIndex = (array: String[] ): number => {
     return Math.floor(Math.random() * array.length);
 };
 
+enum Race {
 
-const addRaceToSociety = (currentPopulation) => {
+        Name = 'name',
+    Quantity = 'quantity',
+    Percent = 'percent',
+
+}
+
+const addRaceToSociety = (currentPopulation: number): Object[] => {
 
     let initialPercentPopulation: number = 100;
     const lastPercentPopulation: number = 1;
@@ -128,25 +136,24 @@ const addRaceToSociety = (currentPopulation) => {
         let indexDrawnRace = getRaceNameIndex(copyRacesCollection);
         let quantityDrawnRace = getRaceQuantityFromPercent(currentPopulation, percentDrawnRace);
 
-        //
-        // if (copyRacesCollection[indexDrawnRace] === undefined) {
-        //     copyRacesCollection.push(
-        //         "Brak szczegółowych danych, błędy w raportach"
-        //     );
-        // }
+        if (copyRacesCollection[indexDrawnRace] === undefined) {
+            copyRacesCollection.push(
+                "Dane uszkodzone"
+            );
+        }
 
-        const raceOnOutpost: Array<object> = [];
+        const Society: Array<object> = [];
 
-        raceOnOutpost['name'] = copyRacesCollection[indexDrawnRace];
-        raceOnOutpost['quantity'] = quantityDrawnRace;
-        raceOnOutpost['percent'] = percentDrawnRace;
-        raceCollection.push(raceOnOutpost);
+        Society[Race.Name] = copyRacesCollection[indexDrawnRace];
+        Society[Race.Quantity] = quantityDrawnRace;
+        Society[Race.Percent] = percentDrawnRace;
+        raceCollection.push(Society);
 
         initialPercentPopulation -= percentDrawnRace;
         copyRacesCollection.splice(indexDrawnRace, amountRacesToRemove);
     }
     
-    sortRacesByPercents(raceCollection, 'percent');
+    sortRacesByPercents(raceCollection, Race.Percent);
     return raceCollection;
 
 };

@@ -83,6 +83,12 @@ var getPercentOfRaceInPopulation = function (minNumber, maxNumber) {
 var getRaceNameIndex = function (array) {
     return Math.floor(Math.random() * array.length);
 };
+var Race;
+(function (Race) {
+    Race["Name"] = "name";
+    Race["Quantity"] = "quantity";
+    Race["Percent"] = "percent";
+})(Race || (Race = {}));
 var addRaceToSociety = function (currentPopulation) {
     var initialPercentPopulation = 100;
     var lastPercentPopulation = 1;
@@ -93,20 +99,17 @@ var addRaceToSociety = function (currentPopulation) {
         var percentDrawnRace = getPercentOfRaceInPopulation(lastPercentPopulation, initialPercentPopulation);
         var indexDrawnRace = getRaceNameIndex(copyRacesCollection);
         var quantityDrawnRace = getRaceQuantityFromPercent(currentPopulation, percentDrawnRace);
-        //
-        // if (copyRacesCollection[indexDrawnRace] === undefined) {
-        //     copyRacesCollection.push(
-        //         "Brak szczegółowych danych, błędy w raportach"
-        //     );
-        // }
-        var raceOnOutpost = [];
-        raceOnOutpost['name'] = copyRacesCollection[indexDrawnRace];
-        raceOnOutpost['quantity'] = quantityDrawnRace;
-        raceOnOutpost['percent'] = percentDrawnRace;
-        raceCollection.push(raceOnOutpost);
+        if (copyRacesCollection[indexDrawnRace] === undefined) {
+            copyRacesCollection.push("Dane uszkodzone");
+        }
+        var Society = [];
+        Society[Race.Name] = copyRacesCollection[indexDrawnRace];
+        Society[Race.Quantity] = quantityDrawnRace;
+        Society[Race.Percent] = percentDrawnRace;
+        raceCollection.push(Society);
         initialPercentPopulation -= percentDrawnRace;
         copyRacesCollection.splice(indexDrawnRace, amountRacesToRemove);
     }
-    sortRacesByPercents(raceCollection, 'percent');
+    sortRacesByPercents(raceCollection, Race.Percent);
     return raceCollection;
 };

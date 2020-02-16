@@ -1,11 +1,11 @@
 "use strict";
 exports.__esModule = true;
-var starTypeGenerator_1 = require("./starTypeGenerator");
+var starType_1 = require("./starType");
 exports.generateStar = function () {
     return {
         name: StarNameGenerator(),
-        lifeCycle: starTypeGenerator_1.generateStarType(),
-        spectral: starTypeGenerator_1.generateSpectralType()
+        lifeCycle: starType_1.generateStarType(),
+        spectral: starType_1.generateSpectralType()
     };
 };
 var availableStarNames = ['Polaris',
