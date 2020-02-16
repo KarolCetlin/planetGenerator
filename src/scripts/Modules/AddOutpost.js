@@ -7,8 +7,6 @@ var __spreadArrays = (this && this.__spreadArrays) || function () {
     return r;
 };
 exports.__esModule = true;
-var Tools_1 = require("../Logic/Tools");
-var Generator_1 = require("./Generator");
 var availableOutpostsTypes = [
     {
         name: 'Kolonia Górnicza',
@@ -62,43 +60,39 @@ var availableOutpostsTypes = [
 var mainRacesCollection = ['Altar-yan', 'Wulkanów', 'Silian', 'Flerów', 'Ludzi', 'Syntetyków', "Giag", 'Miridu'];
 exports.generateOutpost = function () {
     var countOfAvailableOutpostsTypes = availableOutpostsTypes.length;
-    var randomvailableOutpostsIndex = Math.floor(Math.random() * countOfAvailableOutpostsTypes);
-    var outpostTypeParameters = availableOutpostsTypes[randomvailableOutpostsIndex];
+    var randomAvailableOutpostsIndex = Math.floor(Math.random() * countOfAvailableOutpostsTypes);
+    var outpostTypeParameters = availableOutpostsTypes[randomAvailableOutpostsIndex];
+    var currentPopulation = Math.floor(Math.random() * (outpostTypeParameters.maxSize - outpostTypeParameters.minSize)) + outpostTypeParameters.minSize;
     return {
         name: outpostTypeParameters.name,
-        population: generatePopulation(outpostTypeParameters),
+        population: currentPopulation,
         description: outpostTypeParameters.description,
-        raceInOutpost: null
+        society: addRaceToSociety(currentPopulation)
     };
 };
-var generatePopulation = function (outpostTypeParameters) {
-    var minValue = outpostTypeParameters.minSize;
-    var maxValue = outpostTypeParameters.maxSize;
-    return Math.floor(Math.random() * (maxValue - minValue)) + minValue;
-};
-var generateNewPopulation = function () {
-    var population = Generator_1.generatePlanet['outpost']['population'];
-    console.log(population);
-};
-var findNumberFromTotal = function (totalNumber, percent) {
+var getRaceQuantityFromPercent = function (totalNumber, percent) {
     var maxChanceToSuccess = 100;
     return Math.round((totalNumber / maxChanceToSuccess) * percent);
 };
-var sortObjectInArray = function (array, sortProperty) {
+var sortRacesByPercents = function (array, sortProperty) {
     array.sort(function (a, b) { return b[sortProperty] - a[sortProperty]; });
 };
-var addRaceToSociety = function (number2) {
-    var population2 = number2;
-    console.log(population2);
+var getPercentOfRaceInPopulation = function (minNumber, maxNumber) {
+    return Math.floor(Math.random() * (maxNumber - minNumber)) + minNumber;
+};
+var getRaceNameIndex = function (array) {
+    return Math.floor(Math.random() * array.length);
+};
+var addRaceToSociety = function (currentPopulation) {
     var initialPercentPopulation = 100;
     var lastPercentPopulation = 1;
     var amountRacesToRemove = 1;
-    var raceArray = [];
+    var raceCollection = [];
     var copyRacesCollection = __spreadArrays(mainRacesCollection);
     while (initialPercentPopulation >= lastPercentPopulation) {
-        var percentDrawnRace = Tools_1.randomNumberInRange(lastPercentPopulation, initialPercentPopulation);
-        var indexDrawnRace = Tools_1.getNameFromArray(copyRacesCollection);
-        var quantityDrawnRace = findNumberFromTotal(population2, percentDrawnRace);
+        var percentDrawnRace = getPercentOfRaceInPopulation(lastPercentPopulation, initialPercentPopulation);
+        var indexDrawnRace = getRaceNameIndex(copyRacesCollection);
+        var quantityDrawnRace = getRaceQuantityFromPercent(currentPopulation, percentDrawnRace);
         //
         // if (copyRacesCollection[indexDrawnRace] === undefined) {
         //     copyRacesCollection.push(
@@ -109,91 +103,10 @@ var addRaceToSociety = function (number2) {
         raceOnOutpost['name'] = copyRacesCollection[indexDrawnRace];
         raceOnOutpost['quantity'] = quantityDrawnRace;
         raceOnOutpost['percent'] = percentDrawnRace;
-        raceArray.push(raceOnOutpost);
+        raceCollection.push(raceOnOutpost);
         initialPercentPopulation -= percentDrawnRace;
         copyRacesCollection.splice(indexDrawnRace, amountRacesToRemove);
     }
-    sortObjectInArray(raceArray, 'percent');
-    return raceArray;
+    sortRacesByPercents(raceCollection, 'percent');
+    return raceCollection;
 };
-// class AddOutpost {
-//     raceArray: any;
-//     outpostPopulation: number;
-//     outpostIndex: number;
-//     outpostName: string;
-//     outpostDescription: any;
-//
-//     public constructor() {
-//
-//         this.raceArray = [];
-//         this.outpostPopulation = null;
-//         this.outpostIndex = null;
-//         this.outpostName = '';
-//
-//         this.addAllSociety();
-//
-//         console.log(this.raceArray);
-//     }
-//     addAllSociety() {
-//
-//         // this.addRaceToSociety();
-//
-//         let initialPercentPopulation: number = 100;
-//         const lastPercentPopulation: number = 1;
-//         const amountRacesToRemove: number = 1;
-//         let hasPopulationToDraw: boolean;
-//
-//         let copyRacesCollection: string[] = [...mainRacesCollection];
-//
-//         // function checkState(checkedArgument: boolean) {
-//         //
-//         //     checkedArgument = true;
-//         //
-//         //     if (initialPercentPopulation <= lastPercentPopulation) {
-//         //         checkedArgument = false
-//         //     }
-//         // }
-//
-//
-//         while (hasPopulationToDraw === true) {
-//
-//             checkState(hasPopulationToDraw);
-//
-//             let percentDrawnRace = randomNumberInRange(lastPercentPopulation, initialPercentPopulation);
-//             let indexDrawnRace = getNameFromArray(copyRacesCollection);
-//             let quantityDrawnRace = findNumberFromTotal(this.outpostPopulation, percentDrawnRace);
-//
-//             //
-//             // if (copyRacesCollection[indexDrawnRace] === undefined) {
-//             //     copyRacesCollection.push(
-//             //         "Brak szczegółowych danych, błędy w raportach"
-//             //     );
-//             // }
-//
-//             const raceOnOutpost: Array<object> = [];
-//             raceOnOutpost['name'] = copyRacesCollection[indexDrawnRace];
-//             raceOnOutpost['quantity'] = quantityDrawnRace;
-//             raceOnOutpost['percent'] = percentDrawnRace;
-//
-//             this.raceArray.push(raceOnOutpost);
-//
-//             initialPercentPopulation -= percentDrawnRace;
-//             copyRacesCollection.splice(indexDrawnRace, amountRacesToRemove);
-//
-//         }
-//
-//         sortObjectInArray(this.raceArray, 'percent');
-//         return this.raceArray
-//     }
-//
-//     // addRaceToSociety() {
-//     //
-//     //     this.outpostIndex = getNameFromArray(outpostsSet);
-//     //     this.outpostName = getNameFromObject(outpostsSet, this.outpostIndex, 'name');
-//     //     this.outpostDescription = getNameFromObject(outpostsSet, this.outpostIndex, 'description');
-//     //
-//     //     this.outpostPopulation = randomNumberFromArrayInRange(outpostsSet, this.outpostIndex, 'minSize', 'maxSize');
-//     }
-//
-//
-// }

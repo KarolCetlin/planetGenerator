@@ -246,8 +246,8 @@ const availableWorlds: RequirementsCreationEnvironment[] = [
 
 export const environmentGenerete = (): Environment => {
 
-    const countOfAvailableTemperatures = availableTemperatures.length
-    const countOfAvailableHumidities = availableHumidities.length
+    const countOfAvailableTemperatures = availableTemperatures.length;
+    const countOfAvailableHumidities = availableHumidities.length;
     const randomAvailableTemperatureIndex = Math.floor(Math.random() * countOfAvailableTemperatures);
     const randomAvailableHumidityIndex = Math.floor(Math.random() * countOfAvailableHumidities);
 
