@@ -11,8 +11,8 @@ var availablePlanetNames = ['Helara',
     '2M1207b',
 ];
 var generatePlanetName = function () {
-    var availablePlanetsCount = availablePlanetNames.length;
-    var randomIndex = Math.floor(Math.random() * availablePlanetsCount - 1);
+    var availablePlanetsCount = availablePlanetNames.length - 1;
+    var randomIndex = Math.floor(Math.random() * availablePlanetsCount);
     return availablePlanetNames[randomIndex];
 };
 exports["default"] = generatePlanetName;

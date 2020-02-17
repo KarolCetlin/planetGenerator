@@ -1,14 +1,14 @@
 "use strict";
 exports.__esModule = true;
 require("../../sass/main.scss");
-var Generator_js_1 = require("./Modules/Generator.js");
+var Generator_1 = require("./Modules/Generator");
 var ShowDOM_1 = require("./View/ShowDOM");
 require("../../public/images/planets/planets2.jpg");
 require("../../public/images/population/colony.jpg");
 require("../../public/images/stars/star.jpg");
 require("../../public/images/world/savanna.jpg");
 require("../../public/images/background/wallpaper.jpg");
-exports.currentPlanetNumber = 0;
+exports.currentSolarSystemNumber = 0;
 exports.planetsCollection = [];
 var Method;
 (function (Method) {
@@ -24,7 +24,7 @@ var Init = /** @class */ (function () {
         switch (chosenMethod) {
             case Method.Auto:
                 this.initGenerator();
-                new ShowDOM_1["default"]();
+                ShowDOM_1.cardCollection();
                 break;
             case Method.Parameter:
                 console.log("change one parameter");
@@ -35,7 +35,7 @@ var Init = /** @class */ (function () {
         }
     };
     Init.prototype.initGenerator = function () {
-        var newPlanet = Generator_js_1.generatePlanet();
+        var newPlanet = Generator_1.generatePlanet();
         exports.planetsCollection.push(newPlanet);
         console.log(exports.planetsCollection);
     };
@@ -44,7 +44,7 @@ var Init = /** @class */ (function () {
         var clickedElement = document.getElementById($element);
         clickedElement.onclick = function () {
             _this.checkMethod(chosenMethod);
-            exports.currentPlanetNumber++;
+            exports.currentSolarSystemNumber++;
         };
     };
     return Init;

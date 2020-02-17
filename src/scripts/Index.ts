@@ -1,6 +1,6 @@
 import "../../sass/main.scss";
 import {generatePlanet} from "./Modules/Generator";
-import ShowDOM from "./View/ShowDOM";
+import {cardCollection} from "./View/ShowDOM";
 import '../../public/images/planets/planets2.jpg';
 import '../../public/images/population/colony.jpg';
 import '../../public/images/stars/star.jpg';
@@ -10,7 +10,7 @@ import '../../public/images/background/wallpaper.jpg';
 
 export let currentSolarSystemNumber: number = 0;
 export let planetsCollection: Array<object> = [];
-export let starsCollection: Array<object> = [];
+
 
 enum Method {
 
@@ -31,7 +31,7 @@ class Init {
         switch (chosenMethod) {
             case Method.Auto:
                 this.initGenerator();
-                new ShowDOM();
+                cardCollection();
                 break;
 
             case Method.Parameter:

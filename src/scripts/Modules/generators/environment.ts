@@ -155,6 +155,14 @@ const availableWorlds: RequirementsCreationEnvironment[] = [
     },
 
     {
+        name: 'hmmm',
+        description: 'W tym miejscu będzie znajdował się fantastyczny opis tej planety, który będzie działać na' +
+            'twoją wyobraznie. Jednak niestety w tym momencie możesz przeczytać tylko te słowa, nic poza tym',
+        temperature: 2,
+        humidity: 2,
+    },
+
+    {
         name: 'Świat Gajański',
         description: 'Idealne warunki do powstania życia.',
         temperature: 2,
@@ -277,7 +285,7 @@ export const environmentGenerate = (): Environment => {
 
 const matchWorld = (temperatureIndex: number, humidityIndex: number): World => {
 
-    const countOfAvailableWorlds = availableWorlds.length -1;
+    const countOfAvailableWorlds = availableWorlds.length;
 
     for (let availableWorldIndex = 0; availableWorldIndex < countOfAvailableWorlds; availableWorldIndex++) {
 

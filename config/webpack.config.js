@@ -70,13 +70,6 @@ module.exports = {
             },
 
             {
-                test: /\.tsx?$/,
-                use: 'ts-loader',
-                exclude: /node_modules/,
-
-                           },
-
-            {
                 test: /\.(png|svg|jpg|gif)$/i,
                 use: [
 
@@ -133,13 +126,13 @@ module.exports = {
 
             },
 
+
+
         ],
 
 
 
     },
-
-
 
 };
 

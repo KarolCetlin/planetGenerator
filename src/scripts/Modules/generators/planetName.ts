@@ -10,8 +10,8 @@ const availablePlanetNames = ['Helara',
 ];
 
 const generatePlanetName = (): string => {
-  const availablePlanetsCount = availablePlanetNames.length;
-  const randomIndex = Math.floor(Math.random() * availablePlanetsCount - 1);
+  const availablePlanetsCount = availablePlanetNames.length - 1;
+  const randomIndex = Math.floor(Math.random() * availablePlanetsCount);
 
   return availablePlanetNames[ randomIndex ];
 };

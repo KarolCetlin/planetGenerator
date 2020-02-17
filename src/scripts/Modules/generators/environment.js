@@ -125,6 +125,13 @@ var availableWorlds = [
         humidity: 1
     },
     {
+        name: 'hmmm',
+        description: 'W tym miejscu będzie znajdował się fantastyczny opis tej planety, który będzie działać na' +
+            'twoją wyobraznie. Jednak niestety w tym momencie możesz przeczytać tylko te słowa, nic poza tym',
+        temperature: 2,
+        humidity: 2
+    },
+    {
         name: 'Świat Gajański',
         description: 'Idealne warunki do powstania życia.',
         temperature: 2,
@@ -226,7 +233,7 @@ exports.environmentGenerate = function () {
     }
 };
 var matchWorld = function (temperatureIndex, humidityIndex) {
-    var countOfAvailableWorlds = availableWorlds.length - 1;
+    var countOfAvailableWorlds = availableWorlds.length;
     for (var availableWorldIndex = 0; availableWorldIndex < countOfAvailableWorlds; availableWorldIndex++) {
         var requiredTemperature = availableWorlds[availableWorldIndex].temperature;
         var requiredHumidity = availableWorlds[availableWorldIndex].humidity;

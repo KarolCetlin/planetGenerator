@@ -1,32 +1,60 @@
-"use strict";
-exports.__esModule = true;
-var planet_1 = require("./Cards/planet");
-exports.cardCollection = function () {
+import Switch from "../View/Tools/Switch.js";
+import Show from "./Tools/Show";
+import Clear from "./Tools/Clear.js";
+import { planetsCollection, currentSolarSystemNumber } from "../Index";
+import Visible from './Tools/Visible';
+import Diagram from '../Logic/Diagram';
+import { planetCard } from "./Cards/planet";
+
+export const cardCollection = () => {
+
     visibleCard('planetSection');
     visibleCard('starSection');
-    planet_1.planetCard();
+
+    planetCard()
 };
-var starCard = function () {
-    return null;
+
+
+
+
+const starCard = () => {
+
+    return null
 };
-var outpostCard = function () {
-    return null;
+
+
+const outpostCard = () => {
+
+    return null
 };
-var environmentCard = function () {
-    return null;
+
+
+const environmentCard = () => {
+
+    return null
 };
-var HtmlElements;
-(function (HtmlElements) {
-    HtmlElements["ShowCard"] = "block";
-    HtmlElements["AnimationOut"] = "animation__rollOut";
-    HtmlElements["AnimationIn"] = "animation__rollIn";
-})(HtmlElements || (HtmlElements = {}));
-var visibleCard = function ($element) {
-    var element = document.getElementById($element);
+
+enum HtmlElements {
+
+    ShowCard = 'block',
+    AnimationOut = 'animation__rollOut',
+    AnimationIn = 'animation__rollIn',
+
+}
+
+const visibleCard = ($element) => {
+
+    let element = document.getElementById($element);
+
     element.style.display = HtmlElements.ShowCard;
     element.classList.remove(HtmlElements.AnimationOut);
-    element.classList.add(HtmlElements.AnimationIn);
+    element.classList.add(HtmlElements.AnimationIn)
+
 };
+
+
+
+
 //
 //
 //
@@ -135,31 +163,35 @@ var visibleCard = function ($element) {
 //
 //
 //     }
-// chartInit() {
-//
-//   window.onload = function() {
-//
-//     var chart = new CanvasJS.Chart("chartContainer", {
-//       animationEnabled: true,
-//       title: {
-//         text: "Desktop Search Engine Market Share - 2016"
-//       },
-//       data: [{
-//         type: "pie",
-//         startAngle: 240,
-//         yValueFormatString: "##0.00\"%\"",
-//         indexLabel: "{label} {y}",
-//         dataPoints: [
-//           {y: 79.45, label: "Google"},
-//           {y: 7.31, label: "Bing"},
-//           {y: 7.06, label: "Baidu"},
-//           {y: 4.91, label: "Yahoo"},
-//           {y: 1.26, label: "Others"}
-//         ]
-//       }]
-//     });
-//     chart.render();
-//
-//   }
+
+    // chartInit() {
+    //
+    //   window.onload = function() {
+    //
+    //     var chart = new CanvasJS.Chart("chartContainer", {
+    //       animationEnabled: true,
+    //       title: {
+    //         text: "Desktop Search Engine Market Share - 2016"
+    //       },
+    //       data: [{
+    //         type: "pie",
+    //         startAngle: 240,
+    //         yValueFormatString: "##0.00\"%\"",
+    //         indexLabel: "{label} {y}",
+    //         dataPoints: [
+    //           {y: 79.45, label: "Google"},
+    //           {y: 7.31, label: "Bing"},
+    //           {y: 7.06, label: "Baidu"},
+    //           {y: 4.91, label: "Yahoo"},
+    //           {y: 1.26, label: "Others"}
+    //         ]
+    //       }]
+    //     });
+    //     chart.render();
+    //
+    //   }
+    // }
+
 // }
-// }
+
+
