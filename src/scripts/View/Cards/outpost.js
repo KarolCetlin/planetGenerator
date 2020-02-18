@@ -28,31 +28,22 @@ var View;
 var Description;
 (function (Description) {
     Description["Empty"] = "";
-    Description["Humidity"] = "Wilgotno\u015B\u0107:";
-    Description["Temperature"] = "Temperatura:";
+    Description["Population"] = "Liczba mieszka\u0144c\u00F3w:";
 })(Description || (Description = {}));
 var Props;
 (function (Props) {
-    Props["HumName"] = "humidityName";
-    Props["HumDesc"] = "humidityDescription";
-    Props["TemName"] = "temperatureName";
-    Props["TemDesc"] = "temperatureDescription";
-    Props["WorName"] = "worldName";
-    Props["WodDesc"] = "worldDescription";
+    Props["Name"] = "name";
+    Props["Description"] = "description";
 })(Props || (Props = {}));
-exports.environmentCard = function () {
-    if (events_1.planetHasEcosferic === true) {
-        visibleCard('worldSection', View.Show);
-        showTextWithDescription('humidityName', Description.Humidity, Props.HumName);
-        showTextWithDescription('humidityDescription', Description.Empty, Props.HumDesc);
-        showTextWithDescription('temperatureName', Description.Temperature, Props.TemName);
-        showTextWithDescription('temperatureDescription', Description.Empty, Props.TemDesc);
-        showTextWithDescription('planetTypeName', Description.Empty, Props.WorName);
-        showTextWithDescription('planetTypeDescription', Description.Empty, Props.WodDesc);
+exports.outpostCard = function () {
+    if (events_1.planetHasOutpost === true) {
+        visibleCard($ElementId.Outpost, View.Show);
+        showColonyText($ElementId.Structure, Description.Empty, Props.Name);
+        showColonyText($ElementId.Description, Description.Empty, Props.Description);
     }
     else {
-        visibleCard('worldSection', View.Hide);
-        clearElements("humidityName", "humidityDescription", 'temperatureName', 'temperatureDescription', 'planetTypeName', 'planetTypeDescription');
+        visibleCard($ElementId.Outpost, View.Hide);
+        clearElements($ElementId.Description, $ElementId.Structure);
     }
 };
 var visibleCard = function ($element, view) {
@@ -61,9 +52,9 @@ var visibleCard = function ($element, view) {
     element.classList.remove(Animation.Out);
     element.classList.add(Animation.In);
 };
-var showTextWithDescription = function ($element, description, firstProperty) {
+var showColonyText = function ($element, description, firstProperty) {
     var $domElement = document.getElementById($element);
-    $domElement.innerHTML = "<span>" + description + "</span> " + Index_1.planetsCollection[Index_1.currentSolarSystemNumber]['environment'][firstProperty];
+    $domElement.innerHTML = "<span>" + description + "</span> " + Index_1.planetsCollection[Index_1.currentSolarSystemNumber]['outpost'][firstProperty];
 };
 var clearElements = function () {
     var args = [];
@@ -76,3 +67,8 @@ var clearElements = function () {
         cleared.innerHTML = '';
     }
 };
+//             new Diagram();
+//
+//
+//             //  const racesDiagram = new Diagram();
+//             // setTimeout(() => racesDiagram.renderDiagram(), 2000);

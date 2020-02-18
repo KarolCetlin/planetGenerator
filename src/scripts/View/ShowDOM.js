@@ -3,15 +3,14 @@ exports.__esModule = true;
 var planet_1 = require("./Cards/planet");
 var star_1 = require("./Cards/star");
 var environment_1 = require("./Cards/environment");
+var outpost_1 = require("./Cards/outpost");
 exports.cardCollection = function () {
     visibleCard('planetSection');
     visibleCard('starSection');
     planet_1.planetCard();
     star_1.starCard();
     environment_1.environmentCard();
-};
-var outpostCard = function () {
-    return null;
+    outpost_1.outpostCard();
 };
 var HtmlElements;
 (function (HtmlElements) {

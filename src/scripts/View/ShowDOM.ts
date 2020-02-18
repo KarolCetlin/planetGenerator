@@ -7,6 +7,7 @@ import Diagram from '../Logic/Diagram';
 import { planetCard } from "./Cards/planet";
 import {starCard } from './Cards/star'
 import { environmentCard } from './Cards/environment';
+import { outpostCard } from './Cards/outpost';
 
 export const cardCollection = () => {
 
@@ -16,14 +17,7 @@ export const cardCollection = () => {
     planetCard();
     starCard();
     environmentCard();
-};
-
-
-
-const outpostCard = () => {
-
-    return null
-
+    outpostCard();
 };
 
 
