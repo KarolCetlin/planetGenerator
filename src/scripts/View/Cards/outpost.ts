@@ -52,7 +52,7 @@ export const outpostCard = (): void => {
 
 const visibleCard = ($element: string, view: string): void => {
 
-    let element = document.getElementById($element);
+    let element: any = document.getElementById($element);
 
     element.style.display = view;
     element.classList.remove(Animation.Out);
@@ -61,7 +61,7 @@ const visibleCard = ($element: string, view: string): void => {
 };
 
 const showColonyText = ($element: string, description: string, firstProperty: string): void => {
-    const $domElement = document.getElementById($element);
+    const $domElement: any = document.getElementById($element);
     $domElement.innerHTML = `<span>${description}</span> ${planetsCollection[currentSolarSystemNumber]['outpost'][firstProperty]}`;
 };
 

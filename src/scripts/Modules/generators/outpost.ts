@@ -120,7 +120,7 @@ const getRaceQuantityFromPercent = (totalNumber: number, percent: number): numbe
 
 const sortRacesByPercents = (array: Object[], sortProperty: string): void => {
 
-    array.sort((a: string, b: string) => b[sortProperty] - a[sortProperty]
+    array.sort((a: Object, b: Object) => b[sortProperty] - a[sortProperty]
     )
 
 };

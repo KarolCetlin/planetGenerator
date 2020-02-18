@@ -33,7 +33,7 @@ const showTextWithDescription = ($element: string, description: string, firstPro
 };
 
 const switchEvent = ($checkboxId: string, propertyCheck: string): void => {
-    const $checkboxElement = document.getElementById($checkboxId);
+    const $checkboxElement = document.getElementById($checkboxId) as HTMLInputElement;
     const readProperty: boolean = planetsCollection[currentSolarSystemNumber]['event'][propertyCheck];
 
     readProperty === true ? $checkboxElement.checked = true : $checkboxElement.checked = false;

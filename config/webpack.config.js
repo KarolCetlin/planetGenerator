@@ -12,7 +12,7 @@ module.exports = {
     mode: 'development',
 
     entry: {
-        main: './src/scripts/Index.js',
+        main: './src/scripts/Index.ts',
     },
 
     devtool: 'inline-source-map',
@@ -58,6 +58,12 @@ module.exports = {
 
     module: {
         rules: [
+            {
+                test: /\.tsx?$/,
+                use: 'ts-loader',
+                exclude: /node_modules/,
+            },
+
             {
                 test: /\.m?js$/,
                 exclude: /node_modules/,
@@ -130,8 +136,10 @@ module.exports = {
 
         ],
 
+    },
 
-
+    resolve: {
+        extensions: [ '.tsx', '.ts', '.js' ],
     },
 
 };

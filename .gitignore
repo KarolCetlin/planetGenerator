@@ -7,6 +7,7 @@ build/
 /node_modules/
 public/
 prod/
+/dist/
 
 
 # mpeltonen/sbt-idea plugin

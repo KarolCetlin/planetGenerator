@@ -1,9 +1,3 @@
-import Switch from "../View/Tools/Switch.js";
-import Show from "./Tools/Show";
-import Clear from "./Tools/Clear.js";
-import { planetsCollection, currentSolarSystemNumber } from "../Index";
-import Visible from './Tools/Visible';
-import Diagram from '../Logic/Diagram';
 import { planetCard } from "./Cards/planet";
 import {starCard } from './Cards/star'
 import { environmentCard } from './Cards/environment';
@@ -31,9 +25,9 @@ enum HtmlElements {
 
 }
 
-const visibleCard = ($element) => {
+const visibleCard = ($element: string) => {
 
-    let element = document.getElementById($element);
+    let element: any = document.getElementById($element);
 
     element.style.display = HtmlElements.ShowCard;
     element.classList.remove(HtmlElements.AnimationOut);

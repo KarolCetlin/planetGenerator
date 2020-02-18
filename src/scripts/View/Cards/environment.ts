@@ -40,8 +40,6 @@ enum Props {
     WodDesc = 'worldDescription',
 }
 
-
-
 export const environmentCard = () => {
 
     if(planetHasEcosferic === true){

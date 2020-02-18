@@ -12,17 +12,17 @@ export const starCard = (): void => {
 };
 
 const showTitle = ($element: string, property: string): void => {
-    const $domElement = document.getElementById($element);
+    const $domElement: any = document.getElementById($element);
     $domElement.innerHTML = `${planetsCollection[currentSolarSystemNumber]['star'][property]}`
 };
 
 const showLifeCycle = ($element: string, description: string, firstProperty: string): void => {
-    const $domElement = document.getElementById($element);
+    const $domElement: any = document.getElementById($element);
     $domElement.innerHTML = `<span>${description}</span> ${planetsCollection[currentSolarSystemNumber]['star']['lifeCycle'][firstProperty]}`;
 };
 
 const showSpectralType = ($element: string, description: string, firstProperty: string): void => {
-    const $domElement = document.getElementById($element);
+    const $domElement: any = document.getElementById($element);
     $domElement.innerHTML = `<span>${description}</span> ${planetsCollection[currentSolarSystemNumber]['star']['spectral'][firstProperty]}`;
 };
 
