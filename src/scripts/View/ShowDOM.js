@@ -1,18 +1,16 @@
 "use strict";
 exports.__esModule = true;
 var planet_1 = require("./Cards/planet");
+var star_1 = require("./Cards/star");
+var environment_1 = require("./Cards/environment");
 exports.cardCollection = function () {
     visibleCard('planetSection');
     visibleCard('starSection');
     planet_1.planetCard();
-};
-var starCard = function () {
-    return null;
+    star_1.starCard();
+    environment_1.environmentCard();
 };
 var outpostCard = function () {
-    return null;
-};
-var environmentCard = function () {
     return null;
 };
 var HtmlElements;

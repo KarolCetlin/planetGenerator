@@ -5,34 +5,29 @@ import { planetsCollection, currentSolarSystemNumber } from "../Index";
 import Visible from './Tools/Visible';
 import Diagram from '../Logic/Diagram';
 import { planetCard } from "./Cards/planet";
+import {starCard } from './Cards/star'
+import { environmentCard } from './Cards/environment';
 
 export const cardCollection = () => {
 
     visibleCard('planetSection');
     visibleCard('starSection');
 
-    planetCard()
+    planetCard();
+    starCard();
+    environmentCard();
 };
 
-
-
-
-const starCard = () => {
-
-    return null
-};
 
 
 const outpostCard = () => {
 
     return null
+
 };
 
 
-const environmentCard = () => {
 
-    return null
-};
 
 enum HtmlElements {
 
