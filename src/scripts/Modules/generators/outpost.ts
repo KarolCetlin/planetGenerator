@@ -71,7 +71,7 @@ export const generateOutpost = (): Outpost => {
         const outpostTypeParameters = availableOutpostsTypes[randomAvailableOutpostsIndex];
         let currentPopulation: number = Math.floor(Math.random() * (outpostTypeParameters.maxSize - outpostTypeParameters.minSize)) + outpostTypeParameters.minSize;
 
-        console.log('jest kolonia')
+        console.log('jest kolonia');
 
         return {
             name: outpostTypeParameters.name,
@@ -82,7 +82,7 @@ export const generateOutpost = (): Outpost => {
 
     } else {
 
-console.log('brak koloni')
+console.log('brak koloni');
         return {
             name: 'Brak',
             description: 'Ta planeta nie posiada żadnej kolonii',

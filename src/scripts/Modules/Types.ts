@@ -1,3 +1,4 @@
+
 export interface RequirementsCreationEnvironment {
     name: string,
     description: string,
@@ -38,4 +39,62 @@ export interface Outpost {
     population?: number,
     description: string,
     society?: Object[],
+}
+
+export interface AvailablePlanetSizeParameters {
+    planetSizeName: string,
+    description: string,
+    minSizeRadius: number,
+    maxSizeRadius: number,
+    typeSize: string
+}
+
+export interface PlanetSize {
+    name: string,
+    description: string,
+    radius: number,
+}
+
+export interface Star {
+    name: string;
+    lifeCycle: StarType;
+    spectral: StarSpectral;
+}
+
+export interface AvailableLifeCycleStars {
+
+    name: string,
+    description: string,
+    minSpectralType: number,
+    maxSpectralType: number,
+
+}
+
+export interface AvailableSpectralTypes {
+    name: string,
+    description: string,
+    minTemperature: number,
+    maxTemperature: number,
+}
+
+export interface StarType {
+
+    name: string,
+    description: string,
+    spectralIndex: number,
+}
+
+export interface StarSpectral {
+    name: string,
+    description: string,
+    temperature: number,
+}
+
+export interface Planet {
+    name: string;
+    size: PlanetSize;
+    star: Star;
+    event: EventRequirements;
+    outpost: Outpost;
+    environment: Environment;
 }

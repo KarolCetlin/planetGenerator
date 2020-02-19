@@ -1,31 +1,4 @@
-interface AvailableLifeCycleStars {
-
-    name: string,
-    description: string,
-    minSpectralType: number,
-    maxSpectralType: number,
-
-}
-
-interface AvailableSpectralTypes {
-    name: string,
-    description: string,
-    minTemperature: number,
-    maxTemperature: number,
-}
-
-export interface StarType {
-
-    name: string,
-    description: string,
-    spectralIndex: number,
-}
-
-export interface StarSpectral {
-    name: string,
-    description: string,
-    temperature: number,
-}
+import {AvailableLifeCycleStars, AvailableSpectralTypes, StarType, StarSpectral} from "../Types";
 
 
 const availableLifeCycleStars: AvailableLifeCycleStars[] = [

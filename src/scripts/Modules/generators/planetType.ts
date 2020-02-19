@@ -1,16 +1,4 @@
-interface AvailablePlanetSizeParameters {
-  planetSizeName: string,
-  description: string,
-  minSizeRadius: number,
-  maxSizeRadius: number,
-  typeSize: string
-}
-
-export interface PlanetSize {
-  name: string,
-  description: string,
-  radius: number,
-}
+import { AvailablePlanetSizeParameters, PlanetSize } from "../Types";
 
 const availablePlanetSizes: AvailablePlanetSizeParameters[] = [
 
@@ -79,13 +67,12 @@ const availablePlanetSizes: AvailablePlanetSizeParameters[] = [
   },
 ];
 
-
 const generatePlanetSizeRadius = (planetSizeParameters: AvailablePlanetSizeParameters):number => {
   const minValue = planetSizeParameters.minSizeRadius;
   const maxValue = planetSizeParameters.maxSizeRadius;
 
   return Math.floor(Math.random() * (maxValue - minValue)) + minValue;
-}
+};
 
 export const generatePlanetSize = (): PlanetSize => {
   const countOfAvailableSizes = availablePlanetSizes.length;
@@ -99,6 +86,3 @@ export const generatePlanetSize = (): PlanetSize => {
     radius: generatePlanetSizeRadius(planetSizeParameters),
   };
 };
-
-
-

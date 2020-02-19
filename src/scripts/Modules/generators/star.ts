@@ -1,15 +1,9 @@
 import {
-    StarSpectral,
-    StarType,
     generateStarType,
     generateSpectralType,
 } from './starType';
+import { Star} from "../Types";
 
-export interface Star {
-    name: string;
-    lifeCycle: StarType;
-    spectral: StarSpectral;
-}
 
 export const generateStar = (): Star => {
 
