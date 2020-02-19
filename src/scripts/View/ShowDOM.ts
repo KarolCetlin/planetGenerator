@@ -2,6 +2,7 @@ import { planetCard } from "./Cards/planet";
 import {starCard } from './Cards/star'
 import { environmentCard } from './Cards/environment';
 import { outpostCard } from './Cards/outpost';
+import { Animation, View } from '../Modules/Types';
 
 export const cardCollection = () => {
 
@@ -14,24 +15,13 @@ export const cardCollection = () => {
     outpostCard();
 };
 
-
-
-
-enum HtmlElements {
-
-    ShowCard = 'block',
-    AnimationOut = 'animation__rollOut',
-    AnimationIn = 'animation__rollIn',
-
-}
-
 const visibleCard = ($element: string) => {
 
     let element: any = document.getElementById($element);
 
-    element.style.display = HtmlElements.ShowCard;
-    element.classList.remove(HtmlElements.AnimationOut);
-    element.classList.add(HtmlElements.AnimationIn)
+    element.style.display = View.Show;
+    element.classList.remove(Animation.Out);
+    element.classList.add(Animation.In)
 
 };
 

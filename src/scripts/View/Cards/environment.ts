@@ -1,44 +1,7 @@
 import {currentSolarSystemNumber, planetsCollection} from "../../Index";
 import { planetHasEcosferic } from '../../Modules/generators/events'
+import { Animation, View, Description, Props } from '../../Modules/Types';
 
-enum $ElementId {
-
-    Outpost = 'outpostSection',
-    Description = 'colonyDescription',
-    Structure = 'colonyStructure',
-
-}
-
-enum Animation {
-
-    Out = 'animation__rollOut',
-    In = 'animation__rollIn',
-
-}
-
-enum View {
-
-    Show = 'block',
-    Hide = 'none',
-
-}
-
-enum Description {
-
-    Empty = '',
-    Humidity = 'Wilgotność:',
-    Temperature = 'Temperatura:',
-
-}
-
-enum Props {
-    HumName = 'humidityName',
-    HumDesc = 'humidityDescription',
-    TemName = 'temperatureName',
-    TemDesc = 'temperatureDescription',
-    WorName = 'worldName',
-    WodDesc = 'worldDescription',
-}
 
 export const environmentCard = () => {
 

@@ -1,49 +1,17 @@
 import {currentSolarSystemNumber, planetsCollection} from "../../Index";
 import {planetHasOutpost } from '../../Modules/generators/events';
+import { Animation, View, Description, Props, $outpost } from '../../Modules/Types';
 
-enum $ElementId {
-
-    Outpost = 'outpostSection',
-    Description = 'colonyDescription',
-    Structure = 'colonyStructure',
-
-}
-
-enum Animation {
-
-    Out = 'animation__rollOut',
-    In = 'animation__rollIn',
-
-}
-
-enum View {
-
-    Show = 'block',
-    Hide = 'none',
-
-}
-
-enum Description {
-
-    Empty = '',
-    Population = "Liczba mieszkańców:",
-
-}
-
-enum Props {
-    Name = 'name',
-    Description = 'description'
-}
 
 export const outpostCard = (): void => {
 
     if(planetHasOutpost === true){
-        visibleCard($ElementId.Outpost, View.Show);
-        showColonyText( $ElementId.Structure, Description.Empty, Props.Name);
-        showColonyText($ElementId.Description, Description.Empty, Props.Description);
+        visibleCard($outpost.Card, View.Show);
+        showColonyText( $outpost.Structure, Description.Empty, Props.Name);
+        showColonyText($outpost.Description, Description.Empty, Props.Description);
     } else {
-        visibleCard($ElementId.Outpost, View.Hide);
-        clearElements($ElementId.Description, $ElementId.Structure,);
+        visibleCard($outpost.Card, View.Hide);
+        clearElements($outpost.Description, $outpost.Structure,);
     }
 
 };

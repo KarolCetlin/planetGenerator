@@ -1,5 +1,5 @@
 import {planetHasOutpost} from './events';
-import { OutpostsParameters, Outpost } from "../Types";
+import { OutpostsParameters, Outpost, Race } from "../Types";
 
 
 const availableOutpostsTypes: OutpostsParameters[] = [
@@ -115,13 +115,6 @@ const getRaceNameIndex = (array: String[]): number => {
     return Math.floor(Math.random() * array.length);
 };
 
-enum Race {
-
-    Name = 'name',
-    Quantity = 'quantity',
-    Percent = 'percent',
-
-}
 
 const addRaceToSociety = (currentPopulation: number): Object[] => {
 

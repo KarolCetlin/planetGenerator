@@ -1,18 +1,12 @@
 import {currentSolarSystemNumber, planetsCollection} from "../../Index";
+import {Description} from "../../Modules/Types";
 
-enum Description {
-
-    Name = "Wytłumaczenie:",
-    Description = "Rodzaj wielkości:",
-    Radius = "Rozmiar względem ziemii (promień):",
-
-}
 
 export const planetCard = (): void => {
 
     showTitle("planetName", "name")
     showTextWithDescription("planetSizeName", Description.Name, "name", )
-    showTextWithDescription("planetSizeDescription",  Description.Description, "description",);
+    showTextWithDescription("planetSizeDescription",  Description.Size, "description",);
     showTextWithDescription("planetRadius",Description.Radius, "radius");
 
     switchEvent("switchOutpost", "hasOutpost")

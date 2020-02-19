@@ -98,3 +98,56 @@ export interface Planet {
     outpost: Outpost;
     environment: Environment;
 }
+
+
+export enum Race {
+
+    Name = 'name',
+    Quantity = 'quantity',
+    Percent = 'percent',
+
+}
+
+
+export enum $outpost {
+
+    Card = 'outpostSection',
+    Description = 'colonyDescription',
+    Structure = 'colonyStructure',
+
+}
+
+export enum Animation {
+
+    Out = 'animation__rollOut',
+    In = 'animation__rollIn',
+
+}
+
+export enum View {
+
+    Show = 'block',
+    Hide = 'none',
+
+}
+
+export enum Description {
+    Name = "Wytłumaczenie:",
+    Size = "Rodzaj wielkości:",
+    Radius = "Rozmiar względem ziemii (promień):",
+    Empty = '',
+    Humidity = 'Wilgotność:',
+    Temperature = 'Temperatura:',
+
+}
+
+export enum Props {
+    HumName = 'humidityName',
+    HumDesc = 'humidityDescription',
+    TemName = 'temperatureName',
+    TemDesc = 'temperatureDescription',
+    WorName = 'worldName',
+    WodDesc = 'worldDescription',
+    Name = 'name',
+    Description = 'description'
+}
