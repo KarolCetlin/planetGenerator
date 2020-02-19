@@ -2,8 +2,10 @@ import {
     generateStarType,
     generateSpectralType,
 } from './starType';
-import { Star} from "../Types";
-import { availableStarNames } from "./availableStarNames";
+import { Star } from "../Types";
+
+const availableStarNames: string[] = require('./availableStarNames.json');
+
 
 export const generateStar = (): Star => {
 

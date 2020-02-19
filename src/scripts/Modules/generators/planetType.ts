@@ -1,5 +1,6 @@
-import { AvailablePlanetSizeParameters, PlanetSize } from "../Types";
-import { availablePlanetSizes } from './availablePlanetSizes';
+import { AvailablePlanetSizeParameters, PlanetSize} from "../Types";
+
+const availablePlanetSizes: AvailablePlanetSizeParameters[] = require('./availablePlanetSizes.json');
 
 const generatePlanetSizeRadius = (planetSizeParameters: AvailablePlanetSizeParameters):number => {
   const minValue = planetSizeParameters.minSizeRadius;

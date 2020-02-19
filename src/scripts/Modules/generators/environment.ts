@@ -1,8 +1,8 @@
 import { planetHasEcosferic  } from './events'
-import { World, Environment } from '../Types'
-import { availableTemperatures } from "./availableTemperatures";
-import { availableHumidities } from "./availableHumidities";
-import { availableWorlds } from "./availableWorlds";
+import {World, Environment, RequirementsCreationEnvironment} from '../Types'
+const availableHumidities: RequirementsCreationEnvironment[] = require('./availableHumidities.json');
+const availableTemperatures: RequirementsCreationEnvironment[] = require('./availableTemperatures.json');
+const availableWorlds: RequirementsCreationEnvironment[] = require('./availableWorlds.json');
 
 export const environmentGenerate = (): Environment => {
 

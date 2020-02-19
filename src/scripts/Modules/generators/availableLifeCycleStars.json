@@ -1,0 +1,100 @@
+[
+{
+"name": "Brązowy karzeł",
+"description": ["Obiekt gwiazdopodobny o masie zbyt małej, by mogły zachodzić w nim reakcje przemiany",
+  "wodoru w hel, które są głównym źródłem energii gwiazd ciągu głównego. Od planet-olbrzymów odróżnia",
+"je to, że są zdolne do syntezy deuteru przynajmniej na początku swojego istnienia. Brązowe karły",
+"często występują samotnie w 'przestrzeni.' Określa się je czasem mianem 'niewypałów', 'superplanet'",
+"bądź „nieudanych gwiazd."],
+"minSpectralType": 6,
+"maxSpectralType": 8
+},
+{
+"name": "Czerwony karzeł",
+"description": ["Gwiazda ciągu głównego późnego typu widmowego (K, M, rzadko L). Czerwone karły stanowią",
+"najliczniejszy typ gwiazd we Wszechświecie, jednak z powodu małej jasności żadna z tych gwiazd nie",
+"jest widoczna gołym okiem na ziemskim niebie. Z powodu wolnego tempa syntezy wodoru w hel świecą",
+"one długo i ewoluują powoli; szacowany czas życia czerwonych karłów sięga 10 bilionów lat"],
+"minSpectralType": 5,
+"maxSpectralType": 7
+},
+{
+"name": "Biały karzeł",
+"description": ["Niewielki (rzędu rozmiarów Ziemi) obiekt astronomiczny składający się ze zdegenerowanej ",
+"materii, emitujący m.in. promieniowanie widzialne. Powstaje po ustaniu reakcji jądrowych w gwieździe",
+"o małej lub średniej masie. Mało masywne gwiazdy nie osiągają w trakcie swojej ewolucji warunków ",
+"wystarczających do zapłonu helu w reakcjach syntezy termojądrowej i powstają z nich białe karły helowe. ",
+"Średnio masywne gwiazdy spalają hel, dając białe karły węglowe lub węglowo-tlenowe. Pozostałością ",
+"gwiazd są białe karły z domieszką tlenu, neonu i magnezu."],
+"minSpectralType": 1,
+"maxSpectralType": 5
+},
+{
+"name": "Podkarły",
+"description": ["Określenie gwiazd z niezwykłymi widmami, które wcześniej określano jako „przejściowe” (lub ",
+"„niedojrzałe”) białe karły. Charakteryzują się niską metalicznością. Niska metaliczność, czyli mała ",
+"zawartość pierwiastków cięższych od helu sprawia, że zewnętrzne warstwy podkarłów są bardziej ",
+"przepuszczalne i gwiazdy te emitują więcej światła o małych długościach fali"],
+"minSpectralType": 4,
+"maxSpectralType": 6
+},
+{
+"name": "Podolbrzym",
+"description": ["Gwiazdy jaśniejsze od gwiazd z ciągu głównego, ale nie tak jasne jak prawdziwe olbrzymy. ",
+"Uważa się, że podolbrzymy już kończą lub właśnie skończyły spalanie wodoru w swoich jądrach i ",
+"zaczynają rozrastać się aż do stadium olbrzyma. Ich temperatury są niższe, natomiast średnice ",
+"większe od typowych gwiazd ciągu głównego o zbliżonej do nich masie."],
+"minSpectralType": 1,
+"maxSpectralType": 5
+},
+{
+"name": "Gwiazda ciagu głównego",
+"description": ["Będąc na etapie ciągu głównego gwiazdy wypromieniowują energię z syntezy wodoru w hel w ",
+"swoich wnętrzach. Proces ten jest bardzo wydajny energetycznie, wobec czego większość swojego życia ",
+"gwiazdy spędzają właśnie na tym etapie. Masa gwiazdy nie jest jedynym parametrem determinującym ",
+"jasność i temperaturę powierzchni gwiazdy. Gwiazda zmienia się nieco spalając wodór, a wyjęcie z ",
+"ciągu głównego nie jest gwałtowne. Innymi parametrami wpływającymi stan gwiazdy są: pole magnetyczne, ",
+"prędkość obrotowa gwiazdy, a przede wszystkim skład chemiczny."],
+"minSpectralType": 0,
+"maxSpectralType": 7
+},
+{
+"name": "Olbrzym",
+"description": ["Krótkotrwałe stadium ewolucji gwiazdy mającej średnią masę. Moc promieniowania takiego ",
+"olbrzyma jest kilkaset razy większa od mocy promieniowania Słońca (nasza gwiazda za około 5 mld lat ",
+"stanie się olbrzymem i jego średnica wzrośnie ponad stukrotnie, a moc promieniowania tysiąckrotnie)",
+"Fotosfera olbrzyma jest stosunkowo zimna. Olbrzymy zazwyczaj są barwy czerwonej."],
+"minSpectralType": 1,
+"maxSpectralType": 5
+},
+{
+"name": "Jasny olbrzym",
+"description": ["W tym miejscu będzie opis dotyczący wielkości tej planety, na razie jest to całkowicie puste",
+"pole, czekające na to, aż je uzupełnisz"],
+"minSpectralType": 1,
+"maxSpectralType": 7
+},
+{
+"name": "Nadolbrzym",
+"description": ["W tym miejscu będzie opis dotyczący wielkości tej planety, na razie jest to całkowicie puste",
+"pole, czekające na to, aż je uzupełnisz"],
+"minSpectralType": 0,
+"maxSpectralType": 6
+},
+{
+"name": "Hiperolbrzym",
+"description": ["W tym miejscu będzie opis dotyczący wielkości tej planety, na razie jest to całkowicie puste",
+"pole, czekające na to, aż je uzupełnisz"],
+"minSpectralType": 0,
+"maxSpectralType": 6
+},
+{
+"name": "Neutronowa",
+"description": ["Zdegenerowana gwiazda powstała w wyniku ewolucji gwiazd o dużych masach (~ 8–10 mas Słońca).",
+"Powstają podczas wybuchu supernowej lub kolapsu białego karła w układach podwójnych. Materia składająca ",
+"się na gwiazdy neutronowe jest niezwykle gęsta, przy średnicy 10–15 km. Łyżeczka materii neutronowej ma",
+"ciężar taki sam jak ciało o masie ok. 6 miliardów ton na Ziemi."],
+"minSpectralType": 0,
+"maxSpectralType": 0
+}
+]

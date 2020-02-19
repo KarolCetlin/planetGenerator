@@ -1,4 +1,4 @@
-import { availablePlanetNames } from "./availablePlanetNames";
+const availablePlanetNames: string[] = require('./availablePlanetNames.json');
 
 const generatePlanetName = (): string => {
   const availablePlanetsCount = availablePlanetNames.length - 1;
