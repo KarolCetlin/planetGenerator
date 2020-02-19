@@ -14,7 +14,7 @@ export interface Star {
 export const generateStar = (): Star => {
 
     return {
-        name: StarNameGenerator(),
+        name: genereteStarName(),
         lifeCycle: generateStarType(),
         spectral: generateSpectralType(),
     }
@@ -38,7 +38,7 @@ const availableStarNames: string[] = ['Polaris',
     'Jusurvo',
     'Soleko'];
 
-const StarNameGenerator = (): string => {
+const genereteStarName = (): string => {
     const availableStarCount = availableStarNames.length;
     const randomIndex = Math.floor(Math.random() * availableStarCount - 1);
 

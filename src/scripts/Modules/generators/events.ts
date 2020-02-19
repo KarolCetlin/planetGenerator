@@ -1,34 +1,28 @@
-
-export interface EventRequirements {
-    hasOutpost: boolean,
-    hasEcosferic: boolean,
-    hasMinerals: boolean,
-    hasAnomaly: boolean,
-};
+import { EventRequirements } from "../Types";
 
 export let planetHasOutpost: boolean;
 export let planetHasEcosferic: boolean;
 
-export const checkEvents = (): EventRequirements => {
+export const generateEvents = (): EventRequirements => {
 
     const outpostPossibility = 50;
     const ecosfericPossibility = 50;
     const mineralsPossibility = 15;
     const anomalyPossibility = 25;
 
-    planetHasOutpost = checkChance(outpostPossibility);
-    planetHasEcosferic = checkChance(ecosfericPossibility);
+    planetHasOutpost = eventInitialization(outpostPossibility);
+    planetHasEcosferic = eventInitialization(ecosfericPossibility);
 
     return{
         hasOutpost: planetHasOutpost,
         hasEcosferic: planetHasEcosferic,
-        hasMinerals: checkChance(mineralsPossibility),
-        hasAnomaly: checkChance(anomalyPossibility),
+        hasMinerals: eventInitialization(mineralsPossibility),
+        hasAnomaly: eventInitialization(anomalyPossibility),
     }
 
 };
 
-const checkChance = (requiredValue: number): boolean => {
+const eventInitialization = (requiredValue: number): boolean => {
 
     const maxChanceToSuccess: number = 100;
     const drawnValue = Math.floor(Math.random() * Math.floor(maxChanceToSuccess));

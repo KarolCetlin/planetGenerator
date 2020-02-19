@@ -24,7 +24,7 @@ const Init = (chosenMethod: string): void => {
 
     switch (chosenMethod) {
         case Method.Auto:
-            initGenerator();
+            GenerateAllParameters();
             cardCollection();
             break;
 
@@ -36,14 +36,10 @@ const Init = (chosenMethod: string): void => {
             console.log("custom planet");
             break;
     }
+};
 
 
-
-
-}
-
-
-const initGenerator = () => {
+const GenerateAllParameters = () => {
 
     let newPlanet: any = generatePlanet();
     planetsCollection.push(newPlanet);
@@ -60,47 +56,4 @@ const click = ($element: string, chosenMethod: string) => {
     };
 };
 
-Init(Method.Auto);
-
-// class Init {
-//     constructor($element: string, chosenMethod) {
-//         this.click($element, chosenMethod);
-//     }
-//
-//
-//     checkMethod(chosenMethod) {
-//
-//         switch (chosenMethod) {
-//             case Method.Auto:
-//                 this.initGenerator();
-//                 cardCollection();
-//                 break;
-//
-//             case Method.Parameter:
-//                 console.log("change one parameter");
-//                 break;
-//
-//             case Method.Custom:
-//                 console.log("custom planet");
-//                 break;
-//         }
-//     }
-//
-//     initGenerator() {
-//
-//         let newPlanet: any = generatePlanet();
-//         planetsCollection.push(newPlanet);
-//         console.log(planetsCollection);
-//
-//     }
-//
-//     click($element, chosenMethod) {
-//         let clickedElement = document.getElementById($element);
-//         clickedElement.onclick = () => {
-//             this.checkMethod(chosenMethod);
-//             currentSolarSystemNumber++;
-//         };
-//     }
-// }
-//
-// new Init("active", Method.Auto);
+click("active", Method.Auto);

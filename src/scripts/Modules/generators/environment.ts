@@ -1,25 +1,5 @@
 import { planetHasEcosferic  } from './events'
-
-interface RequirementsCreationEnvironment {
-    name: string,
-    description: string,
-    temperature?: number,
-    humidity?: number,
-}
-
-interface World {
-    name: string,
-    description: string,
-}
-
-export interface Environment {
-    temperatureName: string
-    temperatureDescription: string,
-    humidityName: string,
-    humidityDescription: string,
-    worldName: any,
-    worldDescription: string,
-}
+import {RequirementsCreationEnvironment, World, Environment } from '../Types'
 
 const availableTemperatures: RequirementsCreationEnvironment[] = [
     {

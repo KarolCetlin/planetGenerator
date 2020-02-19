@@ -5,9 +5,9 @@ import {
 } from './generators/planetType';
 import { Outpost, generateOutpost } from './generators/outpost';
 import {generateStar, Star} from './generators/star'
-import { Environment,
-  environmentGenerate } from './generators/environment'
-import { EventRequirements, checkEvents} from "./generators/events";
+import { environmentGenerate } from './generators/environment'
+import {Environment, EventRequirements } from './Types'
+import { generateEvents } from "./generators/events";
 
 interface Planet {
   name: string;
@@ -29,7 +29,7 @@ export const generatePlanet = (): Planet => {
     name: generatePlanetName(),
     size: generatePlanetSize(),
     star: generateStar(),
-    event: checkEvents(),
+    event: generateEvents(),
     outpost: generateOutpost(),
     environment: environmentGenerate(),
   };
