@@ -3,10 +3,10 @@ import {
   PlanetSize,
   generatePlanetSize,
 } from './generators/planetType';
-import { Outpost, generateOutpost } from './generators/outpost';
+import { generateOutpost } from './generators/outpost';
 import {generateStar, Star} from './generators/star'
 import { environmentGenerate } from './generators/environment'
-import {Environment, EventRequirements } from './Types'
+import {Environment, EventRequirements, Outpost } from './Types'
 import { generateEvents } from "./generators/events";
 
 interface Planet {

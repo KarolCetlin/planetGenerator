@@ -1,24 +1,6 @@
 import {planetHasOutpost} from './events';
+import { OutpostsParameters, Outpost } from "../Types";
 
-interface OutpostsParameters {
-    name: string,
-    minSize: number,
-    maxSize: number,
-    description: string,
-}
-
-export interface Outpost {
-    name: string,
-    population?: number,
-    description: string,
-    society?: Object[],
-}
-
-interface Society {
-    raceName: string,
-    populationPercent: number,
-    quantity: number,
-}
 
 const availableOutpostsTypes: OutpostsParameters[] = [
     {

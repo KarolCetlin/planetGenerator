@@ -25,3 +25,17 @@ export interface EventRequirements {
     hasMinerals: boolean,
     hasAnomaly: boolean,
 };
+
+export interface OutpostsParameters {
+    name: string,
+    minSize: number,
+    maxSize: number,
+    description: string,
+}
+
+export interface Outpost {
+    name: string,
+    population?: number,
+    description: string,
+    society?: Object[],
+}
