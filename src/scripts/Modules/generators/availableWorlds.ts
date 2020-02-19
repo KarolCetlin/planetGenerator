@@ -1,0 +1,193 @@
+import {RequirementsCreationEnvironment} from "../Types";
+
+export const availableWorlds: RequirementsCreationEnvironment[] = [
+    {
+        name: 'Morze piasku',
+        description: 'W tym miejscu będzie znajdował się fantastyczny opis tej planety, który będzie działać na' +
+            'twoją wyobraznie. Jednak niestety w tym momencie możesz przeczytać tylko te słowa, nic poza tym',
+        temperature: 0,
+        humidity: 0,
+    },
+    {
+        name: 'Pustynna',
+        description: 'W tym miejscu będzie znajdował się fantastyczny opis tej planety, który będzie działać na' +
+            'twoją wyobraznie. Jednak niestety w tym momencie możesz przeczytać tylko te słowa, nic poza tym',
+        temperature: 0,
+        humidity: 1,
+    }, {
+        name: 'Sawanna',
+        description: 'W tym miejscu będzie znajdował się fantastyczny opis tej planety, który będzie działać na' +
+            'twoją wyobraznie. Jednak niestety w tym momencie możesz przeczytać tylko te słowa, nic poza tym',
+        temperature: 0,
+        humidity: 2,
+    }, {
+        name: 'Tropikalna',
+        description: 'W tym miejscu będzie znajdował się fantastyczny opis tej planety, który będzie działać na' +
+            'twoją wyobraznie. Jednak niestety w tym momencie możesz przeczytać tylko te słowa, nic poza tym',
+        temperature: 0,
+        humidity: 3,
+    }, {
+        name: 'Atoll. Pustynne wyspy',
+        description: 'W tym miejscu będzie znajdował się fantastyczny opis tej planety, który będzie działać na' +
+            'twoją wyobraznie. Jednak niestety w tym momencie możesz przeczytać tylko te słowa, nic poza tym',
+        temperature: 0,
+        humidity: 4,
+    },
+    {
+        name: 'Jałowy',
+        description: 'W tym miejscu będzie znajdował się fantastyczny opis tej planety, który będzie działać na' +
+            'twoją wyobraznie. Jednak niestety w tym momencie możesz przeczytać tylko te słowa, nic poza tym',
+        temperature: 1,
+        humidity: 0,
+    },
+
+    {
+        name: 'Arroyo. (Mesa)',
+        description: 'W tym miejscu będzie znajdował się fantastyczny opis tej planety, który będzie działać na' +
+            'twoją wyobraznie. Jednak niestety w tym momencie możesz przeczytać tylko te słowa, nic poza tym',
+        temperature: 1,
+        humidity: 1,
+    },
+
+    {
+        name: 'Podniebne lasy',
+        description: 'W tym miejscu będzie znajdował się fantastyczny opis tej planety, który będzie działać na' +
+            'twoją wyobraznie. Jednak niestety w tym momencie możesz przeczytać tylko te słowa, nic poza tym',
+        temperature: 1,
+        humidity: 2,
+    },
+
+    {
+        name: 'Bagnista',
+        description: 'W tym miejscu będzie znajdował się fantastyczny opis tej planety, który będzie działać na' +
+            'twoją wyobraznie. Jednak niestety w tym momencie możesz przeczytać tylko te słowa, nic poza tym',
+        temperature: 1,
+        humidity: 3,
+    },
+
+    {
+        name: 'Świat lasów mangrowych',
+        description: 'W tym miejscu będzie znajdował się fantastyczny opis tej planety, który będzie działać na' +
+            'twoją wyobraznie. Jednak niestety w tym momencie możesz przeczytać tylko te słowa, nic poza tym',
+        temperature: 1,
+        humidity: 4,
+    },
+
+    {
+        name: 'Świat nieurodzajny (pustynie na dużej wysokości)',
+        description: 'W tym miejscu będzie znajdował się fantastyczny opis tej planety, który będzie działać na' +
+            'twoją wyobraznie. Jednak niestety w tym momencie możesz przeczytać tylko te słowa, nic poza tym',
+        temperature: 2,
+        humidity: 0,
+    },
+
+    {
+        name: 'Oaza',
+        description: 'W tym miejscu będzie znajdował się fantastyczny opis tej planety, który będzie działać na' +
+            'twoją wyobraznie. Jednak niestety w tym momencie możesz przeczytać tylko te słowa, nic poza tym',
+        temperature: 2,
+        humidity: 1,
+    },
+
+    {
+        name: 'hmmm',
+        description: 'W tym miejscu będzie znajdował się fantastyczny opis tej planety, który będzie działać na' +
+            'twoją wyobraznie. Jednak niestety w tym momencie możesz przeczytać tylko te słowa, nic poza tym',
+        temperature: 2,
+        humidity: 2,
+    },
+
+    {
+        name: 'Świat Gajański',
+        description: 'Idealne warunki do powstania życia.',
+        temperature: 2,
+        humidity: 3,
+    },
+
+    {
+        name: 'Oceaniczny',
+        description: 'Planeta to praktycznie jeden wielki ocean',
+        temperature: 2,
+        humidity: 4,
+    },
+
+    {
+        name: 'Mroźne pustkowia',
+        description: 'W tym miejscu będzie znajdował się fantastyczny opis tej planety, który będzie działać na' +
+            'twoją wyobraznie. Jednak niestety w tym momencie możesz przeczytać tylko te słowa, nic poza tym',
+        temperature: 3,
+        humidity: 0,
+    },
+
+    {
+        name: 'Step',
+        description: 'W tym miejscu będzie znajdował się fantastyczny opis tej planety, który będzie działać na' +
+            'twoją wyobraznie. Jednak niestety w tym momencie możesz przeczytać tylko te słowa, nic poza tym',
+        temperature: 3,
+        humidity: 1,
+    },
+
+    {
+        name: 'alpejski - (górzysty)',
+        description: 'W tym miejscu będzie znajdował się fantastyczny opis tej planety, który będzie działać na' +
+            'twoją wyobraznie. Jednak niestety w tym momencie możesz przeczytać tylko te słowa, nic poza tym',
+        temperature: 3,
+        humidity: 2,
+    },
+
+    {
+        name: 'Kaskadowy',
+        description: 'W tym miejscu będzie znajdował się fantastyczny opis tej planety, który będzie działać na' +
+            'twoją wyobraznie. Jednak niestety w tym momencie możesz przeczytać tylko te słowa, nic poza tym',
+        temperature: 3,
+        humidity: 3,
+    },
+
+    {
+        name: 'Kra lodowa',
+        description: 'W tym miejscu będzie znajdował się fantastyczny opis tej planety, który będzie działać na' +
+            'twoją wyobraznie. Jednak niestety w tym momencie możesz przeczytać tylko te słowa, nic poza tym',
+        temperature: 3,
+        humidity: 4,
+    },
+
+    {
+        name: 'Antarktyda',
+        description: 'W tym miejscu będzie znajdował się fantastyczny opis tej planety, który będzie działać na' +
+            'twoją wyobraznie. Jednak niestety w tym momencie możesz przeczytać tylko te słowa, nic poza tym',
+        temperature: 4,
+        humidity: 0,
+    },
+
+    {
+        name: 'Tundra',
+        description: 'W tym miejscu będzie znajdował się fantastyczny opis tej planety, który będzie działać na' +
+            'twoją wyobraznie. Jednak niestety w tym momencie możesz przeczytać tylko te słowa, nic poza tym',
+        temperature: 4,
+        humidity: 1,
+    },
+
+    {
+        name: 'Arktyczna',
+        description: 'W tym miejscu będzie znajdował się fantastyczny opis tej planety, który będzie działać na' +
+            'twoją wyobraznie. Jednak niestety w tym momencie możesz przeczytać tylko te słowa, nic poza tym',
+        temperature: 4,
+        humidity: 2,
+    },
+
+    {
+        name: 'Miedzylodowcowa. (Geotermalna arktyka)',
+        description: 'W tym miejscu będzie znajdował się fantastyczny opis tej planety, który będzie działać na' +
+            'twoją wyobraznie. Jednak niestety w tym momencie możesz przeczytać tylko te słowa, nic poza tym',
+        temperature: 4,
+        humidity: 3,
+    },
+
+    {
+        name: 'Glacjalny',
+        description: 'W tym miejscu będzie znajdował się fantastyczny opis tej planety, który będzie działać na' +
+            'twoją wyobraznie. Jednak niestety w tym momencie możesz przeczytać tylko te słowa, nic poza tym',
+        temperature: 4,
+        humidity: 4,
+    },
+];

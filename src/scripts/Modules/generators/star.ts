@@ -3,7 +3,7 @@ import {
     generateSpectralType,
 } from './starType';
 import { Star} from "../Types";
-
+import { availableStarNames } from "./availableStarNames";
 
 export const generateStar = (): Star => {
 
@@ -13,24 +13,8 @@ export const generateStar = (): Star => {
         spectral: generateSpectralType(),
     }
 
-}
+};
 
-const availableStarNames: string[] = ['Polaris',
-    'Syriusz',
-    'Rigiel',
-    'Vega',
-    'Antares',
-    'Canopus',
-    'Kudo',
-    'Oniga',
-    'Kassimian',
-    'Harravos',
-    'Basusen',
-    'Marev',
-    'Elari',
-    'Wrenn',
-    'Jusurvo',
-    'Soleko'];
 
 const genereteStarName = (): string => {
     const availableStarCount = availableStarNames.length;

@@ -1,13 +1,4 @@
-const availablePlanetNames = ['Helara',
-  'Kitrarth',
-  'Zeceitera',
-  'Chemion',
-  '51 Pegasi b',
-  'PSR 1257+12 C',
-  'OGLE-TR-56b',
-  'Fomalhaut',
-  '2M1207b',
-];
+import { availablePlanetNames } from "./availablePlanetNames";
 
 const generatePlanetName = (): string => {
   const availablePlanetsCount = availablePlanetNames.length - 1;
