@@ -6,6 +6,7 @@ import '../../public/images/population/colony.jpg';
 import '../../public/images/stars/star.jpg';
 import '../../public/images/world/savanna.jpg';
 import '../../public/images/background/wallpaper.jpg';
+import axios from "axios";
 
 
 export let currentSolarSystemNumber: number = 0;
@@ -38,10 +39,18 @@ const Init = (chosenMethod: string): void => {
     }
 };
 
+const getAvailableWorlds = async () => {
+    return (await axios.get('http://localhost:3000/availableWorlds')).data;
+}
 
-const GenerateAllParameters = () => {
 
-    let newPlanet: any = generatePlanet();
+const GenerateAllParameters = async () => {
+    const availableWorlds = await getAvailableWorlds();
+
+
+    let newPlanet: any = generatePlanet({
+        availableWorlds
+    });
     planetsCollection.push(newPlanet);
     console.log(planetsCollection);
 

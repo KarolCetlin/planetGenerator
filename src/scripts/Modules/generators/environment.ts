@@ -1,10 +1,21 @@
 import { planetHasEcosferic  } from './events'
 import {World, Environment, RequirementsCreationEnvironment} from '../Types'
-const availableHumidities: RequirementsCreationEnvironment[] = require('./availableHumidities.json');
-const availableTemperatures: RequirementsCreationEnvironment[] = require('./availableTemperatures.json');
-const availableWorlds: RequirementsCreationEnvironment[] = require('./availableWorlds.json');
+import axios from 'axios';
 
-export const environmentGenerate = (): Environment => {
+
+
+const availableHumidities: RequirementsCreationEnvironment[] = require('../../Data/availableHumidities.json');
+const availableTemperatures: RequirementsCreationEnvironment[] = require('../../Data/availableTemperatures.json');
+// const availableWorlds: RequirementsCreationEnvironment[] = require('../../Data/availableWorlds.json');
+
+
+
+
+
+
+
+export const environmentGenerate =  (availableWorlds:any): Environment => {
+
 
     if(planetHasEcosferic === true) {
         const countOfAvailableTemperatures = availableTemperatures.length;
@@ -20,13 +31,17 @@ export const environmentGenerate = (): Environment => {
             temperatureDescription: temperatureParameters.description,
             humidityName: humidityParameters.name,
             humidityDescription: humidityParameters.description,
-            worldName: matchWorld(randomAvailableTemperatureIndex, randomAvailableHumidityIndex).name,
-            worldDescription: matchWorld(randomAvailableTemperatureIndex, randomAvailableHumidityIndex).description,
+            worldName: matchWorld(randomAvailableTemperatureIndex, randomAvailableHumidityIndex, availableWorlds).name,
+            worldDescription: matchWorld(randomAvailableTemperatureIndex, randomAvailableHumidityIndex, availableWorlds).description,
         }
     }
 };
 
-const matchWorld = (temperatureIndex: number, humidityIndex: number): World => {
+const matchWorld = (
+    temperatureIndex: number,
+    humidityIndex: number,
+    availableWorlds:any
+): World => {
 
     const countOfAvailableWorlds = availableWorlds.length;
 

@@ -11,7 +11,7 @@ const generatePlanetName = (): string => {
 };
 
 
-export const generatePlanet = (): Planet => {
+export const generatePlanet = (params: any): Planet => {
 
   return {
     name: generatePlanetName(),
@@ -19,7 +19,7 @@ export const generatePlanet = (): Planet => {
     star: generateStar(),
     event: generateEvents(),
     outpost: generateOutpost(),
-    environment: environmentGenerate(),
+    environment: environmentGenerate(params.availableWorlds),
   };
 };
 

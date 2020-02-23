@@ -5,8 +5,8 @@ import {
     StarSpectral,
 } from "../Types";
 
-const availableLifeCycleStars: AvailableLifeCycleStars[] = require('./availableLifeCycleStars.json');
-const availableSpectralTypes: AvailableSpectralTypes[] = require('./availableSpectralTypes.json');
+const availableLifeCycleStars: AvailableLifeCycleStars[] = require('../../Data/availableLifeCycleStars.json');
+const availableSpectralTypes: AvailableSpectralTypes[] = require('../../Data/availableSpectralTypes.json');
 
 export const generateStarType = (): StarType => {
 

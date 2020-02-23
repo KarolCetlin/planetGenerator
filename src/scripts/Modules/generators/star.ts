@@ -4,7 +4,7 @@ import {
 } from './starType';
 import { Star } from "../Types";
 
-const availableStarNames: string[] = require('./availableStarNames.json');
+const availableStarNames: string[] = require('../../Data/availableStarNames.json');
 
 
 export const generateStar = (): Star => {

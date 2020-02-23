@@ -1,8 +1,8 @@
 import { planetHasOutpost } from './events';
 import {OutpostsParameters, Outpost, Race} from "../Types";
 
-const availableOutpostsTypes: OutpostsParameters[] = require('./availableOutpostsTypes.json');
-const availableRaces: string[] = require('./availableRaces.json');
+const availableOutpostsTypes: OutpostsParameters[] = require('../../Data/availableOutpostsTypes.json');
+const availableRaces: string[] = require('../../Data/availableRaces.json');
 
 
 export const generateOutpost = (): Outpost => {

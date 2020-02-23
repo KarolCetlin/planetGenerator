@@ -1,4 +1,4 @@
-const availablePlanetNames: string[] = require('./availablePlanetNames.json');
+const availablePlanetNames: string[] = require('../../Data/availablePlanetNames.json');
 
 const generatePlanetName = (): string => {
   const availablePlanetsCount = availablePlanetNames.length - 1;
