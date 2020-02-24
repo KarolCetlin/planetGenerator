@@ -6,20 +6,20 @@ import { environmentGenerate } from './generators/environment'
 import { Planet } from './Types'
 import { generateEvents } from "./generators/events";
 
-const generatePlanetName = (): string => {
-  return planetNameGenerator();
-};
+// const generatePlanetName = (): string => {
+//   return planetNameGenerator();
+// };
 
 
 export const generatePlanet = (params: any): Planet => {
 
   return {
-    name: generatePlanetName(),
+    name: planetNameGenerator(params.availablePlanetNames),
     size: generatePlanetSize(),
-    star: generateStar(),
+    star: generateStar(params.availableStarNames, params.availableLifeCycleStars, params.availableSpectralTypes),
     event: generateEvents(),
     outpost: generateOutpost(),
-    environment: environmentGenerate(params.availableWorlds),
+    environment: environmentGenerate(params.availableWorlds, params.availableTemperatures, params.availableHumidities),
   };
 };
 

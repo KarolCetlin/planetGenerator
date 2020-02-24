@@ -41,15 +41,67 @@ const Init = (chosenMethod: string): void => {
 
 const getAvailableWorlds = async () => {
     return (await axios.get('http://localhost:3000/availableWorlds')).data;
-}
+};
 
+const getAvailableHumidities = async () => {
+    return (await axios.get('http://localhost:3000/availableHumidities')).data;
+};
+
+const getAvailableTemperatures = async () => {
+    return (await axios.get('http://localhost:3000/availableTemperatures')).data;
+};
+
+const getAvailableLifeCycleStars = async () => {
+    return (await axios.get('http://localhost:3000/availableLifeCycleStars')).data;
+};
+
+const getAvailableOutpostsTypes = async () => {
+    return (await axios.get('http://localhost:3000/availableOutpostsTypes')).data;
+};
+
+const getAvailablePlanetNames = async () => {
+    return (await axios.get('http://localhost:3000/availablePlanetNames')).data;
+};
+
+const getAvailablePlanetSizes = async () => {
+    return (await axios.get('http://localhost:3000/availablePlanetSizes')).data;
+};
+
+const getAvailableRaces = async () => {
+    return (await axios.get('http://localhost:3000/availableRaces')).data;
+};
+
+const getAvailableSpectralTypes = async () => {
+    return (await axios.get('http://localhost:3000/availableSpectralTypes')).data;
+};
+
+const getAvailableStarNames = async () => {
+    return (await axios.get('http://localhost:3000/availableStarNames')).data;
+};
 
 const GenerateAllParameters = async () => {
     const availableWorlds = await getAvailableWorlds();
-
+    const availableHumidities = await getAvailableHumidities();
+    const availableTemperatures = await getAvailableTemperatures();
+    const availableLifeCycleStars = await getAvailableLifeCycleStars();
+    const availableOutpostsTypes = await getAvailableOutpostsTypes();
+    const availablePlanetNames = await getAvailablePlanetNames();
+    const availablePlanetSizes = await getAvailablePlanetSizes();
+    const availableRaces = await getAvailableRaces();
+    const availableSpectralTypes = await getAvailableSpectralTypes();
+    const availableStarNames = await getAvailableStarNames();
 
     let newPlanet: any = generatePlanet({
-        availableWorlds
+        availableWorlds,
+        availableHumidities,
+        availableTemperatures,
+        availableLifeCycleStars,
+        availableOutpostsTypes,
+        availablePlanetNames,
+        availablePlanetSizes,
+        availableRaces,
+        availableSpectralTypes,
+        availableStarNames
     });
     planetsCollection.push(newPlanet);
     console.log(planetsCollection);

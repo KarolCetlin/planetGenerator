@@ -3,18 +3,13 @@ import {World, Environment, RequirementsCreationEnvironment} from '../Types'
 import axios from 'axios';
 
 
-
-const availableHumidities: RequirementsCreationEnvironment[] = require('../../Data/availableHumidities.json');
-const availableTemperatures: RequirementsCreationEnvironment[] = require('../../Data/availableTemperatures.json');
-// const availableWorlds: RequirementsCreationEnvironment[] = require('../../Data/availableWorlds.json');
-
-
+//
+// const availableHumidities: RequirementsCreationEnvironment[] = require('../../Data/availableHumidities.json');
+// const availableTemperatures: RequirementsCreationEnvironment[] = require('../../Data/availableTemperatures.json');
+// // const availableWorlds: RequirementsCreationEnvironment[] = require('../../Data/availableWorlds.json');
 
 
-
-
-
-export const environmentGenerate =  (availableWorlds:any): Environment => {
+export const environmentGenerate =  (availableWorlds:any, availableTemperatures, availableHumidities): Environment => {
 
 
     if(planetHasEcosferic === true) {

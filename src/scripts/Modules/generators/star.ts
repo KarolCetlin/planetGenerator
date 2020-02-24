@@ -4,21 +4,21 @@ import {
 } from './starType';
 import { Star } from "../Types";
 
-const availableStarNames: string[] = require('../../Data/availableStarNames.json');
+// const availableStarNames: string[] = require('../../Data/availableStarNames.json');
 
 
-export const generateStar = (): Star => {
+export const generateStar = (availableStarNames, availableLifeCycleStars, availableSpectralTypes): Star => {
 
     return {
-        name: genereteStarName(),
-        lifeCycle: generateStarType(),
-        spectral: generateSpectralType(),
+        name: genereteStarName(availableStarNames),
+        lifeCycle: generateStarType(availableLifeCycleStars),
+        spectral: generateSpectralType(availableSpectralTypes, availableLifeCycleStars),
     }
 
 };
 
 
-const genereteStarName = (): string => {
+const genereteStarName = (availableStarNames): string => {
     const availableStarCount = availableStarNames.length;
     const randomIndex = Math.floor(Math.random() * availableStarCount - 1);
 

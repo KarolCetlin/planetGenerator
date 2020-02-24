@@ -5,10 +5,10 @@ import {
     StarSpectral,
 } from "../Types";
 
-const availableLifeCycleStars: AvailableLifeCycleStars[] = require('../../Data/availableLifeCycleStars.json');
-const availableSpectralTypes: AvailableSpectralTypes[] = require('../../Data/availableSpectralTypes.json');
+// const availableLifeCycleStars: AvailableLifeCycleStars[] = require('../../Data/availableLifeCycleStars.json');
+// const availableSpectralTypes: AvailableSpectralTypes[] = require('../../Data/availableSpectralTypes.json');
 
-export const generateStarType = (): StarType => {
+export const generateStarType = (availableLifeCycleStars): StarType => {
 
     const countOfAvailableStarsLife = availableLifeCycleStars.length;
     const randomAvailableStarLifeIndex = Math.floor(Math.random() * countOfAvailableStarsLife);
@@ -22,10 +22,9 @@ export const generateStarType = (): StarType => {
     }
 };
 
-export const generateSpectralType = (): StarSpectral => {
+export const generateSpectralType = (availableSpectralTypes, availableLifeCycleStars): StarSpectral => {
 
-    const countOfSpectralType = availableLifeCycleStars.length;
-    const currentSpectralIndex = generateStarType().spectralIndex;
+    const currentSpectralIndex = generateStarType(availableLifeCycleStars).spectralIndex;
 
     const starSpectralTypeParameters = availableSpectralTypes[currentSpectralIndex];
 
